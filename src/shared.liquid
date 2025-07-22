@@ -2,6 +2,95 @@
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartkick@5.0.1/dist/chartkick.min.js"></script>
 
+{% template calculate_hours %}
+    {% assign total_decimal = 0 %}
+    {% assign decimal_strings = "" %}
+    {% assign today_date = 'now' | date: '%Y-%m-%d' %}
+    {% assign data = data | reverse %}
+    
+    {% comment %} Iterate through the data for the specified limit {% endcomment %}
+    {% for day in data limit: limit %}
+        {% assign day_date = day.range.date %}
+        
+        {% comment %} Skip future days if exclude_future_week is true {% endcomment %}
+        {% if exclude_future_week == 'true' or exclude_future_week == true %}
+        {% if day_date > today_date %}
+            {% continue %}
+        {% endif %}
+        {% endif %}
+        
+        {% assign day_decimal = day.grand_total.decimal | plus: 0 %}
+        {% comment %} Add to total decimal time {% endcomment %}
+        {% assign decimal_strings = decimal_strings | append: day_decimal | append: ',' %}
+        {% assign total_decimal = total_decimal | plus: day_decimal %}
+    {% endfor %}
+    {% comment %} Format time with 15-minute rounding {% endcomment %}
+    {% assign total_minutes = total_decimal | times: 60 | round %}
+    {% assign remainder = total_minutes | modulo: 15 %}
+    {% if remainder > 0 %}
+        {% assign total_minutes = total_minutes | plus: 15 | minus: remainder %}
+    {% endif %}
+    {% assign display_hours = total_minutes | divided_by: 60 %}
+    {% assign display_minutes = total_minutes | modulo: 60 %}
+    {% if display_minutes < 10 %}
+        {% assign formatted_time = display_hours | append: 'h0' | append: display_minutes | append: 'm' %}
+    {% else %}
+        {% assign formatted_time = display_hours | append: 'h' | append: display_minutes| append: 'm' %}
+    {% endif %}
+    {% comment %} <span class="value value--tnums {{valueSize}}" data-value-fit="{{ valueFit }}">{{ decimal_strings }}</span> {% endcomment %}
+    <span class="value value--tnums {{valueSize}}" data-value-fit="{{ valueFit }}">{{ formatted_time }}</span>
+{% endtemplate %}
+
+{% template dashboard_horizontal %}
+    <!-- Key Metrics Grid -->
+    {% assign metrics_array = selected_metrics | split: ',' %}
+    {% assign metrics_count = metrics_array.size %}
+    {% assign valueSize = '' %}
+
+    {% if metrics_count > 0 %}
+      {% if metrics_count == 1 %}
+        {% assign grid_class = "grid grid--cols-1" %}
+      {% elsif metrics_count == 2 %}
+        {% assign grid_class = "grid grid--cols-2" %}
+      {% elsif metrics_count == 3 %}
+        {% assign grid_class = "grid grid--cols-3" %}
+      {% elsif metrics_count == 4 %}
+        {% assign grid_class = "grid grid--cols-4" %}
+      {% else %}
+        {% assign valueFit = true %}
+        {% assign valueSize = 'value--small' %}
+
+        {% assign grid_class = "grid grid--cols-5" %}
+      {% endif %}
+      
+      <div class="{{ grid_class }}">
+        {% for metric in metrics_array %}
+          {% assign metric_trimmed = metric | strip %}
+          <div class="item">
+            <div class="meta"></div>
+            <div class="content">
+              {% if metric_trimmed == 'today' %}
+                {% render 'calculate_hours' data: data, limit: 1, valueFit: valueFit, valueSize: valueSize, exclude_future_week: exclude_future_week %}
+                <span class="label">Today</span>
+              {% elsif metric_trimmed == 'this_week' %}
+                {% render 'calculate_hours' data: data, limit: 7, valueFit: valueFit, valueSize: valueSize, exclude_future_week: exclude_future_week %}
+                <span class="label">This Week</span>
+              {% elsif metric_trimmed == 'this_month' %}
+                {% render 'calculate_hours' data: data, limit: 30, valueFit: valueFit, valueSize: valueSize, exclude_future_week: exclude_future_week %}
+                <span class="label">This Month</span>
+              {% elsif metric_trimmed == 'last_3_months' %}
+                {% render 'calculate_hours' data: data, limit: 90, valueFit: valueFit, valueSize: valueSize, exclude_future_week: exclude_future_week %}
+                <span class="label">Last 3 Months</span>
+              {% elsif metric_trimmed == 'last_year' %}
+                {% render 'calculate_hours' data: data, limit: 365, valueFit: valueFit, valueSize: valueSize, exclude_future_week: exclude_future_week %}
+                <span class="label">Last Year</span>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+{% endtemplate %}
 
 <script type="text/javascript">
   // Shared data preparation

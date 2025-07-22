@@ -1,6 +1,13 @@
 <!-- WakaTime Half Horizontal Layout -->
 <div class="view view--half-horizontal">
   <div class="layout layout--col gap--space-between">
+    
+    {% render 'dashboard_horizontal' 
+        selected_metrics: trmnl.plugin_settings.custom_fields_values.dashboard_metrics,
+        exclude_future_week: trmnl.plugin_settings.custom_fields_values.exclude_future_week | default: 'false',
+        valueFit: false,
+        data: data
+    %}
     <!-- Chart Container -->
     {% assign selected_layout = trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase %}
     {% if selected_layout == 'contributions' %}
@@ -49,10 +56,11 @@
   }
   
   {% for day in data limit: 365 reversed %}
-    {% if day.range.date and day.grand_total.total_seconds %}
+    {% if day.range.start and day.grand_total.total_seconds %}
+      {% assign day_start_date = day.range.start | split: 'T' | first %}
       var hours = {{ day.grand_total.total_seconds | divided_by: 3600.0 | round: 2 }};
-      chartData.push(["{{ day.range.date }}", hours]);
-      contributionsData["{{ day.range.date }}"] = hours;
+      chartData.push(["{{ day_start_date }}", hours]);
+      contributionsData["{{ day_start_date }}"] = hours;
     {% endif %}
   {% endfor %}
 

@@ -6,67 +6,15 @@
 <!-- Wakatime Dashboard -->
 <div class="view view--full">
   <div class="layout layout--col gap--space-between">
-    <!-- Key Metrics Grid -->
-    {% assign selected_metrics = trmnl.plugin_settings.custom_fields_values.dashboard_metrics | default: 'today,this_week,last_year' %}
-    {% assign metrics_array = selected_metrics | split: ',' %}
-    {% assign metrics_count = metrics_array.size %}
-    
-    {% if metrics_count > 0 %}
-      {% if metrics_count == 1 %}
-        {% assign grid_class = "grid grid--cols-1" %}
-      {% elsif metrics_count == 2 %}
-        {% assign grid_class = "grid grid--cols-2" %}
-      {% elsif metrics_count == 3 %}
-        {% assign grid_class = "grid grid--cols-3" %}
-      {% elsif metrics_count == 4 %}
-        {% assign grid_class = "grid grid--cols-4" %}
-      {% else %}
-        {% assign grid_class = "grid grid--cols-5" %}
-      {% endif %}
-      
-      <div class="{{ grid_class }}">
-        {% for metric in metrics_array %}
-          {% assign metric_trimmed = metric | strip %}
-          <div class="item">
-            <div class="meta"></div>
-            <div class="content">
-              {% if metric_trimmed == 'today' %}
-                <span class="value value--tnums">{{ data.0.grand_total.digital | default: "0:00" }}</span>
-                <span class="label">Today</span>
-              {% elsif metric_trimmed == 'this_week' %}
-                {% assign total_hours = 0 %}
-                {% for day in data limit: 7 %}
-                  {% assign total_hours = total_hours | plus: day.grand_total.hours %}
-                {% endfor %}
-                <span class="value value--tnums">{{ total_hours }}h</span>
-                <span class="label">This Week</span>
-              {% elsif metric_trimmed == 'this_month' %}
-                {% assign total_hours = 0 %}
-                {% for day in data limit: 30 %}
-                  {% assign total_hours = total_hours | plus: day.grand_total.hours %}
-                {% endfor %}
-                <span class="value value--tnums">{{ total_hours }}h</span>
-                <span class="label">This Month</span>
-              {% elsif metric_trimmed == 'last_3_months' %}
-                {% assign total_hours = 0 %}
-                {% for day in data limit: 90 %}
-                  {% assign total_hours = total_hours | plus: day.grand_total.hours %}
-                {% endfor %}
-                <span class="value value--tnums">{{ total_hours }}h</span>
-                <span class="label">Last 3 Months</span>
-              {% elsif metric_trimmed == 'last_year' %}
-                {% assign total_hours = 0 %}
-                {% for day in data limit: 365 %}
-                  {% assign total_hours = total_hours | plus: day.grand_total.hours %}
-                {% endfor %}
-                <span class="value value--tnums">{{ total_hours }}h</span>
-                <span class="label">Last Year</span>
-              {% endif %}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
+
+    {% render 'dashboard_horizontal' 
+        selected_metrics: trmnl.plugin_settings.custom_fields_values.dashboard_metrics,
+        exclude_future_week: trmnl.plugin_settings.custom_fields_values.exclude_future_week | default: 'false',
+        valueFit: false,
+        excludeFutureWeek: trmnl.plugin_settings.custom_fields_values.exclude_future_week,
+        data: data
+    %}
+
 
     <!-- Chart Container -->
     {% assign selected_layout = trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase %}
@@ -119,10 +67,11 @@
   }
   
   {% for day in data limit: 365 reversed %}
-    {% if day.range.date and day.grand_total.total_seconds %}
+    {% if day.range.start and day.grand_total.total_seconds %}
+      {% assign day_start_date = day.range.start | split: 'T' | first %}
       var hours = {{ day.grand_total.total_seconds | divided_by: 3600.0 | round: 2 }};
-      chartData.push(["{{ day.range.date }}", hours]);
-      contributionsData["{{ day.range.date }}"] = hours;
+      chartData.push(["{{ day_start_date }}", hours]);
+      contributionsData["{{ day_start_date }}"] = hours;
     {% endif %}
   {% endfor %}
 

@@ -1,8 +1,3 @@
-#
-# Changes to this file will be overwritten by `trmnlp pull`.
-#
-# Docs: https://help.usetrmnl.com/en/articles/10542599-importing-and-exporting-private-plugins#h_581fb988f0
-#
 ---
 strategy: polling
 no_screen_padding: 'no'
@@ -11,60 +6,66 @@ static_data: ''
 polling_verb: get
 polling_url: ''
 polling_headers: ''
+polling_body: 
+id: 123718
+custom_fields:
+# - keyname: time_zone
+#   field_type: time_zone
+#   name: Time Zone
+#   description: Where are you located?
+- keyname: layout
+  field_type: select
+  name: Chart Layout
+  description: Choose how to display your coding activity
+  options:
+  - Bars: bars
+  - Lines: lines
+  - Contributions / Github Style: contributions
+  default: lines
+- keyname: timeframe
+  field_type: select
+  name: Time Period
+  description: Select the time range for your activity data
+  options:
+  - Last 7 Days: last_7_days
+  - Last 30 Days: last_30_days
+  - Last 90 Days: last_90_days
+  - Last Year: last_year
+  default: last_30_days
+- keyname: enable_grouping
+  field_type: select
+  name: Data Grouping
+  description: Enable data grouping for line charts (weekly median for 90 days, monthly median for year)
+  options:
+  - 'Yes': 'true'
+  - 'No': 'false'
+  default: 'true'
+- keyname: exclude_weekends
+  field_type: select
+  name: Exclude Weekends
+  description: Hide Saturday and Sunday data from charts and contributions
+  options:
+  - 'Yes': 'true'
+  - 'No': 'false'
+  default: 'false'
+- keyname: exclude_future_week
+  field_type: select
+  name: Exclude Future Week
+  description: Remove future days (with 0 hours) from the current week data
+  options:
+  - 'Yes': 'true'
+  - 'No': 'false'
+  default: 'false'
+- keyname: dashboard_metrics
+  field_type: select
+  name: Dashboard Metrics
+  description: Select which metrics to display in the dashboard (up to 5)
+  options:
+  - Today: today
+  - Last 7 Days: this_week
+  - This Month: this_month
+  - Last 3 Months: last_3_months
+  - Last Year: last_year
+  multiple: true
 name: WakaTime Dashboard
 refresh_interval: 1440
-custom_fields:
-  - keyname: layout
-    field_type: select
-    name: Chart Layout
-    description: Choose how to display your coding activity
-    options:
-      - Bars: bars
-      - Lines: lines
-      - Contributions / Github Style: contributions
-    default: lines
-  - keyname: timeframe
-    field_type: select
-    name: Time Period
-    description: Select the time range for your activity data
-    options:
-      - Last 7 Days: last_7_days
-      - Last 30 Days: last_30_days  
-      - Last 90 Days: last_90_days
-      - Last Year: last_year
-    default: last_30_days
-  - keyname: enable_grouping
-    field_type: select
-    name: Data Grouping
-    description: Enable data grouping for line charts (weekly median for 90 days, monthly median for year)
-    options:
-      - 'Yes': 'true'
-      - 'No': 'false'
-    default: 'true'
-  - keyname: exclude_weekends
-    field_type: select
-    name: Exclude Weekends
-    description: Hide Saturday and Sunday data from charts and contributions
-    options:
-      - 'Yes': 'true'
-      - 'No': 'false'
-    default: 'false'
-  - keyname: exclude_future_week
-    field_type: select
-    name: Exclude Future Week
-    description: Remove future days (with 0 hours) from the current week data
-    options:
-      - 'Yes': 'true'
-      - 'No': 'false'
-    default: 'false'
-  - keyname: dashboard_metrics
-    field_type: select
-    name: Dashboard Metrics
-    description: Select which metrics to display in the dashboard (up to 5)
-    options:
-      - 'Today': 'today'
-      - 'Last 7 Days' : 'this_week'
-      - 'This Month' : 'this_month'
-      - 'Last 3 Months' : 'last_3_months'
-      - 'Last Year' : 'last_year'
-    multiple: true

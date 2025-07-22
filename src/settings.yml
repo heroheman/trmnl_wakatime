@@ -49,3 +49,14 @@ custom_fields:
       - 'Yes': 'true'
       - 'No': 'false'
     default: 'false'
+  - keyname: dashboard_metrics
+    field_type: select
+    name: Dashboard Metrics
+    description: Select which metrics to display in the dashboard (up to 5)
+    options:
+      - 'Today': 'today'
+      - 'Last 7 Days' : 'this_week'
+      - 'This Month' : 'this_month'
+      - 'Last 3 Months' : 'last_3_months'
+      - 'Last Year' : 'last_year'
+    multiple: true

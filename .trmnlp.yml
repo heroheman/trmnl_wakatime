@@ -8,15 +8,18 @@ watch:
 
 # values of custom fields (defined in src/settings.yml)
 custom_fields: {
-  layout: "contributions",  # "line", "bars", "contributions"
-  # layout: "line",  # "line", "bars", "contributions"
+  # layout: "contributions",  # "line", "bars", "contributions"
+  layout: "line",  # "line", "bars", "contributions"
   # layout: "bars",  # "line", "bars", "contributions"
-  # timeframe: "last_7_days"  # "last_7_days", "last_30_days", "last_90_days", "last_year", "all_time"
-  # timeframe: "last_30_days"
-  # timeframe: "last_90_days"  
-  timeframe: "last_year",
+  timeframe: "last_7_days",  # "last_7_days", "last_30_days", "last_90_days", "last_year", "all_time"
+  # timeframe: "last_30_days",
+  # timeframe: "last_90_days",  
+  # timeframe: "last_year",
   # timeframe: "all_time"  
-  enable_grouping: true  # "true" or "false"
+  # enable_grouping: true,  # "true" or "false"
+  enable_grouping: false,  # "true" or "false"
+  exclude_weekends: true,  # "true" or "false"
+  # exclude_weekends: false,  # "true" or "false"
 }
 
 # override variables

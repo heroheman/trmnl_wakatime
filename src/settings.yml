@@ -19,9 +19,9 @@ custom_fields:
     name: Chart Layout
     description: Choose how to display your coding activity
     options:
-      - Bars
-      - Lines  
-      - Contributions / Github Style
+      - Bars: bars
+      - Lines: lines
+      - Contributions / Github Style: contributions
     default: lines
   - keyname: timeframe
     field_type: select
@@ -41,3 +41,11 @@ custom_fields:
       - 'Yes': 'true'
       - 'No': 'false'
     default: 'true'
+  - keyname: exclude_weekends
+    field_type: select
+    name: Exclude Weekends
+    description: Hide Saturday and Sunday data from charts and contributions
+    options:
+      - 'Yes': 'true'
+      - 'No': 'false'
+    default: 'false'

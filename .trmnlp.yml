@@ -10,17 +10,17 @@ watch:
 custom_fields: {
   dashboard_metrics: "today,this_week,this_month,last_3_months,last_year",  # up to 5 metrics - "today", "this_week", "this_month", "last_3_months", "last_year"
   # dashboard_metrics: "last_3_months,last_year",  
-  # layout: "contributions",  # "line", "bars", "contributions"
+  layout: "contributions",  # "line", "bars", "contributions"
   # layout: "line",  # "line", "bars", "contributions"
-  layout: "bars",  # "line", "bars", "contributions"
-  timeframe: "last_7_days",  # "last_7_days", "last_30_days", "last_90_days", "last_year", "all_time"
+  # layout: "bars",  # "line", "bars", "contributions"
+  # timeframe: "last_7_days",  # "last_7_days", "last_30_days", "last_90_days", "last_year", "all_time"
   # timeframe: "last_30_days",
-  # timeframe: "last_90_days",  
+  timeframe: "last_90_days",  
   # timeframe: "last_year",
   # timeframe: "all_time"  
   enable_grouping: true,  # "true" or "false"
   # enable_grouping: false,  # "true" or "false"
-  exclude_weekends: true,  # "true" or "false"
+  # exclude_weekends: true,  # "true" or "false"
   # exclude_future_week: false,  # "true" or "false"
   # exclude_future_week: true,  # "true" pr "false"
   # exclude_weekends: false,  

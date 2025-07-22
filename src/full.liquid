@@ -216,8 +216,55 @@
     grid.appendChild(weeksContainer);
   }
 
+  // Function to get X-axis configuration based on timeframe
+  function getXAxisConfig(timeframe) {
+    var config = {
+      type: "datetime",
+      labels: {
+        style: {
+          fontSize: "16px",
+          color: "#000000"
+        }
+      },
+      lineWidth: 0,
+      gridLineDashStyle: "dot",
+      tickWidth: 1,
+      tickLength: 0,
+      gridLineWidth: 1,
+      gridLineColor: "#000000"
+    };
+    
+    if (timeframe === 'last_7_days') {
+      // Show day names for 7 days
+      config.labels.format = '{value:%a}'; // Mon, Tue, Wed, etc.
+      config.tickPixelInterval = 50;
+    } else if (timeframe === 'last_30_days') {
+      // Show dates for 30 days
+      config.labels.format = '{value:%d.%m}'; // 15.07, 16.07, etc.
+      config.tickPixelInterval = 80;
+    } else if (timeframe === 'last_90_days') {
+      // Show every 3rd date for 90 days
+      config.labels.format = '{value:%d.%m}'; // 15.07, 18.07, 21.07, etc.
+      config.tickPixelInterval = 120;
+      config.tickInterval = 3 * 24 * 3600 * 1000; // Every 3 days in milliseconds
+    } else if (timeframe === 'last_year') {
+      // Show month names for year
+      config.labels.format = '{value:%b}'; // Jan, Feb, Mar, etc.
+      config.tickPixelInterval = 150;
+      config.tickInterval = 30 * 24 * 3600 * 1000; // Monthly intervals
+      config.dateTimeLabelFormats = {
+        month: '%b',
+        year: '%Y'
+      };
+    }
+    
+    return config;
+  }
+
   // Function to create chart based on layout selection
   var createChart = function() {
+    var xAxisConfig = getXAxisConfig(selectedTimeframe);
+    
     if (selectedLayout === "contributions") {
       createContributionsGrid();
     } else if (selectedLayout === "bars") {
@@ -258,27 +305,7 @@
                 text: "Hours Coded"
               }
             },
-            xAxis: {
-              type: "datetime",
-              labels: {
-                style: {
-                  fontSize: "16px",
-                  color: "#000000"
-                },
-                format: '{value:%b %Y}'
-              },
-              dateTimeLabelFormats: {
-                month: '%b %Y',
-                year: '%Y'
-              },
-              tickInterval: 30 * 24 * 3600 * 1000, // Monthly intervals (30 days in milliseconds)
-              lineWidth: 0,
-              gridLineDashStyle: "dot",
-              tickWidth: 1,
-              tickLength: 0,
-              gridLineWidth: 1,
-              gridLineColor: "#000000"
-            }
+            xAxis: xAxisConfig
           }
         }
       );
@@ -321,22 +348,7 @@
                 text: "Hours Coded"
               }
             },
-            xAxis: {
-              type: "datetime",
-              labels: {
-                style: {
-                  fontSize: "16px",
-                  color: "#000000"
-                }
-              },
-              lineWidth: 0,
-              gridLineDashStyle: "dot",
-              tickWidth: 1,
-              tickLength: 0,
-              gridLineWidth: 1,
-              gridLineColor: "#000000",
-              tickPixelInterval: 120
-            }
+            xAxis: xAxisConfig
           }
         }
       );

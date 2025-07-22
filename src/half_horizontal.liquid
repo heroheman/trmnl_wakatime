@@ -14,7 +14,9 @@
           <div class="flex flex--row gap--1 mx--2">
             <div class="w--2 h--2 bg--gray-7"></div>
             <div class="w--2 h--2 bg--gray-5"></div>
+            <div class="w--2 h--2 bg--gray-4"></div>
             <div class="w--2 h--2 bg--gray-3"></div>
+            <div class="w--2 h--2 bg--gray-2"></div>
             <div class="w--2 h--2 bg--gray-1"></div>
             <div class="w--2 h--2 bg--black"></div>
           </div>
@@ -116,10 +118,12 @@
 
   // Function to get contribution level based on hours
   function getContributionLevel(hours) {
-    if (hours === 0) return 'bg--gray-7';
-    if (hours < 2) return 'bg--gray-5';
-    if (hours < 4) return 'bg--gray-3';
-    if (hours < 6) return 'bg--gray-1';
+    if (hours === 0) return 'bg--white';
+    if (hours < 0.5) return 'bg--gray-7';
+    if (hours < 1) return 'bg--gray-5';
+    if (hours < 2) return 'bg--gray-3';
+    if (hours < 3) return 'bg--gray-2';
+    if (hours < 4) return 'bg--gray-1';
     return 'bg--black';
   }
 

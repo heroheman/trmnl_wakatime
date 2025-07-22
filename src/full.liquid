@@ -54,12 +54,13 @@
         <div class="contributions-grid flex flex--col gap--1" id="contributions-grid-full">
           <!-- Grid will be populated by JavaScript -->
         </div>
-        <div class="flex flex--row flex--center-x mt--3">
+        <div class="flex flex--row flex--start-x mt--3">
           <span class="description">Less</span>
           <div class="flex flex--row gap--1 mx--3">
             <div class="w--3 h--3 bg--gray-7"></div>
             <div class="w--3 h--3 bg--gray-5"></div>
             <div class="w--3 h--3 bg--gray-3"></div>
+            <div class="w--3 h--3 bg--gray-2"></div>
             <div class="w--3 h--3 bg--gray-1"></div>
             <div class="w--3 h--3 bg--black"></div>
           </div>
@@ -165,10 +166,11 @@
 
   // Function to get contribution level based on hours
   function getContributionLevel(hours) {
-    if (hours === 0) return 'bg--gray-7';
-    if (hours < 2) return 'bg--gray-5';
-    if (hours < 4) return 'bg--gray-3';
-    if (hours < 6) return 'bg--gray-1';
+    if (hours === 0) return 'bg--white';
+    if (hours < 1) return 'bg--gray-7';
+    if (hours < 2) return 'bg--gray-3';
+    if (hours < 3) return 'bg--gray-2';
+    if (hours < 4) return 'bg--gray-1';
     return 'bg--black';
   }
 

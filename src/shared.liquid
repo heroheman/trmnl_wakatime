@@ -2,6 +2,7 @@
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartkick@5.0.1/dist/chartkick.min.js"></script>
 
+
 <script type="text/javascript">
   // Shared data preparation
   var prepareWakatimeData = function() {
@@ -23,13 +24,15 @@
   };
 
   // Get contribution level based on hours
-  var getContributionLevel = function(hours) {
-    if (hours === 0) return 'bg--gray-7';
-    if (hours < 2) return 'bg--gray-5';
-    if (hours < 4) return 'bg--gray-3';
+  function getContributionLevel(hours) {
+    if (hours === 0) return 'bg--white';
+    if (hours < 1) return 'bg--gray-5';
+    if (hours < 2) return 'bg--gray-4';
+    if (hours < 3) return 'bg--gray-3';
+    if (hours < 4) return 'bg--gray-2';
     if (hours < 6) return 'bg--gray-1';
     return 'bg--black';
-  };
+  }
 
   // Create contributions grid
   var createContributionsGrid = function(gridId, contributionsData) {
@@ -166,6 +169,7 @@
     }
   };
 </script>
+
 
 {% template wakatime_title_bar %}
   <div class="title_bar">

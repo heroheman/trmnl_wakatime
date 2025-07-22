@@ -33,3 +33,11 @@ custom_fields:
       - Last 90 Days: last_90_days
       - Last Year: last_year
     default: last_30_days
+  - keyname: enable_grouping
+    field_type: select
+    name: Data Grouping
+    description: Enable data grouping for line charts (weekly median for 90 days, monthly median for year)
+    options:
+      - 'Yes': 'true'
+      - 'No': 'false'
+    default: 'true'

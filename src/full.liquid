@@ -106,10 +106,61 @@
   // Get selected layout from settings
   var selectedLayout = "{{ trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase }}";
   
+  // Get grouping setting
+  var enableGrouping = "{{ trmnl.plugin_settings.custom_fields_values.enable_grouping | default: 'true' }}" === 'true';
+  
   // Filter chart data based on timeframe (but not contributions)
   var filteredChartData = chartData;
   if (selectedLayout !== "contributions / github style" && selectedLayout !== "contributions") {
     filteredChartData = chartData.slice(-dataLimit);
+  }
+
+  // Function to group data for line charts
+  function groupDataForLineChart(data, timeframe) {
+    // Only group if grouping is enabled
+    if (!enableGrouping) {
+      return data;
+    }
+    
+    if (timeframe === 'last_90_days') {
+      // Group by 7-day periods and calculate median
+      var groupedData = [];
+      for (var i = 0; i < data.length; i += 7) {
+        var weekData = data.slice(i, i + 7);
+        if (weekData.length > 0) {
+          var values = weekData.map(function(item) { return item[1]; }).sort(function(a, b) { return a - b; });
+          var median = values.length % 2 === 0 
+            ? (values[Math.floor(values.length / 2) - 1] + values[Math.floor(values.length / 2)]) / 2
+            : values[Math.floor(values.length / 2)];
+          // Use the last date of the week
+          groupedData.push([weekData[weekData.length - 1][0], median]);
+        }
+      }
+      return groupedData;
+    } else if (timeframe === 'last_year') {
+      // Group by month and calculate median
+      var monthlyGroups = {};
+      data.forEach(function(item) {
+        var date = new Date(item[0]);
+        var monthKey = date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0');
+        if (!monthlyGroups[monthKey]) {
+          monthlyGroups[monthKey] = [];
+        }
+        monthlyGroups[monthKey].push(item[1]);
+      });
+      
+      var groupedData = [];
+      Object.keys(monthlyGroups).sort().forEach(function(monthKey) {
+        var values = monthlyGroups[monthKey].sort(function(a, b) { return a - b; });
+        var median = values.length % 2 === 0 
+          ? (values[Math.floor(values.length / 2) - 1] + values[Math.floor(values.length / 2)]) / 2
+          : values[Math.floor(values.length / 2)];
+        // Use first day of month for consistent display
+        groupedData.push([monthKey + '-01', median]);
+      });
+      return groupedData;
+    }
+    return data;
   }
 
   // Function to get contribution level based on hours
@@ -227,10 +278,11 @@
         }
       );
     } else {
-      // Create Line Chart (default)
+      // Create Line Chart (default) with data grouping
+      var lineChartData = groupDataForLineChart(filteredChartData, selectedTimeframe);
       new Chartkick["LineChart"](
         "wakatime-chart-full",
-        filteredChartData,
+        lineChartData,
         {
           adapter: "highcharts",
           prefix: "",

@@ -49,6 +49,14 @@ custom_fields:
       - 'Yes': 'true'
       - 'No': 'false'
     default: 'false'
+  - keyname: exclude_future_week
+    field_type: select
+    name: Exclude Future Week
+    description: Remove future days (with 0 hours) from the current week data
+    options:
+      - 'Yes': 'true'
+      - 'No': 'false'
+    default: 'false'
   - keyname: dashboard_metrics
     field_type: select
     name: Dashboard Metrics

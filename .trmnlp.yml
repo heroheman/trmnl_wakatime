@@ -8,8 +8,9 @@ watch:
 
 # values of custom fields (defined in src/settings.yml)
 custom_fields: {
-  # layout: "contributions",  # "line", "bars", "contributions"
-  layout: "line",  # "line", "bars", "contributions"
+  dashboard_metrics: "today,this_week,this_month,last_3_months,last_year",  # up to 5 metrics - "today", "this_week", "this_month", "last_3_months", "last_year"
+  layout: "contributions",  # "line", "bars", "contributions"
+  # layout: "line",  # "line", "bars", "contributions"
   # layout: "bars",  # "line", "bars", "contributions"
   timeframe: "last_7_days",  # "last_7_days", "last_30_days", "last_90_days", "last_year", "all_time"
   # timeframe: "last_30_days",
@@ -19,6 +20,8 @@ custom_fields: {
   # enable_grouping: true,  # "true" or "false"
   enable_grouping: false,  # "true" or "false"
   exclude_weekends: true,  # "true" or "false"
+  # exclude_future_week: false,  # "true" or "false"
+  exclude_future_week: true,  # "true" or "false"
   # exclude_weekends: false,  # "true" or "false"
 }
 
@@ -26,4 +29,8 @@ custom_fields: {
 variables:
   trmnl:
     plugin_settings:
+      #last year
       polling_url: https://wakatime.com/share/@flrnz/3526e3f7-063a-4cc3-911e-d297f569335d.json
+      # all time
+      # polling_url: https://wakatime.com/share/@flrnz/e6f1249d-8dcd-457a-af76-a30b4131af33.json
+      

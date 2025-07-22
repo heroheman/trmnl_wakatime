@@ -65,6 +65,19 @@
   // Get exclude weekends setting
   var excludeWeekends = "{{ trmnl.plugin_settings.custom_fields_values.exclude_weekends | default: 'false' }}" === 'true';
   
+  // Get exclude future week setting
+  var excludeFutureWeek = "{{ trmnl.plugin_settings.custom_fields_values.exclude_future_week | default: 'false' }}" === 'true';
+  
+  // Filter out future days if enabled
+  if (excludeFutureWeek) {
+    var today = new Date();
+    today.setHours(23, 59, 59, 999); // Set to end of today
+    chartData = chartData.filter(function(item) {
+      var itemDate = new Date(item[0]);
+      return itemDate <= today;
+    });
+  }
+  
   // Filter out weekends if enabled
   if (excludeWeekends) {
     chartData = chartData.filter(function(item) {

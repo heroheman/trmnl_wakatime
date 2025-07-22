@@ -1,1 +1,40 @@
-half horizontal!
+<!-- WakaTime Half Horizontal Layout -->
+<div class="view view--half-horizontal">
+  <div class="layout layout--col gap--space-between">
+    <!-- Chart Container -->
+    {% assign selected_layout = trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase %}
+    {% if selected_layout == 'contributions / github style' or selected_layout == 'contributions' %}
+      <!-- GitHub-style Contributions Grid -->
+      <div class="contributions-container">
+        <div class="contributions-grid flex flex--col gap--1" id="contributions-grid-half">
+          <!-- Grid will be populated by JavaScript -->
+        </div>
+        <div class="flex flex--row flex--center-x mt--2">
+          <span class="description text--small">Less</span>
+          <div class="flex flex--row gap--1 mx--2">
+            <div class="w--2 h--2 bg--gray-7"></div>
+            <div class="w--2 h--2 bg--gray-5"></div>
+            <div class="w--2 h--2 bg--gray-3"></div>
+            <div class="w--2 h--2 bg--gray-1"></div>
+            <div class="w--2 h--2 bg--black"></div>
+          </div>
+          <span class="description text--small">More</span>
+        </div>
+      </div>
+    {% else %}
+      <div id="wakatime-chart-half" style="width: 100%"></div>
+    {% endif %}
+  </div>
+
+  {% render 'wakatime_title_bar' %}
+</div>
+
+<script type="text/javascript">
+  // Get selected layout from settings
+  var selectedLayout = "{{ trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase }}";
+  
+  // Initialize chart for half horizontal view
+  document.addEventListener('DOMContentLoaded', function() {
+    initializeWakatimeChart('wakatime-chart-half', 'contributions-grid-half', selectedLayout, 180);
+  });
+</script>

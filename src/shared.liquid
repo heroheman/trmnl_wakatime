@@ -1,1 +1,176 @@
+<!-- Shared WakaTime JavaScript Functions -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartkick@5.0.1/dist/chartkick.min.js"></script>
 
+<script type="text/javascript">
+  // Shared data preparation
+  var prepareWakatimeData = function() {
+    var chartData = [];
+    var contributionsData = {};
+    
+    {% for day in data limit: 365 reversed %}
+      {% if day.range.date and day.grand_total.total_seconds %}
+        var hours = {{ day.grand_total.total_seconds | divided_by: 3600.0 | round: 2 }};
+        chartData.push(["{{ day.range.date }}", hours]);
+        contributionsData["{{ day.range.date }}"] = hours;
+      {% endif %}
+    {% endfor %}
+    
+    return {
+      chartData: chartData,
+      contributionsData: contributionsData
+    };
+  };
+
+  // Get contribution level based on hours
+  var getContributionLevel = function(hours) {
+    if (hours === 0) return 'bg--gray-7';
+    if (hours < 2) return 'bg--gray-5';
+    if (hours < 4) return 'bg--gray-3';
+    if (hours < 6) return 'bg--gray-1';
+    return 'bg--black';
+  };
+
+  // Create contributions grid
+  var createContributionsGrid = function(gridId, contributionsData) {
+    var grid = document.getElementById(gridId);
+    if (!grid) return;
+    
+    var today = new Date();
+    var startDate = new Date(today);
+    startDate.setDate(today.getDate() - 364); // Show last 365 days
+    
+    // Create weeks container
+    var weeksContainer = document.createElement('div');
+    weeksContainer.className = 'flex flex--row gap--1 flex--center-x';
+    
+    // Generate 52 weeks
+    for (var week = 0; week < 52; week++) {
+      var weekCol = document.createElement('div');
+      weekCol.className = 'flex flex--col gap--1';
+      
+      // Create 7 days for this week
+      for (var day = 0; day < 7; day++) {
+        var currentDate = new Date(startDate);
+        currentDate.setDate(startDate.getDate() + (week * 7) + day);
+        
+        var daySquare = document.createElement('div');
+        daySquare.className = 'w--3 h--3';
+        
+        var dateStr = currentDate.toISOString().split('T')[0];
+        var hours = contributionsData[dateStr] || 0;
+        daySquare.className += ' ' + getContributionLevel(hours);
+        
+        weekCol.appendChild(daySquare);
+      }
+      
+      weeksContainer.appendChild(weekCol);
+    }
+    
+    grid.appendChild(weeksContainer);
+  };
+
+  // Shared chart configuration
+  var getChartConfig = function(chartData, chartType, chartHeight) {
+    var height = chartHeight || 260;
+    
+    var baseConfig = {
+      adapter: "highcharts",
+      prefix: "",
+      suffix: "h", 
+      thousands: ",",
+      colors: ["black"],
+      library: {
+        chart: {
+          height: height
+        },
+        plotOptions: {
+          series: {
+            animation: false
+          }
+        },
+        yAxis: {
+          labels: {
+            style: {
+              fontSize: "16px",
+              color: "#000000"
+            }
+          },
+          gridLineDashStyle: "shortdot",
+          gridLineWidth: 1,
+          gridLineColor: "#000000",
+          tickAmount: 5,
+          title: {
+            text: "Hours Coded"
+          }
+        },
+        xAxis: {
+          type: "datetime",
+          labels: {
+            style: {
+              fontSize: "16px",
+              color: "#000000"
+            }
+          },
+          lineWidth: 0,
+          gridLineDashStyle: "dot",
+          tickWidth: 1,
+          tickLength: 0,
+          gridLineWidth: 1,
+          gridLineColor: "#000000",
+          tickPixelInterval: 120
+        }
+      }
+    };
+
+    if (chartType === "bars") {
+      baseConfig.library.plotOptions.series.pointPadding = 0.1;
+      baseConfig.library.plotOptions.series.groupPadding = 0.1;
+      baseConfig.library.plotOptions.series.borderWidth = 0;
+    } else {
+      baseConfig.points = false;
+      baseConfig.curve = true;
+      baseConfig.library.plotOptions.series.lineWidth = 4;
+    }
+
+    return baseConfig;
+  };
+
+  // Create chart based on layout selection
+  var createWakatimeChart = function(chartId, gridId, data, selectedLayout, chartHeight) {
+    if (selectedLayout === "contributions / github style" || selectedLayout === "contributions") {
+      createContributionsGrid(gridId, data.contributionsData);
+    } else if (selectedLayout === "bars") {
+      var config = getChartConfig(data.chartData, "bars", chartHeight);
+      new Chartkick["ColumnChart"](chartId, data.chartData, config);
+    } else {
+      var config = getChartConfig(data.chartData, "lines", chartHeight);
+      new Chartkick["LineChart"](chartId, data.chartData, config);
+    }
+  };
+
+  // Initialize chart when ready
+  var initializeWakatimeChart = function(chartId, gridId, selectedLayout, chartHeight) {
+    var data = prepareWakatimeData();
+    
+    var createChart = function() {
+      createWakatimeChart(chartId, gridId, data, selectedLayout, chartHeight);
+    };
+
+    if (selectedLayout === "contributions / github style" || selectedLayout === "contributions") {
+      createChart();
+    } else if ("Chartkick" in window) {
+      createChart();
+    } else {
+      window.addEventListener("chartkick:load", createChart, true);
+    }
+  };
+</script>
+
+{% template wakatime_title_bar %}
+  <div class="title_bar">
+    <img class="image" src="https://wakatime.com/static/img/wakatime-logo.svg" />
+    <span class="title">WakaTime</span>
+    <span class="instance">Coding Activity</span>
+  </div>
+{% endtemplate %}

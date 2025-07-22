@@ -1,1 +1,137 @@
-full!
+<!-- import Highcharts + Chartkick libraries -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartkick@5.0.1/dist/chartkick.min.js"></script>
+
+<!-- Wakatime Dashboard -->
+<div class="view view--full">
+  <div class="layout layout--col gap--space-between">
+    <!-- Key Metrics Grid -->
+    <div class="grid grid--cols-3">
+      <div class="item">
+        <div class="meta"></div>
+        <div class="content">
+          <span class="value value--tnums">{{ data.0.grand_total.digital | default: "0:00" }}</span>
+          <span class="label">Today</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="meta"></div>
+        <div class="content">
+          {% assign total_hours = 0 %}
+          {% for day in data limit: 7 %}
+            {% assign total_hours = total_hours | plus: day.grand_total.hours %}
+          {% endfor %}
+          <span class="value value--tnums">{{ total_hours }}h</span>
+          <span class="label">This Week</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="meta"></div>
+        <div class="content">
+          {% assign avg_hours = 0 %}
+          {% assign non_zero_days = 0 %}
+          {% for day in data limit: 30 %}
+            {% if day.grand_total.hours > 0 %}
+              {% assign avg_hours = avg_hours | plus: day.grand_total.hours %}
+              {% assign non_zero_days = non_zero_days | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+          {% if non_zero_days > 0 %}
+            {% assign avg_hours = avg_hours | divided_by: non_zero_days %}
+          {% endif %}
+          <span class="value value--tnums">{{ avg_hours }}h</span>
+          <span class="label">Daily Avg</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Line Chart Container -->
+    <div id="wakatime-chart" style="width: 100%"></div>
+  </div>
+
+  <!-- Title Bar -->
+  <div class="title_bar">
+    <img class="image" src="https://wakatime.com/static/img/wakatime-logo.svg" />
+    <span class="title">WakaTime</span>
+    <span class="instance">Coding Activity</span>
+  </div>
+</div>
+
+{{ trmnl.plugin_settings.custom_fields_values.layout }}
+{{ trmnl.plugin_settings.custom_fields_values.timeframe }}
+
+<script type="text/javascript">
+  // Prepare chart data from Wakatime API response
+  var chartData = [];
+  
+  {% for day in data limit: 30 reversed %}
+    {% if day.range.date and day.grand_total.total_seconds %}
+      chartData.push(["{{ day.range.date }}", {{ day.grand_total.total_seconds | divided_by: 3600.0 | round: 2 }}]);
+    {% endif %}
+  {% endfor %}
+
+  // recommended configs to achieve the TRMNL Framework aesthetic
+  var createChart = function() {
+    new Chartkick["LineChart"](
+    "wakatime-chart",
+    chartData,
+    {
+      adapter: "highcharts", // chartjs, google, etc available
+      prefix: "",
+      suffix: "h",
+      thousands: ",",
+      points: false,
+      colors: ["black"],
+      curve: true,
+      library: {
+        chart: {
+          height: 260
+        },
+        plotOptions: {
+          series: {
+            animation: false,
+            lineWidth: 4
+          }
+        },
+        yAxis: {
+          labels: {
+            style: {
+              fontSize: "16px",
+              color:"#000000"
+            }
+          },
+          gridLineDashStyle: "shortdot",
+          gridLineWidth: 1,
+          gridLineColor: "#000000",
+          tickAmount: 5,
+          title: {
+            text: "Hours Coded"
+          }
+        },
+        xAxis: {
+          type: "datetime",
+          labels: {
+            style: {
+              fontSize: "16px",
+              color: "#000000"
+            }
+          },
+          lineWidth: 0,
+          gridLineDashStyle: "dot",
+          tickWidth: 1,
+          tickLength: 0,
+          gridLineWidth: 1,
+          gridLineColor: "#000000",
+          tickPixelInterval: 120
+        }
+      }
+    });
+  };
+
+  // ensure your chart loads before plugin render is generated
+  if ("Chartkick" in window) {
+    createChart();
+  } else {
+    window.addEventListener("chartkick:load", createChart, true);
+  }
+</script>

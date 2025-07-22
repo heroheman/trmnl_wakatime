@@ -1,0 +1,6209 @@
+{
+  "data": [
+    {
+      "grand_total": {
+        "decimal": "0.32",
+        "digital": "0:19",
+        "hours": 0,
+        "minutes": 19,
+        "text": "19 mins",
+        "total_seconds": 1151.689326
+      },
+      "range": {
+        "date": "2024-07-23",
+        "end": "2024-07-23T21:59:59Z",
+        "start": "2024-07-22T22:00:00Z",
+        "text": "Tue Jul 23rd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-07-24",
+        "end": "2024-07-24T21:59:59Z",
+        "start": "2024-07-23T22:00:00Z",
+        "text": "Wed Jul 24th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-07-25",
+        "end": "2024-07-25T21:59:59Z",
+        "start": "2024-07-24T22:00:00Z",
+        "text": "Thu Jul 25th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-07-26",
+        "end": "2024-07-26T21:59:59Z",
+        "start": "2024-07-25T22:00:00Z",
+        "text": "Fri Jul 26th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-07-27",
+        "end": "2024-07-27T21:59:59Z",
+        "start": "2024-07-26T22:00:00Z",
+        "text": "Sat Jul 27th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-07-28",
+        "end": "2024-07-28T21:59:59Z",
+        "start": "2024-07-27T22:00:00Z",
+        "text": "Sun Jul 28th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-07-29",
+        "end": "2024-07-29T21:59:59Z",
+        "start": "2024-07-28T22:00:00Z",
+        "text": "Mon Jul 29th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-07-30",
+        "end": "2024-07-30T21:59:59Z",
+        "start": "2024-07-29T22:00:00Z",
+        "text": "Tue Jul 30th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-07-31",
+        "end": "2024-07-31T21:59:59Z",
+        "start": "2024-07-30T22:00:00Z",
+        "text": "Wed Jul 31st 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.77",
+        "digital": "2:46",
+        "hours": 2,
+        "minutes": 46,
+        "text": "2 hrs 46 mins",
+        "total_seconds": 9960.097845
+      },
+      "range": {
+        "date": "2024-08-01",
+        "end": "2024-08-01T21:59:59Z",
+        "start": "2024-07-31T22:00:00Z",
+        "text": "Thu Aug 1st 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.73",
+        "digital": "1:44",
+        "hours": 1,
+        "minutes": 44,
+        "text": "1 hr 44 mins",
+        "total_seconds": 6261.660696
+      },
+      "range": {
+        "date": "2024-08-02",
+        "end": "2024-08-02T21:59:59Z",
+        "start": "2024-08-01T22:00:00Z",
+        "text": "Fri Aug 2nd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-08-03",
+        "end": "2024-08-03T21:59:59Z",
+        "start": "2024-08-02T22:00:00Z",
+        "text": "Sat Aug 3rd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-08-04",
+        "end": "2024-08-04T21:59:59Z",
+        "start": "2024-08-03T22:00:00Z",
+        "text": "Sun Aug 4th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-08-05",
+        "end": "2024-08-05T21:59:59Z",
+        "start": "2024-08-04T22:00:00Z",
+        "text": "Mon Aug 5th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-08-06",
+        "end": "2024-08-06T21:59:59Z",
+        "start": "2024-08-05T22:00:00Z",
+        "text": "Tue Aug 6th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.07",
+        "digital": "2:04",
+        "hours": 2,
+        "minutes": 4,
+        "text": "2 hrs 4 mins",
+        "total_seconds": 7443.554761
+      },
+      "range": {
+        "date": "2024-08-07",
+        "end": "2024-08-07T21:59:59Z",
+        "start": "2024-08-06T22:00:00Z",
+        "text": "Wed Aug 7th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.18",
+        "digital": "0:11",
+        "hours": 0,
+        "minutes": 11,
+        "text": "11 mins",
+        "total_seconds": 711.075342
+      },
+      "range": {
+        "date": "2024-08-08",
+        "end": "2024-08-08T21:59:59Z",
+        "start": "2024-08-07T22:00:00Z",
+        "text": "Thu Aug 8th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.28",
+        "digital": "2:17",
+        "hours": 2,
+        "minutes": 17,
+        "text": "2 hrs 17 mins",
+        "total_seconds": 8240.568096
+      },
+      "range": {
+        "date": "2024-08-09",
+        "end": "2024-08-09T21:59:59Z",
+        "start": "2024-08-08T22:00:00Z",
+        "text": "Fri Aug 9th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-08-10",
+        "end": "2024-08-10T21:59:59Z",
+        "start": "2024-08-09T22:00:00Z",
+        "text": "Sat Aug 10th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-08-11",
+        "end": "2024-08-11T21:59:59Z",
+        "start": "2024-08-10T22:00:00Z",
+        "text": "Sun Aug 11th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.63",
+        "digital": "3:38",
+        "hours": 3,
+        "minutes": 38,
+        "text": "3 hrs 38 mins",
+        "total_seconds": 13103.014742
+      },
+      "range": {
+        "date": "2024-08-12",
+        "end": "2024-08-12T21:59:59Z",
+        "start": "2024-08-11T22:00:00Z",
+        "text": "Mon Aug 12th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-08-13",
+        "end": "2024-08-13T21:59:59Z",
+        "start": "2024-08-12T22:00:00Z",
+        "text": "Tue Aug 13th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.12",
+        "digital": "0:07",
+        "hours": 0,
+        "minutes": 7,
+        "text": "7 mins",
+        "total_seconds": 439.342671
+      },
+      "range": {
+        "date": "2024-08-14",
+        "end": "2024-08-14T21:59:59Z",
+        "start": "2024-08-13T22:00:00Z",
+        "text": "Wed Aug 14th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.85",
+        "digital": "1:51",
+        "hours": 1,
+        "minutes": 51,
+        "text": "1 hr 51 mins",
+        "total_seconds": 6707.910032
+      },
+      "range": {
+        "date": "2024-08-15",
+        "end": "2024-08-15T21:59:59Z",
+        "start": "2024-08-14T22:00:00Z",
+        "text": "Thu Aug 15th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.83",
+        "digital": "1:50",
+        "hours": 1,
+        "minutes": 50,
+        "text": "1 hr 50 mins",
+        "total_seconds": 6621.513071
+      },
+      "range": {
+        "date": "2024-08-16",
+        "end": "2024-08-16T21:59:59Z",
+        "start": "2024-08-15T22:00:00Z",
+        "text": "Fri Aug 16th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-08-17",
+        "end": "2024-08-17T21:59:59Z",
+        "start": "2024-08-16T22:00:00Z",
+        "text": "Sat Aug 17th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-08-18",
+        "end": "2024-08-18T21:59:59Z",
+        "start": "2024-08-17T22:00:00Z",
+        "text": "Sun Aug 18th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.97",
+        "digital": "1:58",
+        "hours": 1,
+        "minutes": 58,
+        "text": "1 hr 58 mins",
+        "total_seconds": 7121.521564
+      },
+      "range": {
+        "date": "2024-08-19",
+        "end": "2024-08-19T21:59:59Z",
+        "start": "2024-08-18T22:00:00Z",
+        "text": "Mon Aug 19th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.05",
+        "digital": "2:03",
+        "hours": 2,
+        "minutes": 3,
+        "text": "2 hrs 3 mins",
+        "total_seconds": 7428.645723
+      },
+      "range": {
+        "date": "2024-08-20",
+        "end": "2024-08-20T21:59:59Z",
+        "start": "2024-08-19T22:00:00Z",
+        "text": "Tue Aug 20th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.18",
+        "digital": "1:11",
+        "hours": 1,
+        "minutes": 11,
+        "text": "1 hr 11 mins",
+        "total_seconds": 4274.204644
+      },
+      "range": {
+        "date": "2024-08-21",
+        "end": "2024-08-21T21:59:59Z",
+        "start": "2024-08-20T22:00:00Z",
+        "text": "Wed Aug 21st 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.53",
+        "digital": "1:32",
+        "hours": 1,
+        "minutes": 32,
+        "text": "1 hr 32 mins",
+        "total_seconds": 5575.856263
+      },
+      "range": {
+        "date": "2024-08-22",
+        "end": "2024-08-22T21:59:59Z",
+        "start": "2024-08-21T22:00:00Z",
+        "text": "Thu Aug 22nd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.97",
+        "digital": "2:58",
+        "hours": 2,
+        "minutes": 58,
+        "text": "2 hrs 58 mins",
+        "total_seconds": 10707.148442
+      },
+      "range": {
+        "date": "2024-08-23",
+        "end": "2024-08-23T21:59:59Z",
+        "start": "2024-08-22T22:00:00Z",
+        "text": "Fri Aug 23rd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-08-24",
+        "end": "2024-08-24T21:59:59Z",
+        "start": "2024-08-23T22:00:00Z",
+        "text": "Sat Aug 24th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-08-25",
+        "end": "2024-08-25T21:59:59Z",
+        "start": "2024-08-24T22:00:00Z",
+        "text": "Sun Aug 25th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.50",
+        "digital": "2:30",
+        "hours": 2,
+        "minutes": 30,
+        "text": "2 hrs 30 mins",
+        "total_seconds": 9053.615292
+      },
+      "range": {
+        "date": "2024-08-26",
+        "end": "2024-08-26T21:59:59Z",
+        "start": "2024-08-25T22:00:00Z",
+        "text": "Mon Aug 26th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.58",
+        "digital": "1:35",
+        "hours": 1,
+        "minutes": 35,
+        "text": "1 hr 35 mins",
+        "total_seconds": 5721.427728
+      },
+      "range": {
+        "date": "2024-08-27",
+        "end": "2024-08-27T21:59:59Z",
+        "start": "2024-08-26T22:00:00Z",
+        "text": "Tue Aug 27th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.00",
+        "digital": "2:00",
+        "hours": 2,
+        "minutes": 0,
+        "text": "2 hrs",
+        "total_seconds": 7219.946952
+      },
+      "range": {
+        "date": "2024-08-28",
+        "end": "2024-08-28T21:59:59Z",
+        "start": "2024-08-27T22:00:00Z",
+        "text": "Wed Aug 28th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.12",
+        "digital": "4:07",
+        "hours": 4,
+        "minutes": 7,
+        "text": "4 hrs 7 mins",
+        "total_seconds": 14824.290245
+      },
+      "range": {
+        "date": "2024-08-29",
+        "end": "2024-08-29T21:59:59Z",
+        "start": "2024-08-28T22:00:00Z",
+        "text": "Thu Aug 29th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.20",
+        "digital": "3:12",
+        "hours": 3,
+        "minutes": 12,
+        "text": "3 hrs 12 mins",
+        "total_seconds": 11533.131746
+      },
+      "range": {
+        "date": "2024-08-30",
+        "end": "2024-08-30T21:59:59Z",
+        "start": "2024-08-29T22:00:00Z",
+        "text": "Fri Aug 30th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-08-31",
+        "end": "2024-08-31T21:59:59Z",
+        "start": "2024-08-30T22:00:00Z",
+        "text": "Sat Aug 31st 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-09-01",
+        "end": "2024-09-01T21:59:59Z",
+        "start": "2024-08-31T22:00:00Z",
+        "text": "Sun Sep 1st 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.00",
+        "digital": "3:00",
+        "hours": 3,
+        "minutes": 0,
+        "text": "3 hrs",
+        "total_seconds": 10817.34192
+      },
+      "range": {
+        "date": "2024-09-02",
+        "end": "2024-09-02T21:59:59Z",
+        "start": "2024-09-01T22:00:00Z",
+        "text": "Mon Sep 2nd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.60",
+        "digital": "2:36",
+        "hours": 2,
+        "minutes": 36,
+        "text": "2 hrs 36 mins",
+        "total_seconds": 9395.7761
+      },
+      "range": {
+        "date": "2024-09-03",
+        "end": "2024-09-03T21:59:59Z",
+        "start": "2024-09-02T22:00:00Z",
+        "text": "Tue Sep 3rd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.05",
+        "digital": "1:03",
+        "hours": 1,
+        "minutes": 3,
+        "text": "1 hr 3 mins",
+        "total_seconds": 3837.390327
+      },
+      "range": {
+        "date": "2024-09-04",
+        "end": "2024-09-04T21:59:59Z",
+        "start": "2024-09-03T22:00:00Z",
+        "text": "Wed Sep 4th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.32",
+        "digital": "1:19",
+        "hours": 1,
+        "minutes": 19,
+        "text": "1 hr 19 mins",
+        "total_seconds": 4752.852378
+      },
+      "range": {
+        "date": "2024-09-05",
+        "end": "2024-09-05T21:59:59Z",
+        "start": "2024-09-04T22:00:00Z",
+        "text": "Thu Sep 5th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.23",
+        "digital": "1:14",
+        "hours": 1,
+        "minutes": 14,
+        "text": "1 hr 14 mins",
+        "total_seconds": 4449.889029
+      },
+      "range": {
+        "date": "2024-09-06",
+        "end": "2024-09-06T21:59:59Z",
+        "start": "2024-09-05T22:00:00Z",
+        "text": "Fri Sep 6th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-09-07",
+        "end": "2024-09-07T21:59:59Z",
+        "start": "2024-09-06T22:00:00Z",
+        "text": "Sat Sep 7th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-09-08",
+        "end": "2024-09-08T21:59:59Z",
+        "start": "2024-09-07T22:00:00Z",
+        "text": "Sun Sep 8th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.65",
+        "digital": "1:39",
+        "hours": 1,
+        "minutes": 39,
+        "text": "1 hr 39 mins",
+        "total_seconds": 5982.345082
+      },
+      "range": {
+        "date": "2024-09-09",
+        "end": "2024-09-09T21:59:59Z",
+        "start": "2024-09-08T22:00:00Z",
+        "text": "Mon Sep 9th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.38",
+        "digital": "3:23",
+        "hours": 3,
+        "minutes": 23,
+        "text": "3 hrs 23 mins",
+        "total_seconds": 12196.325984
+      },
+      "range": {
+        "date": "2024-09-10",
+        "end": "2024-09-10T21:59:59Z",
+        "start": "2024-09-09T22:00:00Z",
+        "text": "Tue Sep 10th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.63",
+        "digital": "2:38",
+        "hours": 2,
+        "minutes": 38,
+        "text": "2 hrs 38 mins",
+        "total_seconds": 9519.022497
+      },
+      "range": {
+        "date": "2024-09-11",
+        "end": "2024-09-11T21:59:59Z",
+        "start": "2024-09-10T22:00:00Z",
+        "text": "Wed Sep 11th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.85",
+        "digital": "3:51",
+        "hours": 3,
+        "minutes": 51,
+        "text": "3 hrs 51 mins",
+        "total_seconds": 13910.637888
+      },
+      "range": {
+        "date": "2024-09-12",
+        "end": "2024-09-12T21:59:59Z",
+        "start": "2024-09-11T22:00:00Z",
+        "text": "Thu Sep 12th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.30",
+        "digital": "2:18",
+        "hours": 2,
+        "minutes": 18,
+        "text": "2 hrs 18 mins",
+        "total_seconds": 8316.818651
+      },
+      "range": {
+        "date": "2024-09-13",
+        "end": "2024-09-13T21:59:59Z",
+        "start": "2024-09-12T22:00:00Z",
+        "text": "Fri Sep 13th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-09-14",
+        "end": "2024-09-14T21:59:59Z",
+        "start": "2024-09-13T22:00:00Z",
+        "text": "Sat Sep 14th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-09-15",
+        "end": "2024-09-15T21:59:59Z",
+        "start": "2024-09-14T22:00:00Z",
+        "text": "Sun Sep 15th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.72",
+        "digital": "2:43",
+        "hours": 2,
+        "minutes": 43,
+        "text": "2 hrs 43 mins",
+        "total_seconds": 9807.237311
+      },
+      "range": {
+        "date": "2024-09-16",
+        "end": "2024-09-16T21:59:59Z",
+        "start": "2024-09-15T22:00:00Z",
+        "text": "Mon Sep 16th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.17",
+        "digital": "3:10",
+        "hours": 3,
+        "minutes": 10,
+        "text": "3 hrs 10 mins",
+        "total_seconds": 11447.045149
+      },
+      "range": {
+        "date": "2024-09-17",
+        "end": "2024-09-17T21:59:59Z",
+        "start": "2024-09-16T22:00:00Z",
+        "text": "Tue Sep 17th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.78",
+        "digital": "1:47",
+        "hours": 1,
+        "minutes": 47,
+        "text": "1 hr 47 mins",
+        "total_seconds": 6453.143679
+      },
+      "range": {
+        "date": "2024-09-18",
+        "end": "2024-09-18T21:59:59Z",
+        "start": "2024-09-17T22:00:00Z",
+        "text": "Wed Sep 18th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.05",
+        "digital": "3:03",
+        "hours": 3,
+        "minutes": 3,
+        "text": "3 hrs 3 mins",
+        "total_seconds": 11030.690176
+      },
+      "range": {
+        "date": "2024-09-19",
+        "end": "2024-09-19T21:59:59Z",
+        "start": "2024-09-18T22:00:00Z",
+        "text": "Thu Sep 19th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.57",
+        "digital": "3:34",
+        "hours": 3,
+        "minutes": 34,
+        "text": "3 hrs 34 mins",
+        "total_seconds": 12880.914865
+      },
+      "range": {
+        "date": "2024-09-20",
+        "end": "2024-09-20T21:59:59Z",
+        "start": "2024-09-19T22:00:00Z",
+        "text": "Fri Sep 20th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-09-21",
+        "end": "2024-09-21T21:59:59Z",
+        "start": "2024-09-20T22:00:00Z",
+        "text": "Sat Sep 21st 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-09-22",
+        "end": "2024-09-22T21:59:59Z",
+        "start": "2024-09-21T22:00:00Z",
+        "text": "Sun Sep 22nd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "5.65",
+        "digital": "5:39",
+        "hours": 5,
+        "minutes": 39,
+        "text": "5 hrs 39 mins",
+        "total_seconds": 20350.373065
+      },
+      "range": {
+        "date": "2024-09-23",
+        "end": "2024-09-23T21:59:59Z",
+        "start": "2024-09-22T22:00:00Z",
+        "text": "Mon Sep 23rd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.03",
+        "digital": "3:02",
+        "hours": 3,
+        "minutes": 2,
+        "text": "3 hrs 2 mins",
+        "total_seconds": 10961.215745
+      },
+      "range": {
+        "date": "2024-09-24",
+        "end": "2024-09-24T21:59:59Z",
+        "start": "2024-09-23T22:00:00Z",
+        "text": "Tue Sep 24th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.63",
+        "digital": "4:38",
+        "hours": 4,
+        "minutes": 38,
+        "text": "4 hrs 38 mins",
+        "total_seconds": 16714.842728
+      },
+      "range": {
+        "date": "2024-09-25",
+        "end": "2024-09-25T21:59:59Z",
+        "start": "2024-09-24T22:00:00Z",
+        "text": "Wed Sep 25th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.13",
+        "digital": "1:08",
+        "hours": 1,
+        "minutes": 8,
+        "text": "1 hr 8 mins",
+        "total_seconds": 4086.833881
+      },
+      "range": {
+        "date": "2024-09-26",
+        "end": "2024-09-26T21:59:59Z",
+        "start": "2024-09-25T22:00:00Z",
+        "text": "Thu Sep 26th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.35",
+        "digital": "2:21",
+        "hours": 2,
+        "minutes": 21,
+        "text": "2 hrs 21 mins",
+        "total_seconds": 8518.788978
+      },
+      "range": {
+        "date": "2024-09-27",
+        "end": "2024-09-27T21:59:59Z",
+        "start": "2024-09-26T22:00:00Z",
+        "text": "Fri Sep 27th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-09-28",
+        "end": "2024-09-28T21:59:59Z",
+        "start": "2024-09-27T22:00:00Z",
+        "text": "Sat Sep 28th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-09-29",
+        "end": "2024-09-29T21:59:59Z",
+        "start": "2024-09-28T22:00:00Z",
+        "text": "Sun Sep 29th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-09-30",
+        "end": "2024-09-30T21:59:59Z",
+        "start": "2024-09-29T22:00:00Z",
+        "text": "Mon Sep 30th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-10-01",
+        "end": "2024-10-01T21:59:59Z",
+        "start": "2024-09-30T22:00:00Z",
+        "text": "Tue Oct 1st 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-10-02",
+        "end": "2024-10-02T21:59:59Z",
+        "start": "2024-10-01T22:00:00Z",
+        "text": "Wed Oct 2nd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-10-03",
+        "end": "2024-10-03T21:59:59Z",
+        "start": "2024-10-02T22:00:00Z",
+        "text": "Thu Oct 3rd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-10-04",
+        "end": "2024-10-04T21:59:59Z",
+        "start": "2024-10-03T22:00:00Z",
+        "text": "Fri Oct 4th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-10-05",
+        "end": "2024-10-05T21:59:59Z",
+        "start": "2024-10-04T22:00:00Z",
+        "text": "Sat Oct 5th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-10-06",
+        "end": "2024-10-06T21:59:59Z",
+        "start": "2024-10-05T22:00:00Z",
+        "text": "Sun Oct 6th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-10-07",
+        "end": "2024-10-07T21:59:59Z",
+        "start": "2024-10-06T22:00:00Z",
+        "text": "Mon Oct 7th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.77",
+        "digital": "1:46",
+        "hours": 1,
+        "minutes": 46,
+        "text": "1 hr 46 mins",
+        "total_seconds": 6382.239224
+      },
+      "range": {
+        "date": "2024-10-08",
+        "end": "2024-10-08T21:59:59Z",
+        "start": "2024-10-07T22:00:00Z",
+        "text": "Tue Oct 8th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.75",
+        "digital": "2:45",
+        "hours": 2,
+        "minutes": 45,
+        "text": "2 hrs 45 mins",
+        "total_seconds": 9956.533468
+      },
+      "range": {
+        "date": "2024-10-09",
+        "end": "2024-10-09T21:59:59Z",
+        "start": "2024-10-08T22:00:00Z",
+        "text": "Wed Oct 9th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.02",
+        "digital": "2:01",
+        "hours": 2,
+        "minutes": 1,
+        "text": "2 hrs 1 min",
+        "total_seconds": 7268.251255
+      },
+      "range": {
+        "date": "2024-10-10",
+        "end": "2024-10-10T21:59:59Z",
+        "start": "2024-10-09T22:00:00Z",
+        "text": "Thu Oct 10th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.02",
+        "digital": "4:01",
+        "hours": 4,
+        "minutes": 1,
+        "text": "4 hrs 1 min",
+        "total_seconds": 14495.759081
+      },
+      "range": {
+        "date": "2024-10-11",
+        "end": "2024-10-11T21:59:59Z",
+        "start": "2024-10-10T22:00:00Z",
+        "text": "Fri Oct 11th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-10-12",
+        "end": "2024-10-12T21:59:59Z",
+        "start": "2024-10-11T22:00:00Z",
+        "text": "Sat Oct 12th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.10",
+        "digital": "3:06",
+        "hours": 3,
+        "minutes": 6,
+        "text": "3 hrs 6 mins",
+        "total_seconds": 11161.745307
+      },
+      "range": {
+        "date": "2024-10-13",
+        "end": "2024-10-13T21:59:59Z",
+        "start": "2024-10-12T22:00:00Z",
+        "text": "Sun Oct 13th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.43",
+        "digital": "2:26",
+        "hours": 2,
+        "minutes": 26,
+        "text": "2 hrs 26 mins",
+        "total_seconds": 8765.575573
+      },
+      "range": {
+        "date": "2024-10-14",
+        "end": "2024-10-14T21:59:59Z",
+        "start": "2024-10-13T22:00:00Z",
+        "text": "Mon Oct 14th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.25",
+        "digital": "1:15",
+        "hours": 1,
+        "minutes": 15,
+        "text": "1 hr 15 mins",
+        "total_seconds": 4548.769111
+      },
+      "range": {
+        "date": "2024-10-15",
+        "end": "2024-10-15T21:59:59Z",
+        "start": "2024-10-14T22:00:00Z",
+        "text": "Tue Oct 15th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.78",
+        "digital": "3:47",
+        "hours": 3,
+        "minutes": 47,
+        "text": "3 hrs 47 mins",
+        "total_seconds": 13642.269605
+      },
+      "range": {
+        "date": "2024-10-16",
+        "end": "2024-10-16T21:59:59Z",
+        "start": "2024-10-15T22:00:00Z",
+        "text": "Wed Oct 16th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.77",
+        "digital": "2:46",
+        "hours": 2,
+        "minutes": 46,
+        "text": "2 hrs 46 mins",
+        "total_seconds": 10016.445942
+      },
+      "range": {
+        "date": "2024-10-17",
+        "end": "2024-10-17T21:59:59Z",
+        "start": "2024-10-16T22:00:00Z",
+        "text": "Thu Oct 17th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.52",
+        "digital": "1:31",
+        "hours": 1,
+        "minutes": 31,
+        "text": "1 hr 31 mins",
+        "total_seconds": 5470.628997
+      },
+      "range": {
+        "date": "2024-10-18",
+        "end": "2024-10-18T21:59:59Z",
+        "start": "2024-10-17T22:00:00Z",
+        "text": "Fri Oct 18th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-10-19",
+        "end": "2024-10-19T21:59:59Z",
+        "start": "2024-10-18T22:00:00Z",
+        "text": "Sat Oct 19th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-10-20",
+        "end": "2024-10-20T21:59:59Z",
+        "start": "2024-10-19T22:00:00Z",
+        "text": "Sun Oct 20th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.77",
+        "digital": "2:46",
+        "hours": 2,
+        "minutes": 46,
+        "text": "2 hrs 46 mins",
+        "total_seconds": 9984.903105
+      },
+      "range": {
+        "date": "2024-10-21",
+        "end": "2024-10-21T21:59:59Z",
+        "start": "2024-10-20T22:00:00Z",
+        "text": "Mon Oct 21st 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.70",
+        "digital": "3:42",
+        "hours": 3,
+        "minutes": 42,
+        "text": "3 hrs 42 mins",
+        "total_seconds": 13327.91699
+      },
+      "range": {
+        "date": "2024-10-22",
+        "end": "2024-10-22T21:59:59Z",
+        "start": "2024-10-21T22:00:00Z",
+        "text": "Tue Oct 22nd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.32",
+        "digital": "3:19",
+        "hours": 3,
+        "minutes": 19,
+        "text": "3 hrs 19 mins",
+        "total_seconds": 11977.319849
+      },
+      "range": {
+        "date": "2024-10-23",
+        "end": "2024-10-23T21:59:59Z",
+        "start": "2024-10-22T22:00:00Z",
+        "text": "Wed Oct 23rd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.17",
+        "digital": "3:10",
+        "hours": 3,
+        "minutes": 10,
+        "text": "3 hrs 10 mins",
+        "total_seconds": 11415.441282
+      },
+      "range": {
+        "date": "2024-10-24",
+        "end": "2024-10-24T21:59:59Z",
+        "start": "2024-10-23T22:00:00Z",
+        "text": "Thu Oct 24th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.22",
+        "digital": "3:13",
+        "hours": 3,
+        "minutes": 13,
+        "text": "3 hrs 13 mins",
+        "total_seconds": 11639.584806
+      },
+      "range": {
+        "date": "2024-10-25",
+        "end": "2024-10-25T21:59:59Z",
+        "start": "2024-10-24T22:00:00Z",
+        "text": "Fri Oct 25th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-10-26",
+        "end": "2024-10-26T21:59:59Z",
+        "start": "2024-10-25T22:00:00Z",
+        "text": "Sat Oct 26th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-10-27",
+        "end": "2024-10-27T22:59:59Z",
+        "start": "2024-10-26T22:00:00Z",
+        "text": "Sun Oct 27th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.25",
+        "digital": "3:15",
+        "hours": 3,
+        "minutes": 15,
+        "text": "3 hrs 15 mins",
+        "total_seconds": 11721.343724
+      },
+      "range": {
+        "date": "2024-10-28",
+        "end": "2024-10-28T22:59:59Z",
+        "start": "2024-10-27T23:00:00Z",
+        "text": "Mon Oct 28th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.23",
+        "digital": "1:14",
+        "hours": 1,
+        "minutes": 14,
+        "text": "1 hr 14 mins",
+        "total_seconds": 4496.891989
+      },
+      "range": {
+        "date": "2024-10-29",
+        "end": "2024-10-29T22:59:59Z",
+        "start": "2024-10-28T23:00:00Z",
+        "text": "Tue Oct 29th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.73",
+        "digital": "3:44",
+        "hours": 3,
+        "minutes": 44,
+        "text": "3 hrs 44 mins",
+        "total_seconds": 13459.840168
+      },
+      "range": {
+        "date": "2024-10-30",
+        "end": "2024-10-30T22:59:59Z",
+        "start": "2024-10-29T23:00:00Z",
+        "text": "Wed Oct 30th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-10-31",
+        "end": "2024-10-31T22:59:59Z",
+        "start": "2024-10-30T23:00:00Z",
+        "text": "Thu Oct 31st 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-11-01",
+        "end": "2024-11-01T22:59:59Z",
+        "start": "2024-10-31T23:00:00Z",
+        "text": "Fri Nov 1st 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-11-02",
+        "end": "2024-11-02T22:59:59Z",
+        "start": "2024-11-01T23:00:00Z",
+        "text": "Sat Nov 2nd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-11-03",
+        "end": "2024-11-03T22:59:59Z",
+        "start": "2024-11-02T23:00:00Z",
+        "text": "Sun Nov 3rd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.58",
+        "digital": "4:35",
+        "hours": 4,
+        "minutes": 35,
+        "text": "4 hrs 35 mins",
+        "total_seconds": 16536.199216
+      },
+      "range": {
+        "date": "2024-11-04",
+        "end": "2024-11-04T22:59:59Z",
+        "start": "2024-11-03T23:00:00Z",
+        "text": "Mon Nov 4th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.77",
+        "digital": "2:46",
+        "hours": 2,
+        "minutes": 46,
+        "text": "2 hrs 46 mins",
+        "total_seconds": 9977.771567
+      },
+      "range": {
+        "date": "2024-11-05",
+        "end": "2024-11-05T22:59:59Z",
+        "start": "2024-11-04T23:00:00Z",
+        "text": "Tue Nov 5th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.88",
+        "digital": "2:53",
+        "hours": 2,
+        "minutes": 53,
+        "text": "2 hrs 53 mins",
+        "total_seconds": 10398.589482
+      },
+      "range": {
+        "date": "2024-11-06",
+        "end": "2024-11-06T22:59:59Z",
+        "start": "2024-11-05T23:00:00Z",
+        "text": "Wed Nov 6th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.08",
+        "digital": "2:05",
+        "hours": 2,
+        "minutes": 5,
+        "text": "2 hrs 5 mins",
+        "total_seconds": 7545.000588
+      },
+      "range": {
+        "date": "2024-11-07",
+        "end": "2024-11-07T22:59:59Z",
+        "start": "2024-11-06T23:00:00Z",
+        "text": "Thu Nov 7th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.25",
+        "digital": "1:15",
+        "hours": 1,
+        "minutes": 15,
+        "text": "1 hr 15 mins",
+        "total_seconds": 4510.583421
+      },
+      "range": {
+        "date": "2024-11-08",
+        "end": "2024-11-08T22:59:59Z",
+        "start": "2024-11-07T23:00:00Z",
+        "text": "Fri Nov 8th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-11-09",
+        "end": "2024-11-09T22:59:59Z",
+        "start": "2024-11-08T23:00:00Z",
+        "text": "Sat Nov 9th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-11-10",
+        "end": "2024-11-10T22:59:59Z",
+        "start": "2024-11-09T23:00:00Z",
+        "text": "Sun Nov 10th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.62",
+        "digital": "3:37",
+        "hours": 3,
+        "minutes": 37,
+        "text": "3 hrs 37 mins",
+        "total_seconds": 13039.044304
+      },
+      "range": {
+        "date": "2024-11-11",
+        "end": "2024-11-11T22:59:59Z",
+        "start": "2024-11-10T23:00:00Z",
+        "text": "Mon Nov 11th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.47",
+        "digital": "3:28",
+        "hours": 3,
+        "minutes": 28,
+        "text": "3 hrs 28 mins",
+        "total_seconds": 12531.288439
+      },
+      "range": {
+        "date": "2024-11-12",
+        "end": "2024-11-12T22:59:59Z",
+        "start": "2024-11-11T23:00:00Z",
+        "text": "Tue Nov 12th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.58",
+        "digital": "0:35",
+        "hours": 0,
+        "minutes": 35,
+        "text": "35 mins",
+        "total_seconds": 2103.145801
+      },
+      "range": {
+        "date": "2024-11-13",
+        "end": "2024-11-13T22:59:59Z",
+        "start": "2024-11-12T23:00:00Z",
+        "text": "Wed Nov 13th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.90",
+        "digital": "3:54",
+        "hours": 3,
+        "minutes": 54,
+        "text": "3 hrs 54 mins",
+        "total_seconds": 14076.528569
+      },
+      "range": {
+        "date": "2024-11-14",
+        "end": "2024-11-14T22:59:59Z",
+        "start": "2024-11-13T23:00:00Z",
+        "text": "Thu Nov 14th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.72",
+        "digital": "3:43",
+        "hours": 3,
+        "minutes": 43,
+        "text": "3 hrs 43 mins",
+        "total_seconds": 13388.879456
+      },
+      "range": {
+        "date": "2024-11-15",
+        "end": "2024-11-15T22:59:59Z",
+        "start": "2024-11-14T23:00:00Z",
+        "text": "Fri Nov 15th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-11-16",
+        "end": "2024-11-16T22:59:59Z",
+        "start": "2024-11-15T23:00:00Z",
+        "text": "Sat Nov 16th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-11-17",
+        "end": "2024-11-17T22:59:59Z",
+        "start": "2024-11-16T23:00:00Z",
+        "text": "Sun Nov 17th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.25",
+        "digital": "3:15",
+        "hours": 3,
+        "minutes": 15,
+        "text": "3 hrs 15 mins",
+        "total_seconds": 11754.743907
+      },
+      "range": {
+        "date": "2024-11-18",
+        "end": "2024-11-18T22:59:59Z",
+        "start": "2024-11-17T23:00:00Z",
+        "text": "Mon Nov 18th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.98",
+        "digital": "2:59",
+        "hours": 2,
+        "minutes": 59,
+        "text": "2 hrs 59 mins",
+        "total_seconds": 10756.748004
+      },
+      "range": {
+        "date": "2024-11-19",
+        "end": "2024-11-19T22:59:59Z",
+        "start": "2024-11-18T23:00:00Z",
+        "text": "Tue Nov 19th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.48",
+        "digital": "4:29",
+        "hours": 4,
+        "minutes": 29,
+        "text": "4 hrs 29 mins",
+        "total_seconds": 16171.355494
+      },
+      "range": {
+        "date": "2024-11-20",
+        "end": "2024-11-20T22:59:59Z",
+        "start": "2024-11-19T23:00:00Z",
+        "text": "Wed Nov 20th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.23",
+        "digital": "3:14",
+        "hours": 3,
+        "minutes": 14,
+        "text": "3 hrs 14 mins",
+        "total_seconds": 11683.177806
+      },
+      "range": {
+        "date": "2024-11-21",
+        "end": "2024-11-21T22:59:59Z",
+        "start": "2024-11-20T23:00:00Z",
+        "text": "Thu Nov 21st 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.97",
+        "digital": "2:58",
+        "hours": 2,
+        "minutes": 58,
+        "text": "2 hrs 58 mins",
+        "total_seconds": 10723.266021
+      },
+      "range": {
+        "date": "2024-11-22",
+        "end": "2024-11-22T22:59:59Z",
+        "start": "2024-11-21T23:00:00Z",
+        "text": "Fri Nov 22nd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-11-23",
+        "end": "2024-11-23T22:59:59Z",
+        "start": "2024-11-22T23:00:00Z",
+        "text": "Sat Nov 23rd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-11-24",
+        "end": "2024-11-24T22:59:59Z",
+        "start": "2024-11-23T23:00:00Z",
+        "text": "Sun Nov 24th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.20",
+        "digital": "1:12",
+        "hours": 1,
+        "minutes": 12,
+        "text": "1 hr 12 mins",
+        "total_seconds": 4379.136223
+      },
+      "range": {
+        "date": "2024-11-25",
+        "end": "2024-11-25T22:59:59Z",
+        "start": "2024-11-24T23:00:00Z",
+        "text": "Mon Nov 25th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.75",
+        "digital": "2:45",
+        "hours": 2,
+        "minutes": 45,
+        "text": "2 hrs 45 mins",
+        "total_seconds": 9953.533916
+      },
+      "range": {
+        "date": "2024-11-26",
+        "end": "2024-11-26T22:59:59Z",
+        "start": "2024-11-25T23:00:00Z",
+        "text": "Tue Nov 26th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.83",
+        "digital": "2:50",
+        "hours": 2,
+        "minutes": 50,
+        "text": "2 hrs 50 mins",
+        "total_seconds": 10251.332785
+      },
+      "range": {
+        "date": "2024-11-27",
+        "end": "2024-11-27T22:59:59Z",
+        "start": "2024-11-26T23:00:00Z",
+        "text": "Wed Nov 27th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.93",
+        "digital": "3:56",
+        "hours": 3,
+        "minutes": 56,
+        "text": "3 hrs 56 mins",
+        "total_seconds": 14198.850971
+      },
+      "range": {
+        "date": "2024-11-28",
+        "end": "2024-11-28T22:59:59Z",
+        "start": "2024-11-27T23:00:00Z",
+        "text": "Thu Nov 28th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.57",
+        "digital": "1:34",
+        "hours": 1,
+        "minutes": 34,
+        "text": "1 hr 34 mins",
+        "total_seconds": 5672.941173
+      },
+      "range": {
+        "date": "2024-11-29",
+        "end": "2024-11-29T22:59:59Z",
+        "start": "2024-11-28T23:00:00Z",
+        "text": "Fri Nov 29th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-11-30",
+        "end": "2024-11-30T22:59:59Z",
+        "start": "2024-11-29T23:00:00Z",
+        "text": "Sat Nov 30th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-12-01",
+        "end": "2024-12-01T22:59:59Z",
+        "start": "2024-11-30T23:00:00Z",
+        "text": "Sun Dec 1st 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.75",
+        "digital": "1:45",
+        "hours": 1,
+        "minutes": 45,
+        "text": "1 hr 45 mins",
+        "total_seconds": 6306.760558
+      },
+      "range": {
+        "date": "2024-12-02",
+        "end": "2024-12-02T22:59:59Z",
+        "start": "2024-12-01T23:00:00Z",
+        "text": "Mon Dec 2nd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.65",
+        "digital": "1:39",
+        "hours": 1,
+        "minutes": 39,
+        "text": "1 hr 39 mins",
+        "total_seconds": 5975.900302
+      },
+      "range": {
+        "date": "2024-12-03",
+        "end": "2024-12-03T22:59:59Z",
+        "start": "2024-12-02T23:00:00Z",
+        "text": "Tue Dec 3rd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.13",
+        "digital": "2:08",
+        "hours": 2,
+        "minutes": 8,
+        "text": "2 hrs 8 mins",
+        "total_seconds": 7681.720781
+      },
+      "range": {
+        "date": "2024-12-04",
+        "end": "2024-12-04T22:59:59Z",
+        "start": "2024-12-03T23:00:00Z",
+        "text": "Wed Dec 4th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.47",
+        "digital": "4:28",
+        "hours": 4,
+        "minutes": 28,
+        "text": "4 hrs 28 mins",
+        "total_seconds": 16119.50249
+      },
+      "range": {
+        "date": "2024-12-05",
+        "end": "2024-12-05T22:59:59Z",
+        "start": "2024-12-04T23:00:00Z",
+        "text": "Thu Dec 5th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.92",
+        "digital": "2:55",
+        "hours": 2,
+        "minutes": 55,
+        "text": "2 hrs 55 mins",
+        "total_seconds": 10551.79272
+      },
+      "range": {
+        "date": "2024-12-06",
+        "end": "2024-12-06T22:59:59Z",
+        "start": "2024-12-05T23:00:00Z",
+        "text": "Fri Dec 6th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-12-07",
+        "end": "2024-12-07T22:59:59Z",
+        "start": "2024-12-06T23:00:00Z",
+        "text": "Sat Dec 7th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.97",
+        "digital": "0:58",
+        "hours": 0,
+        "minutes": 58,
+        "text": "58 mins",
+        "total_seconds": 3518.652423
+      },
+      "range": {
+        "date": "2024-12-08",
+        "end": "2024-12-08T22:59:59Z",
+        "start": "2024-12-07T23:00:00Z",
+        "text": "Sun Dec 8th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.67",
+        "digital": "4:40",
+        "hours": 4,
+        "minutes": 40,
+        "text": "4 hrs 40 mins",
+        "total_seconds": 16818.152629
+      },
+      "range": {
+        "date": "2024-12-09",
+        "end": "2024-12-09T22:59:59Z",
+        "start": "2024-12-08T23:00:00Z",
+        "text": "Mon Dec 9th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.42",
+        "digital": "2:25",
+        "hours": 2,
+        "minutes": 25,
+        "text": "2 hrs 25 mins",
+        "total_seconds": 8703.683248
+      },
+      "range": {
+        "date": "2024-12-10",
+        "end": "2024-12-10T22:59:59Z",
+        "start": "2024-12-09T23:00:00Z",
+        "text": "Tue Dec 10th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.75",
+        "digital": "2:45",
+        "hours": 2,
+        "minutes": 45,
+        "text": "2 hrs 45 mins",
+        "total_seconds": 9916.984275
+      },
+      "range": {
+        "date": "2024-12-11",
+        "end": "2024-12-11T22:59:59Z",
+        "start": "2024-12-10T23:00:00Z",
+        "text": "Wed Dec 11th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.03",
+        "digital": "4:02",
+        "hours": 4,
+        "minutes": 2,
+        "text": "4 hrs 2 mins",
+        "total_seconds": 14578.60827
+      },
+      "range": {
+        "date": "2024-12-12",
+        "end": "2024-12-12T22:59:59Z",
+        "start": "2024-12-11T23:00:00Z",
+        "text": "Thu Dec 12th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.18",
+        "digital": "2:11",
+        "hours": 2,
+        "minutes": 11,
+        "text": "2 hrs 11 mins",
+        "total_seconds": 7900.726431
+      },
+      "range": {
+        "date": "2024-12-13",
+        "end": "2024-12-13T22:59:59Z",
+        "start": "2024-12-12T23:00:00Z",
+        "text": "Fri Dec 13th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-12-14",
+        "end": "2024-12-14T22:59:59Z",
+        "start": "2024-12-13T23:00:00Z",
+        "text": "Sat Dec 14th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-12-15",
+        "end": "2024-12-15T22:59:59Z",
+        "start": "2024-12-14T23:00:00Z",
+        "text": "Sun Dec 15th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.47",
+        "digital": "2:28",
+        "hours": 2,
+        "minutes": 28,
+        "text": "2 hrs 28 mins",
+        "total_seconds": 8886.954696
+      },
+      "range": {
+        "date": "2024-12-16",
+        "end": "2024-12-16T22:59:59Z",
+        "start": "2024-12-15T23:00:00Z",
+        "text": "Mon Dec 16th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.47",
+        "digital": "2:28",
+        "hours": 2,
+        "minutes": 28,
+        "text": "2 hrs 28 mins",
+        "total_seconds": 8919.847138
+      },
+      "range": {
+        "date": "2024-12-17",
+        "end": "2024-12-17T22:59:59Z",
+        "start": "2024-12-16T23:00:00Z",
+        "text": "Tue Dec 17th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-12-18",
+        "end": "2024-12-18T22:59:59Z",
+        "start": "2024-12-17T23:00:00Z",
+        "text": "Wed Dec 18th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-12-19",
+        "end": "2024-12-19T22:59:59Z",
+        "start": "2024-12-18T23:00:00Z",
+        "text": "Thu Dec 19th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-12-20",
+        "end": "2024-12-20T22:59:59Z",
+        "start": "2024-12-19T23:00:00Z",
+        "text": "Fri Dec 20th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.17",
+        "digital": "4:10",
+        "hours": 4,
+        "minutes": 10,
+        "text": "4 hrs 10 mins",
+        "total_seconds": 15005.326356
+      },
+      "range": {
+        "date": "2024-12-21",
+        "end": "2024-12-21T22:59:59Z",
+        "start": "2024-12-20T23:00:00Z",
+        "text": "Sat Dec 21st 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-12-22",
+        "end": "2024-12-22T22:59:59Z",
+        "start": "2024-12-21T23:00:00Z",
+        "text": "Sun Dec 22nd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-12-23",
+        "end": "2024-12-23T22:59:59Z",
+        "start": "2024-12-22T23:00:00Z",
+        "text": "Mon Dec 23rd 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.07",
+        "digital": "1:04",
+        "hours": 1,
+        "minutes": 4,
+        "text": "1 hr 4 mins",
+        "total_seconds": 3858.629891
+      },
+      "range": {
+        "date": "2024-12-24",
+        "end": "2024-12-24T22:59:59Z",
+        "start": "2024-12-23T23:00:00Z",
+        "text": "Tue Dec 24th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-12-25",
+        "end": "2024-12-25T22:59:59Z",
+        "start": "2024-12-24T23:00:00Z",
+        "text": "Wed Dec 25th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-12-26",
+        "end": "2024-12-26T22:59:59Z",
+        "start": "2024-12-25T23:00:00Z",
+        "text": "Thu Dec 26th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-12-27",
+        "end": "2024-12-27T22:59:59Z",
+        "start": "2024-12-26T23:00:00Z",
+        "text": "Fri Dec 27th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-12-28",
+        "end": "2024-12-28T22:59:59Z",
+        "start": "2024-12-27T23:00:00Z",
+        "text": "Sat Dec 28th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-12-29",
+        "end": "2024-12-29T22:59:59Z",
+        "start": "2024-12-28T23:00:00Z",
+        "text": "Sun Dec 29th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2024-12-30",
+        "end": "2024-12-30T22:59:59Z",
+        "start": "2024-12-29T23:00:00Z",
+        "text": "Mon Dec 30th 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.97",
+        "digital": "0:58",
+        "hours": 0,
+        "minutes": 58,
+        "text": "58 mins",
+        "total_seconds": 3491.935111
+      },
+      "range": {
+        "date": "2024-12-31",
+        "end": "2024-12-31T22:59:59Z",
+        "start": "2024-12-30T23:00:00Z",
+        "text": "Tue Dec 31st 2024",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-01-01",
+        "end": "2025-01-01T22:59:59Z",
+        "start": "2024-12-31T23:00:00Z",
+        "text": "Wed Jan 1st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-01-02",
+        "end": "2025-01-02T22:59:59Z",
+        "start": "2025-01-01T23:00:00Z",
+        "text": "Thu Jan 2nd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-01-03",
+        "end": "2025-01-03T22:59:59Z",
+        "start": "2025-01-02T23:00:00Z",
+        "text": "Fri Jan 3rd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-01-04",
+        "end": "2025-01-04T22:59:59Z",
+        "start": "2025-01-03T23:00:00Z",
+        "text": "Sat Jan 4th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-01-05",
+        "end": "2025-01-05T22:59:59Z",
+        "start": "2025-01-04T23:00:00Z",
+        "text": "Sun Jan 5th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.08",
+        "digital": "1:05",
+        "hours": 1,
+        "minutes": 5,
+        "text": "1 hr 5 mins",
+        "total_seconds": 3929.181589
+      },
+      "range": {
+        "date": "2025-01-06",
+        "end": "2025-01-06T22:59:59Z",
+        "start": "2025-01-05T23:00:00Z",
+        "text": "Mon Jan 6th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.47",
+        "digital": "3:28",
+        "hours": 3,
+        "minutes": 28,
+        "text": "3 hrs 28 mins",
+        "total_seconds": 12512.879391
+      },
+      "range": {
+        "date": "2025-01-07",
+        "end": "2025-01-07T22:59:59Z",
+        "start": "2025-01-06T23:00:00Z",
+        "text": "Tue Jan 7th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.47",
+        "digital": "3:28",
+        "hours": 3,
+        "minutes": 28,
+        "text": "3 hrs 28 mins",
+        "total_seconds": 12482.880161
+      },
+      "range": {
+        "date": "2025-01-08",
+        "end": "2025-01-08T22:59:59Z",
+        "start": "2025-01-07T23:00:00Z",
+        "text": "Wed Jan 8th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.45",
+        "digital": "2:27",
+        "hours": 2,
+        "minutes": 27,
+        "text": "2 hrs 27 mins",
+        "total_seconds": 8840.965671
+      },
+      "range": {
+        "date": "2025-01-09",
+        "end": "2025-01-09T22:59:59Z",
+        "start": "2025-01-08T23:00:00Z",
+        "text": "Thu Jan 9th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.45",
+        "digital": "0:27",
+        "hours": 0,
+        "minutes": 27,
+        "text": "27 mins",
+        "total_seconds": 1620.444202
+      },
+      "range": {
+        "date": "2025-01-10",
+        "end": "2025-01-10T22:59:59Z",
+        "start": "2025-01-09T23:00:00Z",
+        "text": "Fri Jan 10th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-01-11",
+        "end": "2025-01-11T22:59:59Z",
+        "start": "2025-01-10T23:00:00Z",
+        "text": "Sat Jan 11th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-01-12",
+        "end": "2025-01-12T22:59:59Z",
+        "start": "2025-01-11T23:00:00Z",
+        "text": "Sun Jan 12th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.10",
+        "digital": "2:06",
+        "hours": 2,
+        "minutes": 6,
+        "text": "2 hrs 6 mins",
+        "total_seconds": 7593.249954
+      },
+      "range": {
+        "date": "2025-01-13",
+        "end": "2025-01-13T22:59:59Z",
+        "start": "2025-01-12T23:00:00Z",
+        "text": "Mon Jan 13th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.38",
+        "digital": "2:23",
+        "hours": 2,
+        "minutes": 23,
+        "text": "2 hrs 23 mins",
+        "total_seconds": 8601.877156
+      },
+      "range": {
+        "date": "2025-01-14",
+        "end": "2025-01-14T22:59:59Z",
+        "start": "2025-01-13T23:00:00Z",
+        "text": "Tue Jan 14th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.18",
+        "digital": "3:11",
+        "hours": 3,
+        "minutes": 11,
+        "text": "3 hrs 11 mins",
+        "total_seconds": 11491.243458
+      },
+      "range": {
+        "date": "2025-01-15",
+        "end": "2025-01-15T22:59:59Z",
+        "start": "2025-01-14T23:00:00Z",
+        "text": "Wed Jan 15th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.23",
+        "digital": "0:14",
+        "hours": 0,
+        "minutes": 14,
+        "text": "14 mins",
+        "total_seconds": 870.834227
+      },
+      "range": {
+        "date": "2025-01-16",
+        "end": "2025-01-16T22:59:59Z",
+        "start": "2025-01-15T23:00:00Z",
+        "text": "Thu Jan 16th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.48",
+        "digital": "1:29",
+        "hours": 1,
+        "minutes": 29,
+        "text": "1 hr 29 mins",
+        "total_seconds": 5348.809111
+      },
+      "range": {
+        "date": "2025-01-17",
+        "end": "2025-01-17T22:59:59Z",
+        "start": "2025-01-16T23:00:00Z",
+        "text": "Fri Jan 17th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-01-18",
+        "end": "2025-01-18T22:59:59Z",
+        "start": "2025-01-17T23:00:00Z",
+        "text": "Sat Jan 18th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-01-19",
+        "end": "2025-01-19T22:59:59Z",
+        "start": "2025-01-18T23:00:00Z",
+        "text": "Sun Jan 19th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.17",
+        "digital": "1:10",
+        "hours": 1,
+        "minutes": 10,
+        "text": "1 hr 10 mins",
+        "total_seconds": 4243.071684
+      },
+      "range": {
+        "date": "2025-01-20",
+        "end": "2025-01-20T22:59:59Z",
+        "start": "2025-01-19T23:00:00Z",
+        "text": "Mon Jan 20th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.57",
+        "digital": "1:34",
+        "hours": 1,
+        "minutes": 34,
+        "text": "1 hr 34 mins",
+        "total_seconds": 5681.425799
+      },
+      "range": {
+        "date": "2025-01-21",
+        "end": "2025-01-21T22:59:59Z",
+        "start": "2025-01-20T23:00:00Z",
+        "text": "Tue Jan 21st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.75",
+        "digital": "1:45",
+        "hours": 1,
+        "minutes": 45,
+        "text": "1 hr 45 mins",
+        "total_seconds": 6325.293083
+      },
+      "range": {
+        "date": "2025-01-22",
+        "end": "2025-01-22T22:59:59Z",
+        "start": "2025-01-21T23:00:00Z",
+        "text": "Wed Jan 22nd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 11.031884
+      },
+      "range": {
+        "date": "2025-01-23",
+        "end": "2025-01-23T22:59:59Z",
+        "start": "2025-01-22T23:00:00Z",
+        "text": "Thu Jan 23rd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-01-24",
+        "end": "2025-01-24T22:59:59Z",
+        "start": "2025-01-23T23:00:00Z",
+        "text": "Fri Jan 24th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-01-25",
+        "end": "2025-01-25T22:59:59Z",
+        "start": "2025-01-24T23:00:00Z",
+        "text": "Sat Jan 25th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-01-26",
+        "end": "2025-01-26T22:59:59Z",
+        "start": "2025-01-25T23:00:00Z",
+        "text": "Sun Jan 26th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.38",
+        "digital": "2:23",
+        "hours": 2,
+        "minutes": 23,
+        "text": "2 hrs 23 mins",
+        "total_seconds": 8585.19973
+      },
+      "range": {
+        "date": "2025-01-27",
+        "end": "2025-01-27T22:59:59Z",
+        "start": "2025-01-26T23:00:00Z",
+        "text": "Mon Jan 27th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.32",
+        "digital": "1:19",
+        "hours": 1,
+        "minutes": 19,
+        "text": "1 hr 19 mins",
+        "total_seconds": 4783.808131
+      },
+      "range": {
+        "date": "2025-01-28",
+        "end": "2025-01-28T22:59:59Z",
+        "start": "2025-01-27T23:00:00Z",
+        "text": "Tue Jan 28th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-01-29",
+        "end": "2025-01-29T22:59:59Z",
+        "start": "2025-01-28T23:00:00Z",
+        "text": "Wed Jan 29th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-01-30",
+        "end": "2025-01-30T22:59:59Z",
+        "start": "2025-01-29T23:00:00Z",
+        "text": "Thu Jan 30th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.70",
+        "digital": "1:42",
+        "hours": 1,
+        "minutes": 42,
+        "text": "1 hr 42 mins",
+        "total_seconds": 6162.510259
+      },
+      "range": {
+        "date": "2025-01-31",
+        "end": "2025-01-31T22:59:59Z",
+        "start": "2025-01-30T23:00:00Z",
+        "text": "Fri Jan 31st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-02-01",
+        "end": "2025-02-01T22:59:59Z",
+        "start": "2025-01-31T23:00:00Z",
+        "text": "Sat Feb 1st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-02-02",
+        "end": "2025-02-02T22:59:59Z",
+        "start": "2025-02-01T23:00:00Z",
+        "text": "Sun Feb 2nd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.88",
+        "digital": "3:53",
+        "hours": 3,
+        "minutes": 53,
+        "text": "3 hrs 53 mins",
+        "total_seconds": 13999.951459
+      },
+      "range": {
+        "date": "2025-02-03",
+        "end": "2025-02-03T22:59:59Z",
+        "start": "2025-02-02T23:00:00Z",
+        "text": "Mon Feb 3rd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.85",
+        "digital": "1:51",
+        "hours": 1,
+        "minutes": 51,
+        "text": "1 hr 51 mins",
+        "total_seconds": 6686.779049
+      },
+      "range": {
+        "date": "2025-02-04",
+        "end": "2025-02-04T22:59:59Z",
+        "start": "2025-02-03T23:00:00Z",
+        "text": "Tue Feb 4th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.45",
+        "digital": "2:27",
+        "hours": 2,
+        "minutes": 27,
+        "text": "2 hrs 27 mins",
+        "total_seconds": 8877.566275
+      },
+      "range": {
+        "date": "2025-02-05",
+        "end": "2025-02-05T22:59:59Z",
+        "start": "2025-02-04T23:00:00Z",
+        "text": "Wed Feb 5th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.50",
+        "digital": "3:30",
+        "hours": 3,
+        "minutes": 30,
+        "text": "3 hrs 30 mins",
+        "total_seconds": 12610.143027
+      },
+      "range": {
+        "date": "2025-02-06",
+        "end": "2025-02-06T22:59:59Z",
+        "start": "2025-02-05T23:00:00Z",
+        "text": "Thu Feb 6th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.25",
+        "digital": "0:15",
+        "hours": 0,
+        "minutes": 15,
+        "text": "15 mins",
+        "total_seconds": 941.154923
+      },
+      "range": {
+        "date": "2025-02-07",
+        "end": "2025-02-07T22:59:59Z",
+        "start": "2025-02-06T23:00:00Z",
+        "text": "Fri Feb 7th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-02-08",
+        "end": "2025-02-08T22:59:59Z",
+        "start": "2025-02-07T23:00:00Z",
+        "text": "Sat Feb 8th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-02-09",
+        "end": "2025-02-09T22:59:59Z",
+        "start": "2025-02-08T23:00:00Z",
+        "text": "Sun Feb 9th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.72",
+        "digital": "1:43",
+        "hours": 1,
+        "minutes": 43,
+        "text": "1 hr 43 mins",
+        "total_seconds": 6204.722655
+      },
+      "range": {
+        "date": "2025-02-10",
+        "end": "2025-02-10T22:59:59Z",
+        "start": "2025-02-09T23:00:00Z",
+        "text": "Mon Feb 10th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.33",
+        "digital": "2:20",
+        "hours": 2,
+        "minutes": 20,
+        "text": "2 hrs 20 mins",
+        "total_seconds": 8411.481097
+      },
+      "range": {
+        "date": "2025-02-11",
+        "end": "2025-02-11T22:59:59Z",
+        "start": "2025-02-10T23:00:00Z",
+        "text": "Tue Feb 11th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.93",
+        "digital": "0:56",
+        "hours": 0,
+        "minutes": 56,
+        "text": "56 mins",
+        "total_seconds": 3384.481464
+      },
+      "range": {
+        "date": "2025-02-12",
+        "end": "2025-02-12T22:59:59Z",
+        "start": "2025-02-11T23:00:00Z",
+        "text": "Wed Feb 12th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.83",
+        "digital": "2:50",
+        "hours": 2,
+        "minutes": 50,
+        "text": "2 hrs 50 mins",
+        "total_seconds": 10237.674577
+      },
+      "range": {
+        "date": "2025-02-13",
+        "end": "2025-02-13T22:59:59Z",
+        "start": "2025-02-12T23:00:00Z",
+        "text": "Thu Feb 13th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.65",
+        "digital": "1:39",
+        "hours": 1,
+        "minutes": 39,
+        "text": "1 hr 39 mins",
+        "total_seconds": 5987.497662
+      },
+      "range": {
+        "date": "2025-02-14",
+        "end": "2025-02-14T22:59:59Z",
+        "start": "2025-02-13T23:00:00Z",
+        "text": "Fri Feb 14th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-02-15",
+        "end": "2025-02-15T22:59:59Z",
+        "start": "2025-02-14T23:00:00Z",
+        "text": "Sat Feb 15th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-02-16",
+        "end": "2025-02-16T22:59:59Z",
+        "start": "2025-02-15T23:00:00Z",
+        "text": "Sun Feb 16th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.32",
+        "digital": "2:19",
+        "hours": 2,
+        "minutes": 19,
+        "text": "2 hrs 19 mins",
+        "total_seconds": 8388.523452
+      },
+      "range": {
+        "date": "2025-02-17",
+        "end": "2025-02-17T22:59:59Z",
+        "start": "2025-02-16T23:00:00Z",
+        "text": "Mon Feb 17th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.40",
+        "digital": "1:24",
+        "hours": 1,
+        "minutes": 24,
+        "text": "1 hr 24 mins",
+        "total_seconds": 5096.099605
+      },
+      "range": {
+        "date": "2025-02-18",
+        "end": "2025-02-18T22:59:59Z",
+        "start": "2025-02-17T23:00:00Z",
+        "text": "Tue Feb 18th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.35",
+        "digital": "1:21",
+        "hours": 1,
+        "minutes": 21,
+        "text": "1 hr 21 mins",
+        "total_seconds": 4864.301214
+      },
+      "range": {
+        "date": "2025-02-19",
+        "end": "2025-02-19T22:59:59Z",
+        "start": "2025-02-18T23:00:00Z",
+        "text": "Wed Feb 19th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-02-20",
+        "end": "2025-02-20T22:59:59Z",
+        "start": "2025-02-19T23:00:00Z",
+        "text": "Thu Feb 20th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-02-21",
+        "end": "2025-02-21T22:59:59Z",
+        "start": "2025-02-20T23:00:00Z",
+        "text": "Fri Feb 21st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-02-22",
+        "end": "2025-02-22T22:59:59Z",
+        "start": "2025-02-21T23:00:00Z",
+        "text": "Sat Feb 22nd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-02-23",
+        "end": "2025-02-23T22:59:59Z",
+        "start": "2025-02-22T23:00:00Z",
+        "text": "Sun Feb 23rd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.92",
+        "digital": "1:55",
+        "hours": 1,
+        "minutes": 55,
+        "text": "1 hr 55 mins",
+        "total_seconds": 6943.845221
+      },
+      "range": {
+        "date": "2025-02-24",
+        "end": "2025-02-24T22:59:59Z",
+        "start": "2025-02-23T23:00:00Z",
+        "text": "Mon Feb 24th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.30",
+        "digital": "3:18",
+        "hours": 3,
+        "minutes": 18,
+        "text": "3 hrs 18 mins",
+        "total_seconds": 11924.869651
+      },
+      "range": {
+        "date": "2025-02-25",
+        "end": "2025-02-25T22:59:59Z",
+        "start": "2025-02-24T23:00:00Z",
+        "text": "Tue Feb 25th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.68",
+        "digital": "2:41",
+        "hours": 2,
+        "minutes": 41,
+        "text": "2 hrs 41 mins",
+        "total_seconds": 9702.096926
+      },
+      "range": {
+        "date": "2025-02-26",
+        "end": "2025-02-26T22:59:59Z",
+        "start": "2025-02-25T23:00:00Z",
+        "text": "Wed Feb 26th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.27",
+        "digital": "3:16",
+        "hours": 3,
+        "minutes": 16,
+        "text": "3 hrs 16 mins",
+        "total_seconds": 11772.715288
+      },
+      "range": {
+        "date": "2025-02-27",
+        "end": "2025-02-27T22:59:59Z",
+        "start": "2025-02-26T23:00:00Z",
+        "text": "Thu Feb 27th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.57",
+        "digital": "1:34",
+        "hours": 1,
+        "minutes": 34,
+        "text": "1 hr 34 mins",
+        "total_seconds": 5686.524144
+      },
+      "range": {
+        "date": "2025-02-28",
+        "end": "2025-02-28T22:59:59Z",
+        "start": "2025-02-27T23:00:00Z",
+        "text": "Fri Feb 28th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-03-01",
+        "end": "2025-03-01T22:59:59Z",
+        "start": "2025-02-28T23:00:00Z",
+        "text": "Sat Mar 1st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-03-02",
+        "end": "2025-03-02T22:59:59Z",
+        "start": "2025-03-01T23:00:00Z",
+        "text": "Sun Mar 2nd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.43",
+        "digital": "2:26",
+        "hours": 2,
+        "minutes": 26,
+        "text": "2 hrs 26 mins",
+        "total_seconds": 8771.460208
+      },
+      "range": {
+        "date": "2025-03-03",
+        "end": "2025-03-03T22:59:59Z",
+        "start": "2025-03-02T23:00:00Z",
+        "text": "Mon Mar 3rd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.25",
+        "digital": "2:15",
+        "hours": 2,
+        "minutes": 15,
+        "text": "2 hrs 15 mins",
+        "total_seconds": 8109.541334
+      },
+      "range": {
+        "date": "2025-03-04",
+        "end": "2025-03-04T22:59:59Z",
+        "start": "2025-03-03T23:00:00Z",
+        "text": "Tue Mar 4th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.13",
+        "digital": "4:08",
+        "hours": 4,
+        "minutes": 8,
+        "text": "4 hrs 8 mins",
+        "total_seconds": 14905.222541
+      },
+      "range": {
+        "date": "2025-03-05",
+        "end": "2025-03-05T22:59:59Z",
+        "start": "2025-03-04T23:00:00Z",
+        "text": "Wed Mar 5th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "5.12",
+        "digital": "5:07",
+        "hours": 5,
+        "minutes": 7,
+        "text": "5 hrs 7 mins",
+        "total_seconds": 18447.269371
+      },
+      "range": {
+        "date": "2025-03-06",
+        "end": "2025-03-06T22:59:59Z",
+        "start": "2025-03-05T23:00:00Z",
+        "text": "Thu Mar 6th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.07",
+        "digital": "2:04",
+        "hours": 2,
+        "minutes": 4,
+        "text": "2 hrs 4 mins",
+        "total_seconds": 7468.889757
+      },
+      "range": {
+        "date": "2025-03-07",
+        "end": "2025-03-07T22:59:59Z",
+        "start": "2025-03-06T23:00:00Z",
+        "text": "Fri Mar 7th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-03-08",
+        "end": "2025-03-08T22:59:59Z",
+        "start": "2025-03-07T23:00:00Z",
+        "text": "Sat Mar 8th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-03-09",
+        "end": "2025-03-09T22:59:59Z",
+        "start": "2025-03-08T23:00:00Z",
+        "text": "Sun Mar 9th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.43",
+        "digital": "4:26",
+        "hours": 4,
+        "minutes": 26,
+        "text": "4 hrs 26 mins",
+        "total_seconds": 15991.782723
+      },
+      "range": {
+        "date": "2025-03-10",
+        "end": "2025-03-10T22:59:59Z",
+        "start": "2025-03-09T23:00:00Z",
+        "text": "Mon Mar 10th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.30",
+        "digital": "3:18",
+        "hours": 3,
+        "minutes": 18,
+        "text": "3 hrs 18 mins",
+        "total_seconds": 11933.566629
+      },
+      "range": {
+        "date": "2025-03-11",
+        "end": "2025-03-11T22:59:59Z",
+        "start": "2025-03-10T23:00:00Z",
+        "text": "Tue Mar 11th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.37",
+        "digital": "2:22",
+        "hours": 2,
+        "minutes": 22,
+        "text": "2 hrs 22 mins",
+        "total_seconds": 8575.903145
+      },
+      "range": {
+        "date": "2025-03-12",
+        "end": "2025-03-12T22:59:59Z",
+        "start": "2025-03-11T23:00:00Z",
+        "text": "Wed Mar 12th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.83",
+        "digital": "2:50",
+        "hours": 2,
+        "minutes": 50,
+        "text": "2 hrs 50 mins",
+        "total_seconds": 10221.988944
+      },
+      "range": {
+        "date": "2025-03-13",
+        "end": "2025-03-13T22:59:59Z",
+        "start": "2025-03-12T23:00:00Z",
+        "text": "Thu Mar 13th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.72",
+        "digital": "2:43",
+        "hours": 2,
+        "minutes": 43,
+        "text": "2 hrs 43 mins",
+        "total_seconds": 9820.992353
+      },
+      "range": {
+        "date": "2025-03-14",
+        "end": "2025-03-14T22:59:59Z",
+        "start": "2025-03-13T23:00:00Z",
+        "text": "Fri Mar 14th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-03-15",
+        "end": "2025-03-15T22:59:59Z",
+        "start": "2025-03-14T23:00:00Z",
+        "text": "Sat Mar 15th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-03-16",
+        "end": "2025-03-16T22:59:59Z",
+        "start": "2025-03-15T23:00:00Z",
+        "text": "Sun Mar 16th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.97",
+        "digital": "3:58",
+        "hours": 3,
+        "minutes": 58,
+        "text": "3 hrs 58 mins",
+        "total_seconds": 14331.12065
+      },
+      "range": {
+        "date": "2025-03-17",
+        "end": "2025-03-17T22:59:59Z",
+        "start": "2025-03-16T23:00:00Z",
+        "text": "Mon Mar 17th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.55",
+        "digital": "3:33",
+        "hours": 3,
+        "minutes": 33,
+        "text": "3 hrs 33 mins",
+        "total_seconds": 12814.071488
+      },
+      "range": {
+        "date": "2025-03-18",
+        "end": "2025-03-18T22:59:59Z",
+        "start": "2025-03-17T23:00:00Z",
+        "text": "Tue Mar 18th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.72",
+        "digital": "1:43",
+        "hours": 1,
+        "minutes": 43,
+        "text": "1 hr 43 mins",
+        "total_seconds": 6188.089013
+      },
+      "range": {
+        "date": "2025-03-19",
+        "end": "2025-03-19T22:59:59Z",
+        "start": "2025-03-18T23:00:00Z",
+        "text": "Wed Mar 19th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.52",
+        "digital": "1:31",
+        "hours": 1,
+        "minutes": 31,
+        "text": "1 hr 31 mins",
+        "total_seconds": 5479.837273
+      },
+      "range": {
+        "date": "2025-03-20",
+        "end": "2025-03-20T22:59:59Z",
+        "start": "2025-03-19T23:00:00Z",
+        "text": "Thu Mar 20th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.33",
+        "digital": "1:20",
+        "hours": 1,
+        "minutes": 20,
+        "text": "1 hr 20 mins",
+        "total_seconds": 4803.223753
+      },
+      "range": {
+        "date": "2025-03-21",
+        "end": "2025-03-21T22:59:59Z",
+        "start": "2025-03-20T23:00:00Z",
+        "text": "Fri Mar 21st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-03-22",
+        "end": "2025-03-22T22:59:59Z",
+        "start": "2025-03-21T23:00:00Z",
+        "text": "Sat Mar 22nd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-03-23",
+        "end": "2025-03-23T22:59:59Z",
+        "start": "2025-03-22T23:00:00Z",
+        "text": "Sun Mar 23rd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.35",
+        "digital": "3:21",
+        "hours": 3,
+        "minutes": 21,
+        "text": "3 hrs 21 mins",
+        "total_seconds": 12119.018761
+      },
+      "range": {
+        "date": "2025-03-24",
+        "end": "2025-03-24T22:59:59Z",
+        "start": "2025-03-23T23:00:00Z",
+        "text": "Mon Mar 24th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.57",
+        "digital": "2:34",
+        "hours": 2,
+        "minutes": 34,
+        "text": "2 hrs 34 mins",
+        "total_seconds": 9246.271292
+      },
+      "range": {
+        "date": "2025-03-25",
+        "end": "2025-03-25T22:59:59Z",
+        "start": "2025-03-24T23:00:00Z",
+        "text": "Tue Mar 25th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.92",
+        "digital": "2:55",
+        "hours": 2,
+        "minutes": 55,
+        "text": "2 hrs 55 mins",
+        "total_seconds": 10516.178559
+      },
+      "range": {
+        "date": "2025-03-26",
+        "end": "2025-03-26T22:59:59Z",
+        "start": "2025-03-25T23:00:00Z",
+        "text": "Wed Mar 26th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.68",
+        "digital": "2:41",
+        "hours": 2,
+        "minutes": 41,
+        "text": "2 hrs 41 mins",
+        "total_seconds": 9709.728836
+      },
+      "range": {
+        "date": "2025-03-27",
+        "end": "2025-03-27T22:59:59Z",
+        "start": "2025-03-26T23:00:00Z",
+        "text": "Thu Mar 27th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.90",
+        "digital": "3:54",
+        "hours": 3,
+        "minutes": 54,
+        "text": "3 hrs 54 mins",
+        "total_seconds": 14051.660803
+      },
+      "range": {
+        "date": "2025-03-28",
+        "end": "2025-03-28T22:59:59Z",
+        "start": "2025-03-27T23:00:00Z",
+        "text": "Fri Mar 28th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-03-29",
+        "end": "2025-03-29T22:59:59Z",
+        "start": "2025-03-28T23:00:00Z",
+        "text": "Sat Mar 29th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-03-30",
+        "end": "2025-03-30T21:59:59Z",
+        "start": "2025-03-29T23:00:00Z",
+        "text": "Sun Mar 30th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.08",
+        "digital": "3:05",
+        "hours": 3,
+        "minutes": 5,
+        "text": "3 hrs 5 mins",
+        "total_seconds": 11121.744863
+      },
+      "range": {
+        "date": "2025-03-31",
+        "end": "2025-03-31T21:59:59Z",
+        "start": "2025-03-30T22:00:00Z",
+        "text": "Mon Mar 31st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.37",
+        "digital": "2:22",
+        "hours": 2,
+        "minutes": 22,
+        "text": "2 hrs 22 mins",
+        "total_seconds": 8575.341673
+      },
+      "range": {
+        "date": "2025-04-01",
+        "end": "2025-04-01T21:59:59Z",
+        "start": "2025-03-31T22:00:00Z",
+        "text": "Tue Apr 1st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.37",
+        "digital": "2:22",
+        "hours": 2,
+        "minutes": 22,
+        "text": "2 hrs 22 mins",
+        "total_seconds": 8520.697083
+      },
+      "range": {
+        "date": "2025-04-02",
+        "end": "2025-04-02T21:59:59Z",
+        "start": "2025-04-01T22:00:00Z",
+        "text": "Wed Apr 2nd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.85",
+        "digital": "2:51",
+        "hours": 2,
+        "minutes": 51,
+        "text": "2 hrs 51 mins",
+        "total_seconds": 10311.079024
+      },
+      "range": {
+        "date": "2025-04-03",
+        "end": "2025-04-03T21:59:59Z",
+        "start": "2025-04-02T22:00:00Z",
+        "text": "Thu Apr 3rd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.52",
+        "digital": "4:31",
+        "hours": 4,
+        "minutes": 31,
+        "text": "4 hrs 31 mins",
+        "total_seconds": 16265.47782
+      },
+      "range": {
+        "date": "2025-04-04",
+        "end": "2025-04-04T21:59:59Z",
+        "start": "2025-04-03T22:00:00Z",
+        "text": "Fri Apr 4th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-04-05",
+        "end": "2025-04-05T21:59:59Z",
+        "start": "2025-04-04T22:00:00Z",
+        "text": "Sat Apr 5th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-04-06",
+        "end": "2025-04-06T21:59:59Z",
+        "start": "2025-04-05T22:00:00Z",
+        "text": "Sun Apr 6th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.63",
+        "digital": "2:38",
+        "hours": 2,
+        "minutes": 38,
+        "text": "2 hrs 38 mins",
+        "total_seconds": 9526.010025
+      },
+      "range": {
+        "date": "2025-04-07",
+        "end": "2025-04-07T21:59:59Z",
+        "start": "2025-04-06T22:00:00Z",
+        "text": "Mon Apr 7th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.23",
+        "digital": "4:14",
+        "hours": 4,
+        "minutes": 14,
+        "text": "4 hrs 14 mins",
+        "total_seconds": 15259.19095
+      },
+      "range": {
+        "date": "2025-04-08",
+        "end": "2025-04-08T21:59:59Z",
+        "start": "2025-04-07T22:00:00Z",
+        "text": "Tue Apr 8th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.72",
+        "digital": "3:43",
+        "hours": 3,
+        "minutes": 43,
+        "text": "3 hrs 43 mins",
+        "total_seconds": 13397.028537
+      },
+      "range": {
+        "date": "2025-04-09",
+        "end": "2025-04-09T21:59:59Z",
+        "start": "2025-04-08T22:00:00Z",
+        "text": "Wed Apr 9th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.38",
+        "digital": "3:23",
+        "hours": 3,
+        "minutes": 23,
+        "text": "3 hrs 23 mins",
+        "total_seconds": 12220.522768
+      },
+      "range": {
+        "date": "2025-04-10",
+        "end": "2025-04-10T21:59:59Z",
+        "start": "2025-04-09T22:00:00Z",
+        "text": "Thu Apr 10th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.55",
+        "digital": "1:33",
+        "hours": 1,
+        "minutes": 33,
+        "text": "1 hr 33 mins",
+        "total_seconds": 5611.570117
+      },
+      "range": {
+        "date": "2025-04-11",
+        "end": "2025-04-11T21:59:59Z",
+        "start": "2025-04-10T22:00:00Z",
+        "text": "Fri Apr 11th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-04-12",
+        "end": "2025-04-12T21:59:59Z",
+        "start": "2025-04-11T22:00:00Z",
+        "text": "Sat Apr 12th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-04-13",
+        "end": "2025-04-13T21:59:59Z",
+        "start": "2025-04-12T22:00:00Z",
+        "text": "Sun Apr 13th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.73",
+        "digital": "2:44",
+        "hours": 2,
+        "minutes": 44,
+        "text": "2 hrs 44 mins",
+        "total_seconds": 9896.111317
+      },
+      "range": {
+        "date": "2025-04-14",
+        "end": "2025-04-14T21:59:59Z",
+        "start": "2025-04-13T22:00:00Z",
+        "text": "Mon Apr 14th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.73",
+        "digital": "3:44",
+        "hours": 3,
+        "minutes": 44,
+        "text": "3 hrs 44 mins",
+        "total_seconds": 13471.745489
+      },
+      "range": {
+        "date": "2025-04-15",
+        "end": "2025-04-15T21:59:59Z",
+        "start": "2025-04-14T22:00:00Z",
+        "text": "Tue Apr 15th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.68",
+        "digital": "4:41",
+        "hours": 4,
+        "minutes": 41,
+        "text": "4 hrs 41 mins",
+        "total_seconds": 16911.266251
+      },
+      "range": {
+        "date": "2025-04-16",
+        "end": "2025-04-16T21:59:59Z",
+        "start": "2025-04-15T22:00:00Z",
+        "text": "Wed Apr 16th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.15",
+        "digital": "4:09",
+        "hours": 4,
+        "minutes": 9,
+        "text": "4 hrs 9 mins",
+        "total_seconds": 14950.357928
+      },
+      "range": {
+        "date": "2025-04-17",
+        "end": "2025-04-17T21:59:59Z",
+        "start": "2025-04-16T22:00:00Z",
+        "text": "Thu Apr 17th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-04-18",
+        "end": "2025-04-18T21:59:59Z",
+        "start": "2025-04-17T22:00:00Z",
+        "text": "Fri Apr 18th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-04-19",
+        "end": "2025-04-19T21:59:59Z",
+        "start": "2025-04-18T22:00:00Z",
+        "text": "Sat Apr 19th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-04-20",
+        "end": "2025-04-20T21:59:59Z",
+        "start": "2025-04-19T22:00:00Z",
+        "text": "Sun Apr 20th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.33",
+        "digital": "1:20",
+        "hours": 1,
+        "minutes": 20,
+        "text": "1 hr 20 mins",
+        "total_seconds": 4822.478449
+      },
+      "range": {
+        "date": "2025-04-21",
+        "end": "2025-04-21T21:59:59Z",
+        "start": "2025-04-20T22:00:00Z",
+        "text": "Mon Apr 21st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.37",
+        "digital": "0:22",
+        "hours": 0,
+        "minutes": 22,
+        "text": "22 mins",
+        "total_seconds": 1354.918334
+      },
+      "range": {
+        "date": "2025-04-22",
+        "end": "2025-04-22T21:59:59Z",
+        "start": "2025-04-21T22:00:00Z",
+        "text": "Tue Apr 22nd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "5.97",
+        "digital": "5:58",
+        "hours": 5,
+        "minutes": 58,
+        "text": "5 hrs 58 mins",
+        "total_seconds": 21489.39923
+      },
+      "range": {
+        "date": "2025-04-23",
+        "end": "2025-04-23T21:59:59Z",
+        "start": "2025-04-22T22:00:00Z",
+        "text": "Wed Apr 23rd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.67",
+        "digital": "3:40",
+        "hours": 3,
+        "minutes": 40,
+        "text": "3 hrs 40 mins",
+        "total_seconds": 13243.804233
+      },
+      "range": {
+        "date": "2025-04-24",
+        "end": "2025-04-24T21:59:59Z",
+        "start": "2025-04-23T22:00:00Z",
+        "text": "Thu Apr 24th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.78",
+        "digital": "4:47",
+        "hours": 4,
+        "minutes": 47,
+        "text": "4 hrs 47 mins",
+        "total_seconds": 17224.544549
+      },
+      "range": {
+        "date": "2025-04-25",
+        "end": "2025-04-25T21:59:59Z",
+        "start": "2025-04-24T22:00:00Z",
+        "text": "Fri Apr 25th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-04-26",
+        "end": "2025-04-26T21:59:59Z",
+        "start": "2025-04-25T22:00:00Z",
+        "text": "Sat Apr 26th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-04-27",
+        "end": "2025-04-27T21:59:59Z",
+        "start": "2025-04-26T22:00:00Z",
+        "text": "Sun Apr 27th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.07",
+        "digital": "4:04",
+        "hours": 4,
+        "minutes": 4,
+        "text": "4 hrs 4 mins",
+        "total_seconds": 14683.515071
+      },
+      "range": {
+        "date": "2025-04-28",
+        "end": "2025-04-28T21:59:59Z",
+        "start": "2025-04-27T22:00:00Z",
+        "text": "Mon Apr 28th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.77",
+        "digital": "3:46",
+        "hours": 3,
+        "minutes": 46,
+        "text": "3 hrs 46 mins",
+        "total_seconds": 13562.867801
+      },
+      "range": {
+        "date": "2025-04-29",
+        "end": "2025-04-29T21:59:59Z",
+        "start": "2025-04-28T22:00:00Z",
+        "text": "Tue Apr 29th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.58",
+        "digital": "2:35",
+        "hours": 2,
+        "minutes": 35,
+        "text": "2 hrs 35 mins",
+        "total_seconds": 9318.362315
+      },
+      "range": {
+        "date": "2025-04-30",
+        "end": "2025-04-30T21:59:59Z",
+        "start": "2025-04-29T22:00:00Z",
+        "text": "Wed Apr 30th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-05-01",
+        "end": "2025-05-01T21:59:59Z",
+        "start": "2025-04-30T22:00:00Z",
+        "text": "Thu May 1st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-05-02",
+        "end": "2025-05-02T21:59:59Z",
+        "start": "2025-05-01T22:00:00Z",
+        "text": "Fri May 2nd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-05-03",
+        "end": "2025-05-03T21:59:59Z",
+        "start": "2025-05-02T22:00:00Z",
+        "text": "Sat May 3rd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.53",
+        "digital": "0:32",
+        "hours": 0,
+        "minutes": 32,
+        "text": "32 mins",
+        "total_seconds": 1974.831128
+      },
+      "range": {
+        "date": "2025-05-04",
+        "end": "2025-05-04T21:59:59Z",
+        "start": "2025-05-03T22:00:00Z",
+        "text": "Sun May 4th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-05-05",
+        "end": "2025-05-05T21:59:59Z",
+        "start": "2025-05-04T22:00:00Z",
+        "text": "Mon May 5th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-05-06",
+        "end": "2025-05-06T21:59:59Z",
+        "start": "2025-05-05T22:00:00Z",
+        "text": "Tue May 6th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "5.50",
+        "digital": "5:30",
+        "hours": 5,
+        "minutes": 30,
+        "text": "5 hrs 30 mins",
+        "total_seconds": 19851.716621
+      },
+      "range": {
+        "date": "2025-05-07",
+        "end": "2025-05-07T21:59:59Z",
+        "start": "2025-05-06T22:00:00Z",
+        "text": "Wed May 7th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.83",
+        "digital": "4:50",
+        "hours": 4,
+        "minutes": 50,
+        "text": "4 hrs 50 mins",
+        "total_seconds": 17445.283805
+      },
+      "range": {
+        "date": "2025-05-08",
+        "end": "2025-05-08T21:59:59Z",
+        "start": "2025-05-07T22:00:00Z",
+        "text": "Thu May 8th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.50",
+        "digital": "3:30",
+        "hours": 3,
+        "minutes": 30,
+        "text": "3 hrs 30 mins",
+        "total_seconds": 12648.420002
+      },
+      "range": {
+        "date": "2025-05-09",
+        "end": "2025-05-09T21:59:59Z",
+        "start": "2025-05-08T22:00:00Z",
+        "text": "Fri May 9th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-05-10",
+        "end": "2025-05-10T21:59:59Z",
+        "start": "2025-05-09T22:00:00Z",
+        "text": "Sat May 10th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-05-11",
+        "end": "2025-05-11T21:59:59Z",
+        "start": "2025-05-10T22:00:00Z",
+        "text": "Sun May 11th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.77",
+        "digital": "3:46",
+        "hours": 3,
+        "minutes": 46,
+        "text": "3 hrs 46 mins",
+        "total_seconds": 13567.352232
+      },
+      "range": {
+        "date": "2025-05-12",
+        "end": "2025-05-12T21:59:59Z",
+        "start": "2025-05-11T22:00:00Z",
+        "text": "Mon May 12th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.27",
+        "digital": "2:16",
+        "hours": 2,
+        "minutes": 16,
+        "text": "2 hrs 16 mins",
+        "total_seconds": 8181.73268
+      },
+      "range": {
+        "date": "2025-05-13",
+        "end": "2025-05-13T21:59:59Z",
+        "start": "2025-05-12T22:00:00Z",
+        "text": "Tue May 13th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.33",
+        "digital": "2:20",
+        "hours": 2,
+        "minutes": 20,
+        "text": "2 hrs 20 mins",
+        "total_seconds": 8425.204542
+      },
+      "range": {
+        "date": "2025-05-14",
+        "end": "2025-05-14T21:59:59Z",
+        "start": "2025-05-13T22:00:00Z",
+        "text": "Wed May 14th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.00",
+        "digital": "2:00",
+        "hours": 2,
+        "minutes": 0,
+        "text": "2 hrs",
+        "total_seconds": 7255.999825
+      },
+      "range": {
+        "date": "2025-05-15",
+        "end": "2025-05-15T21:59:59Z",
+        "start": "2025-05-14T22:00:00Z",
+        "text": "Thu May 15th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.88",
+        "digital": "1:53",
+        "hours": 1,
+        "minutes": 53,
+        "text": "1 hr 53 mins",
+        "total_seconds": 6787.894943
+      },
+      "range": {
+        "date": "2025-05-16",
+        "end": "2025-05-16T21:59:59Z",
+        "start": "2025-05-15T22:00:00Z",
+        "text": "Fri May 16th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-05-17",
+        "end": "2025-05-17T21:59:59Z",
+        "start": "2025-05-16T22:00:00Z",
+        "text": "Sat May 17th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-05-18",
+        "end": "2025-05-18T21:59:59Z",
+        "start": "2025-05-17T22:00:00Z",
+        "text": "Sun May 18th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.92",
+        "digital": "4:55",
+        "hours": 4,
+        "minutes": 55,
+        "text": "4 hrs 55 mins",
+        "total_seconds": 17738.793413
+      },
+      "range": {
+        "date": "2025-05-19",
+        "end": "2025-05-19T21:59:59Z",
+        "start": "2025-05-18T22:00:00Z",
+        "text": "Mon May 19th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.97",
+        "digital": "4:58",
+        "hours": 4,
+        "minutes": 58,
+        "text": "4 hrs 58 mins",
+        "total_seconds": 17897.959847
+      },
+      "range": {
+        "date": "2025-05-20",
+        "end": "2025-05-20T21:59:59Z",
+        "start": "2025-05-19T22:00:00Z",
+        "text": "Tue May 20th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "5.08",
+        "digital": "5:05",
+        "hours": 5,
+        "minutes": 5,
+        "text": "5 hrs 5 mins",
+        "total_seconds": 18303.026767
+      },
+      "range": {
+        "date": "2025-05-21",
+        "end": "2025-05-21T21:59:59Z",
+        "start": "2025-05-20T22:00:00Z",
+        "text": "Wed May 21st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.90",
+        "digital": "4:54",
+        "hours": 4,
+        "minutes": 54,
+        "text": "4 hrs 54 mins",
+        "total_seconds": 17692.556334
+      },
+      "range": {
+        "date": "2025-05-22",
+        "end": "2025-05-22T21:59:59Z",
+        "start": "2025-05-21T22:00:00Z",
+        "text": "Thu May 22nd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.13",
+        "digital": "4:08",
+        "hours": 4,
+        "minutes": 8,
+        "text": "4 hrs 8 mins",
+        "total_seconds": 14898.901663
+      },
+      "range": {
+        "date": "2025-05-23",
+        "end": "2025-05-23T21:59:59Z",
+        "start": "2025-05-22T22:00:00Z",
+        "text": "Fri May 23rd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-05-24",
+        "end": "2025-05-24T21:59:59Z",
+        "start": "2025-05-23T22:00:00Z",
+        "text": "Sat May 24th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-05-25",
+        "end": "2025-05-25T21:59:59Z",
+        "start": "2025-05-24T22:00:00Z",
+        "text": "Sun May 25th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.93",
+        "digital": "3:56",
+        "hours": 3,
+        "minutes": 56,
+        "text": "3 hrs 56 mins",
+        "total_seconds": 14160.448357
+      },
+      "range": {
+        "date": "2025-05-26",
+        "end": "2025-05-26T21:59:59Z",
+        "start": "2025-05-25T22:00:00Z",
+        "text": "Mon May 26th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.57",
+        "digital": "1:34",
+        "hours": 1,
+        "minutes": 34,
+        "text": "1 hr 34 mins",
+        "total_seconds": 5652.199899
+      },
+      "range": {
+        "date": "2025-05-27",
+        "end": "2025-05-27T21:59:59Z",
+        "start": "2025-05-26T22:00:00Z",
+        "text": "Tue May 27th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.93",
+        "digital": "1:56",
+        "hours": 1,
+        "minutes": 56,
+        "text": "1 hr 56 mins",
+        "total_seconds": 7006.82887
+      },
+      "range": {
+        "date": "2025-05-28",
+        "end": "2025-05-28T21:59:59Z",
+        "start": "2025-05-27T22:00:00Z",
+        "text": "Wed May 28th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.53",
+        "digital": "0:32",
+        "hours": 0,
+        "minutes": 32,
+        "text": "32 mins",
+        "total_seconds": 1970.151153
+      },
+      "range": {
+        "date": "2025-05-29",
+        "end": "2025-05-29T21:59:59Z",
+        "start": "2025-05-28T22:00:00Z",
+        "text": "Thu May 29th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-05-30",
+        "end": "2025-05-30T21:59:59Z",
+        "start": "2025-05-29T22:00:00Z",
+        "text": "Fri May 30th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-05-31",
+        "end": "2025-05-31T21:59:59Z",
+        "start": "2025-05-30T22:00:00Z",
+        "text": "Sat May 31st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-06-01",
+        "end": "2025-06-01T21:59:59Z",
+        "start": "2025-05-31T22:00:00Z",
+        "text": "Sun Jun 1st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.73",
+        "digital": "1:44",
+        "hours": 1,
+        "minutes": 44,
+        "text": "1 hr 44 mins",
+        "total_seconds": 6282.68281
+      },
+      "range": {
+        "date": "2025-06-02",
+        "end": "2025-06-02T21:59:59Z",
+        "start": "2025-06-01T22:00:00Z",
+        "text": "Mon Jun 2nd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.77",
+        "digital": "2:46",
+        "hours": 2,
+        "minutes": 46,
+        "text": "2 hrs 46 mins",
+        "total_seconds": 10017.968833
+      },
+      "range": {
+        "date": "2025-06-03",
+        "end": "2025-06-03T21:59:59Z",
+        "start": "2025-06-02T22:00:00Z",
+        "text": "Tue Jun 3rd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.60",
+        "digital": "3:36",
+        "hours": 3,
+        "minutes": 36,
+        "text": "3 hrs 36 mins",
+        "total_seconds": 13012.01022
+      },
+      "range": {
+        "date": "2025-06-04",
+        "end": "2025-06-04T21:59:59Z",
+        "start": "2025-06-03T22:00:00Z",
+        "text": "Wed Jun 4th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.93",
+        "digital": "4:56",
+        "hours": 4,
+        "minutes": 56,
+        "text": "4 hrs 56 mins",
+        "total_seconds": 17800.044476
+      },
+      "range": {
+        "date": "2025-06-05",
+        "end": "2025-06-05T21:59:59Z",
+        "start": "2025-06-04T22:00:00Z",
+        "text": "Thu Jun 5th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.77",
+        "digital": "1:46",
+        "hours": 1,
+        "minutes": 46,
+        "text": "1 hr 46 mins",
+        "total_seconds": 6377.375311
+      },
+      "range": {
+        "date": "2025-06-06",
+        "end": "2025-06-06T21:59:59Z",
+        "start": "2025-06-05T22:00:00Z",
+        "text": "Fri Jun 6th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-06-07",
+        "end": "2025-06-07T21:59:59Z",
+        "start": "2025-06-06T22:00:00Z",
+        "text": "Sat Jun 7th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-06-08",
+        "end": "2025-06-08T21:59:59Z",
+        "start": "2025-06-07T22:00:00Z",
+        "text": "Sun Jun 8th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-06-09",
+        "end": "2025-06-09T21:59:59Z",
+        "start": "2025-06-08T22:00:00Z",
+        "text": "Mon Jun 9th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.60",
+        "digital": "3:36",
+        "hours": 3,
+        "minutes": 36,
+        "text": "3 hrs 36 mins",
+        "total_seconds": 12968.746839
+      },
+      "range": {
+        "date": "2025-06-10",
+        "end": "2025-06-10T21:59:59Z",
+        "start": "2025-06-09T22:00:00Z",
+        "text": "Tue Jun 10th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.12",
+        "digital": "4:07",
+        "hours": 4,
+        "minutes": 7,
+        "text": "4 hrs 7 mins",
+        "total_seconds": 14823.239184
+      },
+      "range": {
+        "date": "2025-06-11",
+        "end": "2025-06-11T21:59:59Z",
+        "start": "2025-06-10T22:00:00Z",
+        "text": "Wed Jun 11th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "7.35",
+        "digital": "7:21",
+        "hours": 7,
+        "minutes": 21,
+        "text": "7 hrs 21 mins",
+        "total_seconds": 26475.534229
+      },
+      "range": {
+        "date": "2025-06-12",
+        "end": "2025-06-12T21:59:59Z",
+        "start": "2025-06-11T22:00:00Z",
+        "text": "Thu Jun 12th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.40",
+        "digital": "4:24",
+        "hours": 4,
+        "minutes": 24,
+        "text": "4 hrs 24 mins",
+        "total_seconds": 15884.21189
+      },
+      "range": {
+        "date": "2025-06-13",
+        "end": "2025-06-13T21:59:59Z",
+        "start": "2025-06-12T22:00:00Z",
+        "text": "Fri Jun 13th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-06-14",
+        "end": "2025-06-14T21:59:59Z",
+        "start": "2025-06-13T22:00:00Z",
+        "text": "Sat Jun 14th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-06-15",
+        "end": "2025-06-15T21:59:59Z",
+        "start": "2025-06-14T22:00:00Z",
+        "text": "Sun Jun 15th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "6.07",
+        "digital": "6:04",
+        "hours": 6,
+        "minutes": 4,
+        "text": "6 hrs 4 mins",
+        "total_seconds": 21884.020667
+      },
+      "range": {
+        "date": "2025-06-16",
+        "end": "2025-06-16T21:59:59Z",
+        "start": "2025-06-15T22:00:00Z",
+        "text": "Mon Jun 16th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.33",
+        "digital": "3:20",
+        "hours": 3,
+        "minutes": 20,
+        "text": "3 hrs 20 mins",
+        "total_seconds": 12007.440285
+      },
+      "range": {
+        "date": "2025-06-17",
+        "end": "2025-06-17T21:59:59Z",
+        "start": "2025-06-16T22:00:00Z",
+        "text": "Tue Jun 17th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.57",
+        "digital": "4:34",
+        "hours": 4,
+        "minutes": 34,
+        "text": "4 hrs 34 mins",
+        "total_seconds": 16493.554077
+      },
+      "range": {
+        "date": "2025-06-18",
+        "end": "2025-06-18T21:59:59Z",
+        "start": "2025-06-17T22:00:00Z",
+        "text": "Wed Jun 18th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "8.10",
+        "digital": "8:06",
+        "hours": 8,
+        "minutes": 6,
+        "text": "8 hrs 6 mins",
+        "total_seconds": 29178.317934
+      },
+      "range": {
+        "date": "2025-06-19",
+        "end": "2025-06-19T21:59:59Z",
+        "start": "2025-06-18T22:00:00Z",
+        "text": "Thu Jun 19th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.78",
+        "digital": "3:47",
+        "hours": 3,
+        "minutes": 47,
+        "text": "3 hrs 47 mins",
+        "total_seconds": 13658.241165
+      },
+      "range": {
+        "date": "2025-06-20",
+        "end": "2025-06-20T21:59:59Z",
+        "start": "2025-06-19T22:00:00Z",
+        "text": "Fri Jun 20th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.42",
+        "digital": "2:25",
+        "hours": 2,
+        "minutes": 25,
+        "text": "2 hrs 25 mins",
+        "total_seconds": 8741.455922
+      },
+      "range": {
+        "date": "2025-06-21",
+        "end": "2025-06-21T21:59:59Z",
+        "start": "2025-06-20T22:00:00Z",
+        "text": "Sat Jun 21st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "6.65",
+        "digital": "6:39",
+        "hours": 6,
+        "minutes": 39,
+        "text": "6 hrs 39 mins",
+        "total_seconds": 23975.103334
+      },
+      "range": {
+        "date": "2025-06-22",
+        "end": "2025-06-22T21:59:59Z",
+        "start": "2025-06-21T22:00:00Z",
+        "text": "Sun Jun 22nd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "5.88",
+        "digital": "5:53",
+        "hours": 5,
+        "minutes": 53,
+        "text": "5 hrs 53 mins",
+        "total_seconds": 21204.851747
+      },
+      "range": {
+        "date": "2025-06-23",
+        "end": "2025-06-23T21:59:59Z",
+        "start": "2025-06-22T22:00:00Z",
+        "text": "Mon Jun 23rd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "6.98",
+        "digital": "6:59",
+        "hours": 6,
+        "minutes": 59,
+        "text": "6 hrs 59 mins",
+        "total_seconds": 25198.375919
+      },
+      "range": {
+        "date": "2025-06-24",
+        "end": "2025-06-24T21:59:59Z",
+        "start": "2025-06-23T22:00:00Z",
+        "text": "Tue Jun 24th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.75",
+        "digital": "3:45",
+        "hours": 3,
+        "minutes": 45,
+        "text": "3 hrs 45 mins",
+        "total_seconds": 13518.314353
+      },
+      "range": {
+        "date": "2025-06-25",
+        "end": "2025-06-25T21:59:59Z",
+        "start": "2025-06-24T22:00:00Z",
+        "text": "Wed Jun 25th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "2.82",
+        "digital": "2:49",
+        "hours": 2,
+        "minutes": 49,
+        "text": "2 hrs 49 mins",
+        "total_seconds": 10177.029013
+      },
+      "range": {
+        "date": "2025-06-26",
+        "end": "2025-06-26T21:59:59Z",
+        "start": "2025-06-25T22:00:00Z",
+        "text": "Thu Jun 26th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.53",
+        "digital": "4:32",
+        "hours": 4,
+        "minutes": 32,
+        "text": "4 hrs 32 mins",
+        "total_seconds": 16320.991959
+      },
+      "range": {
+        "date": "2025-06-27",
+        "end": "2025-06-27T21:59:59Z",
+        "start": "2025-06-26T22:00:00Z",
+        "text": "Fri Jun 27th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-06-28",
+        "end": "2025-06-28T21:59:59Z",
+        "start": "2025-06-27T22:00:00Z",
+        "text": "Sat Jun 28th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-06-29",
+        "end": "2025-06-29T21:59:59Z",
+        "start": "2025-06-28T22:00:00Z",
+        "text": "Sun Jun 29th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "6.12",
+        "digital": "6:07",
+        "hours": 6,
+        "minutes": 7,
+        "text": "6 hrs 7 mins",
+        "total_seconds": 22064.571708
+      },
+      "range": {
+        "date": "2025-06-30",
+        "end": "2025-06-30T21:59:59Z",
+        "start": "2025-06-29T22:00:00Z",
+        "text": "Mon Jun 30th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.53",
+        "digital": "3:32",
+        "hours": 3,
+        "minutes": 32,
+        "text": "3 hrs 32 mins",
+        "total_seconds": 12722.125015
+      },
+      "range": {
+        "date": "2025-07-01",
+        "end": "2025-07-01T21:59:59Z",
+        "start": "2025-06-30T22:00:00Z",
+        "text": "Tue Jul 1st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.58",
+        "digital": "3:35",
+        "hours": 3,
+        "minutes": 35,
+        "text": "3 hrs 35 mins",
+        "total_seconds": 12903.883096
+      },
+      "range": {
+        "date": "2025-07-02",
+        "end": "2025-07-02T21:59:59Z",
+        "start": "2025-07-01T22:00:00Z",
+        "text": "Wed Jul 2nd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.80",
+        "digital": "3:48",
+        "hours": 3,
+        "minutes": 48,
+        "text": "3 hrs 48 mins",
+        "total_seconds": 13689.724177
+      },
+      "range": {
+        "date": "2025-07-03",
+        "end": "2025-07-03T21:59:59Z",
+        "start": "2025-07-02T22:00:00Z",
+        "text": "Thu Jul 3rd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "5.42",
+        "digital": "5:25",
+        "hours": 5,
+        "minutes": 25,
+        "text": "5 hrs 25 mins",
+        "total_seconds": 19510.393877
+      },
+      "range": {
+        "date": "2025-07-04",
+        "end": "2025-07-04T21:59:59Z",
+        "start": "2025-07-03T22:00:00Z",
+        "text": "Fri Jul 4th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-07-05",
+        "end": "2025-07-05T21:59:59Z",
+        "start": "2025-07-04T22:00:00Z",
+        "text": "Sat Jul 5th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "7.13",
+        "digital": "7:08",
+        "hours": 7,
+        "minutes": 8,
+        "text": "7 hrs 8 mins",
+        "total_seconds": 25711.809314
+      },
+      "range": {
+        "date": "2025-07-06",
+        "end": "2025-07-06T21:59:59Z",
+        "start": "2025-07-05T22:00:00Z",
+        "text": "Sun Jul 6th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "6.43",
+        "digital": "6:26",
+        "hours": 6,
+        "minutes": 26,
+        "text": "6 hrs 26 mins",
+        "total_seconds": 23164.283716
+      },
+      "range": {
+        "date": "2025-07-07",
+        "end": "2025-07-07T21:59:59Z",
+        "start": "2025-07-06T22:00:00Z",
+        "text": "Mon Jul 7th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.53",
+        "digital": "3:32",
+        "hours": 3,
+        "minutes": 32,
+        "text": "3 hrs 32 mins",
+        "total_seconds": 12734.350918
+      },
+      "range": {
+        "date": "2025-07-08",
+        "end": "2025-07-08T21:59:59Z",
+        "start": "2025-07-07T22:00:00Z",
+        "text": "Tue Jul 8th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.00",
+        "digital": "4:00",
+        "hours": 4,
+        "minutes": 0,
+        "text": "4 hrs",
+        "total_seconds": 14457.793613
+      },
+      "range": {
+        "date": "2025-07-09",
+        "end": "2025-07-09T21:59:59Z",
+        "start": "2025-07-08T22:00:00Z",
+        "text": "Wed Jul 9th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.33",
+        "digital": "3:20",
+        "hours": 3,
+        "minutes": 20,
+        "text": "3 hrs 20 mins",
+        "total_seconds": 12006.76013
+      },
+      "range": {
+        "date": "2025-07-10",
+        "end": "2025-07-10T21:59:59Z",
+        "start": "2025-07-09T22:00:00Z",
+        "text": "Thu Jul 10th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.87",
+        "digital": "4:52",
+        "hours": 4,
+        "minutes": 52,
+        "text": "4 hrs 52 mins",
+        "total_seconds": 17571.515372
+      },
+      "range": {
+        "date": "2025-07-11",
+        "end": "2025-07-11T21:59:59Z",
+        "start": "2025-07-10T22:00:00Z",
+        "text": "Fri Jul 11th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-07-12",
+        "end": "2025-07-12T21:59:59Z",
+        "start": "2025-07-11T22:00:00Z",
+        "text": "Sat Jul 12th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-07-13",
+        "end": "2025-07-13T21:59:59Z",
+        "start": "2025-07-12T22:00:00Z",
+        "text": "Sun Jul 13th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "1.32",
+        "digital": "1:19",
+        "hours": 1,
+        "minutes": 19,
+        "text": "1 hr 19 mins",
+        "total_seconds": 4757.425933
+      },
+      "range": {
+        "date": "2025-07-14",
+        "end": "2025-07-14T21:59:59Z",
+        "start": "2025-07-13T22:00:00Z",
+        "text": "Mon Jul 14th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.07",
+        "digital": "4:04",
+        "hours": 4,
+        "minutes": 4,
+        "text": "4 hrs 4 mins",
+        "total_seconds": 14666.3968
+      },
+      "range": {
+        "date": "2025-07-15",
+        "end": "2025-07-15T21:59:59Z",
+        "start": "2025-07-14T22:00:00Z",
+        "text": "Tue Jul 15th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "4.98",
+        "digital": "4:59",
+        "hours": 4,
+        "minutes": 59,
+        "text": "4 hrs 59 mins",
+        "total_seconds": 17942.316894
+      },
+      "range": {
+        "date": "2025-07-16",
+        "end": "2025-07-16T21:59:59Z",
+        "start": "2025-07-15T22:00:00Z",
+        "text": "Wed Jul 16th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "6.35",
+        "digital": "6:21",
+        "hours": 6,
+        "minutes": 21,
+        "text": "6 hrs 21 mins",
+        "total_seconds": 22892.178311
+      },
+      "range": {
+        "date": "2025-07-17",
+        "end": "2025-07-17T21:59:59Z",
+        "start": "2025-07-16T22:00:00Z",
+        "text": "Thu Jul 17th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.15",
+        "digital": "3:09",
+        "hours": 3,
+        "minutes": 9,
+        "text": "3 hrs 9 mins",
+        "total_seconds": 11345.822826
+      },
+      "range": {
+        "date": "2025-07-18",
+        "end": "2025-07-18T21:59:59Z",
+        "start": "2025-07-17T22:00:00Z",
+        "text": "Fri Jul 18th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-07-19",
+        "end": "2025-07-19T21:59:59Z",
+        "start": "2025-07-18T22:00:00Z",
+        "text": "Sat Jul 19th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-07-20",
+        "end": "2025-07-20T21:59:59Z",
+        "start": "2025-07-19T22:00:00Z",
+        "text": "Sun Jul 20th 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "3.87",
+        "digital": "3:52",
+        "hours": 3,
+        "minutes": 52,
+        "text": "3 hrs 52 mins",
+        "total_seconds": 13969.320723
+      },
+      "range": {
+        "date": "2025-07-21",
+        "end": "2025-07-21T21:59:59Z",
+        "start": "2025-07-20T22:00:00Z",
+        "text": "Mon Jul 21st 2025",
+        "timezone": "Europe/Berlin"
+      }
+    },
+    {
+      "grand_total": {
+        "decimal": "0.00",
+        "digital": "0:00",
+        "hours": 0,
+        "minutes": 0,
+        "text": "0 secs",
+        "total_seconds": 0.0
+      },
+      "range": {
+        "date": "2025-07-22",
+        "end": "2025-07-22T21:59:59Z",
+        "start": "2025-07-21T22:00:00Z",
+        "text": "Tue Jul 22nd 2025",
+        "timezone": "Europe/Berlin"
+      }
+    }
+  ]
+}

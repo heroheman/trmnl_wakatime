@@ -11,5 +11,25 @@ static_data: ''
 polling_verb: get
 polling_url: ''
 polling_headers: ''
-name: My Plugin
+name: WakaTime Dashboard
 refresh_interval: 1440
+custom_fields:
+  - keyname: layout
+    field_type: select
+    name: Chart Layout
+    description: Choose how to display your coding activity
+    options:
+      - Bars
+      - Lines  
+      - Contributions / Github Style
+    default: lines
+  - keyname: timeframe
+    field_type: select
+    name: Time Period
+    description: Select the time range for your activity data
+    options:
+      - Last 7 Days: last_7_days
+      - Last 30 Days: last_30_days  
+      - Last 90 Days: last_90_days
+      - Last Year: last_year
+    default: last_30_days

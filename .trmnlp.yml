@@ -7,8 +7,13 @@ watch:
   - src
 
 # values of custom fields (defined in src/settings.yml)
-custom_fields: {}
+custom_fields: {
+  layout: "line",  # "line", "bars", "contributions"
+  timeframe: "last_7_days"  # "last_7_days", "last_30_days", "last_90_days", "last_year", "all_time"
+}
 
 # override variables
 variables:
-  trmnl: {}
+  trmnl:
+    plugin_settings:
+      polling_url: https://wakatime.com/share/@flrnz/3526e3f7-063a-4cc3-911e-d297f569335d.json

@@ -193,13 +193,17 @@
                 },
                 format: '{value:%b %Y}'
               },
+              dateTimeLabelFormats: {
+                month: '%b %Y',
+                year: '%Y'
+              },
+              tickInterval: 30 * 24 * 3600 * 1000, // Monthly intervals (30 days in milliseconds)
               lineWidth: 0,
               gridLineDashStyle: "dot",
               tickWidth: 1,
               tickLength: 0,
               gridLineWidth: 1,
-              gridLineColor: "#000000",
-              tickPixelInterval: 120
+              gridLineColor: "#000000"
             }
           }
         }

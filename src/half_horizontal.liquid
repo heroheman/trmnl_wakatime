@@ -30,11 +30,196 @@
 </div>
 
 <script type="text/javascript">
+  // Prepare chart data from Wakatime API response
+  var chartData = [];
+  var contributionsData = {};
+  
+  {% for day in data limit: 365 reversed %}
+    {% if day.range.date and day.grand_total.total_seconds %}
+      var hours = {{ day.grand_total.total_seconds | divided_by: 3600.0 | round: 2 }};
+      chartData.push(["{{ day.range.date }}", hours]);
+      contributionsData["{{ day.range.date }}"] = hours;
+    {% endif %}
+  {% endfor %}
+
   // Get selected layout from settings
   var selectedLayout = "{{ trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase }}";
-  
-  // Initialize chart for half horizontal view
-  document.addEventListener('DOMContentLoaded', function() {
-    initializeWakatimeChart('wakatime-chart-half', 'contributions-grid-half', selectedLayout, 180);
-  });
+
+  // Function to get contribution level based on hours
+  function getContributionLevel(hours) {
+    if (hours === 0) return 'bg--gray-7';
+    if (hours < 2) return 'bg--gray-5';
+    if (hours < 4) return 'bg--gray-3';
+    if (hours < 6) return 'bg--gray-1';
+    return 'bg--black';
+  }
+
+  // Function to create contributions grid
+  function createContributionsGrid() {
+    var grid = document.getElementById('contributions-grid-half');
+    if (!grid) return;
+    
+    var today = new Date();
+    var startDate = new Date(today);
+    startDate.setDate(today.getDate() - 364); // Show last 365 days
+    
+    // Create weeks container
+    var weeksContainer = document.createElement('div');
+    weeksContainer.className = 'flex flex--row gap--1 flex--center-x';
+    
+    // Generate 52 weeks
+    for (var week = 0; week < 52; week++) {
+      var weekCol = document.createElement('div');
+      weekCol.className = 'flex flex--col gap--1';
+      
+      // Create 7 days for this week
+      for (var day = 0; day < 7; day++) {
+        var currentDate = new Date(startDate);
+        currentDate.setDate(startDate.getDate() + (week * 7) + day);
+        
+        var daySquare = document.createElement('div');
+        daySquare.className = 'w--3 h--3';
+        
+        var dateStr = currentDate.toISOString().split('T')[0];
+        var hours = contributionsData[dateStr] || 0;
+        daySquare.className += ' ' + getContributionLevel(hours);
+        
+        weekCol.appendChild(daySquare);
+      }
+      
+      weeksContainer.appendChild(weekCol);
+    }
+    
+    grid.appendChild(weeksContainer);
+  }
+
+  // Function to create chart based on layout selection
+  var createChart = function() {
+    if (selectedLayout === "contributions / github style" || selectedLayout === "contributions") {
+      createContributionsGrid();
+    } else if (selectedLayout === "bars") {
+      // Create Bar Chart using Chartkick ColumnChart
+      new Chartkick["ColumnChart"](
+        "wakatime-chart-half",
+        chartData,
+        {
+          adapter: "highcharts",
+          prefix: "",
+          suffix: "h",
+          thousands: ",",
+          colors: ["black"],
+          library: {
+            chart: {
+              height: 180
+            },
+            plotOptions: {
+              series: {
+                animation: false,
+                pointPadding: 0.1,
+                groupPadding: 0.1,
+                borderWidth: 0
+              }
+            },
+            yAxis: {
+              labels: {
+                style: {
+                  fontSize: "16px",
+                  color: "#000000"
+                }
+              },
+              gridLineDashStyle: "shortdot",
+              gridLineWidth: 1,
+              gridLineColor: "#000000",
+              tickAmount: 5,
+              title: {
+                text: "Hours Coded"
+              }
+            },
+            xAxis: {
+              type: "datetime",
+              labels: {
+                style: {
+                  fontSize: "16px",
+                  color: "#000000"
+                }
+              },
+              lineWidth: 0,
+              gridLineDashStyle: "dot",
+              tickWidth: 1,
+              tickLength: 0,
+              gridLineWidth: 1,
+              gridLineColor: "#000000",
+              tickPixelInterval: 120
+            }
+          }
+        }
+      );
+    } else {
+      // Create Line Chart (default)
+      new Chartkick["LineChart"](
+        "wakatime-chart-half",
+        chartData,
+        {
+          adapter: "highcharts",
+          prefix: "",
+          suffix: "h",
+          thousands: ",",
+          points: false,
+          colors: ["black"],
+          curve: true,
+          library: {
+            chart: {
+              height: 180
+            },
+            plotOptions: {
+              series: {
+                animation: false,
+                lineWidth: 4
+              }
+            },
+            yAxis: {
+              labels: {
+                style: {
+                  fontSize: "16px",
+                  color:"#000000"
+                }
+              },
+              gridLineDashStyle: "shortdot",
+              gridLineWidth: 1,
+              gridLineColor: "#000000",
+              tickAmount: 5,
+              title: {
+                text: "Hours Coded"
+              }
+            },
+            xAxis: {
+              type: "datetime",
+              labels: {
+                style: {
+                  fontSize: "16px",
+                  color: "#000000"
+                }
+              },
+              lineWidth: 0,
+              gridLineDashStyle: "dot",
+              tickWidth: 1,
+              tickLength: 0,
+              gridLineWidth: 1,
+              gridLineColor: "#000000",
+              tickPixelInterval: 120
+            }
+          }
+        }
+      );
+    }
+  };
+
+  // ensure your chart loads before plugin render is generated
+  if (selectedLayout === "contributions / github style" || selectedLayout === "contributions") {
+    createChart();
+  } else if ("Chartkick" in window) {
+    createChart();
+  } else {
+    window.addEventListener("chartkick:load", createChart, true);
+  }
 </script>

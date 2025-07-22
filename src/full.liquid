@@ -1,4 +1,8 @@
 
+<!-- import Highcharts + Chartkick libraries -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartkick@5.0.1/dist/chartkick.min.js"></script>
+
 <!-- Wakatime Dashboard -->
 <div class="view view--full">
   <div class="layout layout--col gap--space-between">
@@ -67,21 +71,12 @@
     {% endif %}
   </div>
 
-  {% render 'wakatime_title_bar' %}
+  <div class="title_bar">
+    <img class="image" src="https://wakatime.com/static/img/wakatime-logo.svg" />
+    <span class="title">WakaTime</span>
+    <span class="instance">Coding Activity</span>
+  </div>
 </div>
-
-<script type="text/javascript">
-  // Get selected layout from settings
-  var selectedLayout = "{{ trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase }}";
-  
-  // Initialize chart for full view
-  document.addEventListener('DOMContentLoaded', function() {
-    initializeWakatimeChart('wakatime-chart-full', 'contributions-grid-full', selectedLayout, 260);
-  });
-</script>
-
-{% comment %} {{ trmnl.plugin_settings.custom_fields_values.layout }}
-{{ trmnl.plugin_settings.custom_fields_values.timeframe }} {% endcomment %}
 
 <script type="text/javascript">
   // Prepare chart data from Wakatime API response
@@ -110,7 +105,7 @@
 
   // Function to create contributions grid
   function createContributionsGrid() {
-    var grid = document.getElementById('contributions-grid');
+    var grid = document.getElementById('contributions-grid-full');
     if (!grid) return;
     
     var today = new Date();
@@ -154,7 +149,7 @@
     } else if (selectedLayout === "bars") {
       // Create Bar Chart using Chartkick ColumnChart
       new Chartkick["ColumnChart"](
-        "wakatime-chart",
+        "wakatime-chart-full",
         chartData,
         {
           adapter: "highcharts",
@@ -195,7 +190,8 @@
                 style: {
                   fontSize: "16px",
                   color: "#000000"
-                }
+                },
+                format: '{value:%b %Y}'
               },
               lineWidth: 0,
               gridLineDashStyle: "dot",
@@ -211,7 +207,7 @@
     } else {
       // Create Line Chart (default)
       new Chartkick["LineChart"](
-        "wakatime-chart",
+        "wakatime-chart-full",
         chartData,
         {
           adapter: "highcharts",

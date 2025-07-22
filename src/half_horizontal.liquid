@@ -34,6 +34,18 @@
   var chartData = [];
   var contributionsData = {};
   
+  // Get selected timeframe from settings
+  var selectedTimeframe = "{{ trmnl.plugin_settings.custom_fields_values.timeframe | default: 'last_30_days' }}";
+  var dataLimit = 365; // Default for contributions and last_year
+  
+  if (selectedTimeframe === 'last_7_days') {
+    dataLimit = 7;
+  } else if (selectedTimeframe === 'last_30_days') {
+    dataLimit = 30;
+  } else if (selectedTimeframe === 'last_90_days') {
+    dataLimit = 90;
+  }
+  
   {% for day in data limit: 365 reversed %}
     {% if day.range.date and day.grand_total.total_seconds %}
       var hours = {{ day.grand_total.total_seconds | divided_by: 3600.0 | round: 2 }};
@@ -44,6 +56,12 @@
 
   // Get selected layout from settings
   var selectedLayout = "{{ trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase }}";
+  
+  // Filter chart data based on timeframe (but not contributions)
+  var filteredChartData = chartData;
+  if (selectedLayout !== "contributions / github style" && selectedLayout !== "contributions") {
+    filteredChartData = chartData.slice(-dataLimit);
+  }
 
   // Function to get contribution level based on hours
   function getContributionLevel(hours) {
@@ -101,7 +119,7 @@
       // Create Bar Chart using Chartkick ColumnChart
       new Chartkick["ColumnChart"](
         "wakatime-chart-half",
-        chartData,
+        filteredChartData,
         {
           adapter: "highcharts",
           prefix: "",
@@ -158,7 +176,7 @@
       // Create Line Chart (default)
       new Chartkick["LineChart"](
         "wakatime-chart-half",
-        chartData,
+        filteredChartData,
         {
           adapter: "highcharts",
           prefix: "",

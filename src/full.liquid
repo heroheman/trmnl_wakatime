@@ -45,7 +45,7 @@
       </div>
     </div>
 
-    <!-- Line Chart Container -->
+    <!-- Chart Container -->
     <div id="wakatime-chart" style="width: 100%"></div>
   </div>
 
@@ -70,62 +70,126 @@
     {% endif %}
   {% endfor %}
 
-  // recommended configs to achieve the TRMNL Framework aesthetic
+  // Get selected layout from settings
+  var selectedLayout = "{{ trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase }}";
+
+  // Function to create chart based on layout selection
   var createChart = function() {
-    new Chartkick["LineChart"](
-    "wakatime-chart",
-    chartData,
-    {
-      adapter: "highcharts", // chartjs, google, etc available
-      prefix: "",
-      suffix: "h",
-      thousands: ",",
-      points: false,
-      colors: ["black"],
-      curve: true,
-      library: {
-        chart: {
-          height: 260
-        },
-        plotOptions: {
-          series: {
-            animation: false,
-            lineWidth: 4
-          }
-        },
-        yAxis: {
-          labels: {
-            style: {
-              fontSize: "16px",
-              color:"#000000"
+    if (selectedLayout === "bars") {
+      // Create Bar Chart using Chartkick ColumnChart
+      new Chartkick["ColumnChart"](
+        "wakatime-chart",
+        chartData,
+        {
+          adapter: "highcharts",
+          prefix: "",
+          suffix: "h",
+          thousands: ",",
+          colors: ["black"],
+          library: {
+            chart: {
+              height: 260
+            },
+            plotOptions: {
+              series: {
+                animation: false,
+                pointPadding: 0.1,
+                groupPadding: 0.1,
+                borderWidth: 0
+              }
+            },
+            yAxis: {
+              labels: {
+                style: {
+                  fontSize: "16px",
+                  color: "#000000"
+                }
+              },
+              gridLineDashStyle: "shortdot",
+              gridLineWidth: 1,
+              gridLineColor: "#000000",
+              tickAmount: 5,
+              title: {
+                text: "Hours Coded"
+              }
+            },
+            xAxis: {
+              type: "datetime",
+              labels: {
+                style: {
+                  fontSize: "16px",
+                  color: "#000000"
+                }
+              },
+              lineWidth: 0,
+              gridLineDashStyle: "dot",
+              tickWidth: 1,
+              tickLength: 0,
+              gridLineWidth: 1,
+              gridLineColor: "#000000",
+              tickPixelInterval: 120
             }
-          },
-          gridLineDashStyle: "shortdot",
-          gridLineWidth: 1,
-          gridLineColor: "#000000",
-          tickAmount: 5,
-          title: {
-            text: "Hours Coded"
           }
-        },
-        xAxis: {
-          type: "datetime",
-          labels: {
-            style: {
-              fontSize: "16px",
-              color: "#000000"
-            }
-          },
-          lineWidth: 0,
-          gridLineDashStyle: "dot",
-          tickWidth: 1,
-          tickLength: 0,
-          gridLineWidth: 1,
-          gridLineColor: "#000000",
-          tickPixelInterval: 120
         }
-      }
-    });
+      );
+    } else {
+      // Create Line Chart (default)
+      new Chartkick["LineChart"](
+        "wakatime-chart",
+        chartData,
+        {
+          adapter: "highcharts",
+          prefix: "",
+          suffix: "h",
+          thousands: ",",
+          points: false,
+          colors: ["black"],
+          curve: true,
+          library: {
+            chart: {
+              height: 260
+            },
+            plotOptions: {
+              series: {
+                animation: false,
+                lineWidth: 4
+              }
+            },
+            yAxis: {
+              labels: {
+                style: {
+                  fontSize: "16px",
+                  color:"#000000"
+                }
+              },
+              gridLineDashStyle: "shortdot",
+              gridLineWidth: 1,
+              gridLineColor: "#000000",
+              tickAmount: 5,
+              title: {
+                text: "Hours Coded"
+              }
+            },
+            xAxis: {
+              type: "datetime",
+              labels: {
+                style: {
+                  fontSize: "16px",
+                  color: "#000000"
+                }
+              },
+              lineWidth: 0,
+              gridLineDashStyle: "dot",
+              tickWidth: 1,
+              tickLength: 0,
+              gridLineWidth: 1,
+              gridLineColor: "#000000",
+              tickPixelInterval: 120
+            }
+          }
+        }
+      );
+    }
   };
 
   // ensure your chart loads before plugin render is generated

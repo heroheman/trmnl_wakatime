@@ -40,6 +40,14 @@ custom_fields:
   - 'Yes': 'true'
   - 'No': 'false'
   default: 'true'
+- keyname: show_x_axis_labels
+  field_type: select
+  name: Show X-Axis Labels
+  description: Show or hide date labels on the X-axis of charts
+  options:
+  - 'Yes': 'true'
+  - 'No': 'false'
+  default: 'true'
 - keyname: dashboard_metrics
   field_type: select
   name: Dashboard Metrics

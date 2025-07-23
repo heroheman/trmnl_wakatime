@@ -42,7 +42,9 @@
     {% endif %}
     {% assign display_hours = total_minutes | divided_by: 60 %}
     {% assign display_minutes = total_minutes | modulo: 60 %}
-    {% if display_minutes < 10 %}
+    {% if display_minutes == 0 %}
+        {% assign formatted_time = display_hours | append: 'h' %}
+    {% elsif display_minutes < 10 %}
         {% assign formatted_time = display_hours | append: 'h0' | append: display_minutes | append: 'm' %}
     {% else %}
         {% assign formatted_time = display_hours | append: 'h' | append: display_minutes| append: 'm' %}
@@ -61,7 +63,7 @@
       {% assign current_week_days = 0 %}
       
       {% for day in data limit: 364 reversed %}
-        {% if day.range.start and day.grand_total.total_seconds %}
+        {% if day.range.date and day.grand_total.total_seconds %}
           {% assign hours = day.grand_total.total_seconds | divided_by: 3600.0 | round: 2 %}
           
           {% comment %} Start a new week column when needed {% endcomment %}
@@ -70,7 +72,7 @@
           {% endif %}
           
           {% comment %} Determine background class based on hours {% endcomment %}
-          {% assign bg_class = 'bg--white' %}
+          {% assign bg_class = 'bg--gray-7' %}
           {% if hours > 0 %}
             {% if hours < 1 %}
               {% assign bg_class = 'bg--gray-6' %}
@@ -174,173 +176,252 @@
     {% endif %}
 {% endtemplate %}
 
-<script type="text/javascript">
-  // Shared data preparation
-  var prepareWakatimeData = function() {
+
+{% template wakatime_charts %}
+    <div id="wakatime-chart-full" style="width: 100%"></div>
+    <script type="text/javascript">
+    // Prepare chart data from Wakatime API response
     var chartData = [];
     var contributionsData = {};
+    var chartHeight = {{ chart_height | default: 260 }};
+    var showXAxisLabels = "{{ show_x_axis_labels | default: 'true' }}" === 'true';
+    console.log("showXAxisLabels:", showXAxisLabels);
+    
+    // Get selected timeframe from settings
+    var selectedTimeframe = "{{ selected_timeframe |  default: 'last_30_days' }}";
+    var dataLimit = 365; // Default for contributions and last_year
+    
+    if (selectedTimeframe === 'last_7_days') {
+        dataLimit = 7;
+    } else if (selectedTimeframe === 'last_30_days') {
+        dataLimit = 30;
+    } else if (selectedTimeframe === 'last_90_days') {
+        dataLimit = 90;
+    }
     
     {% for day in data limit: 365 reversed %}
-      {% if day.range.date and day.grand_total.total_seconds %}
+        {% if day.range.date and day.grand_total.total_seconds %}
+        {% assign day_start_date = day.range.date %}
+        {% comment %} Use date directly for consistency with JavaScript Date object {% endcomment %}
         var hours = {{ day.grand_total.total_seconds | divided_by: 3600.0 | round: 2 }};
-        chartData.push(["{{ day.range.date }}", hours]);
-        contributionsData["{{ day.range.date }}"] = hours;
-      {% endif %}
+        chartData.push(["{{ day_start_date }}", hours]);
+        contributionsData["{{ day_start_date }}"] = hours;
+        {% endif %}
     {% endfor %}
-    
-    return {
-      chartData: chartData,
-      contributionsData: contributionsData
-    };
-  };
 
-  // Get contribution level based on hours
-  function getContributionLevel(hours) {
-    if (hours === 0) return 'bg--white';
-    if (hours < 1) return 'bg--gray-5';
-    if (hours < 2) return 'bg--gray-4';
-    if (hours < 3) return 'bg--gray-3';
-    if (hours < 4) return 'bg--gray-2';
-    if (hours < 6) return 'bg--gray-1';
-    return 'bg--black';
-  }
-
-  // Create contributions grid
-  var createContributionsGrid = function(gridId, contributionsData) {
-    var grid = document.getElementById(gridId);
-    if (!grid) return;
+    // Get selected layout from settings
+    var selectedLayout = "{{ selected_layout | default: 'lines' }}";
     
-    var today = new Date();
-    var startDate = new Date(today);
-    startDate.setDate(today.getDate() - 364); // Show last 365 days
+    // Get grouping setting
+    var enableGrouping = "{{ enable_grouping | default: 'true' }}" === 'true';
     
-    // Create weeks container
-    var weeksContainer = document.createElement('div');
-    weeksContainer.className = 'flex flex--row gap--1 flex--center-x';
-    
-    // Generate 52 weeks
-    for (var week = 0; week < 52; week++) {
-      var weekCol = document.createElement('div');
-      weekCol.className = 'flex flex--col gap--1';
-      
-      // Create 7 days for this week
-      for (var day = 0; day < 10; day++) {
-        var currentDate = new Date(startDate);
-        currentDate.setDate(startDate.getDate() + (week * 7) + day);
-        
-        var daySquare = document.createElement('div');
-        daySquare.className = 'w--2 h--2';
-        
-        var dateStr = currentDate.toISOString().split('T')[0];
-        var hours = contributionsData[dateStr] || 0;
-        daySquare.className += ' ' + getContributionLevel(hours);
-        
-        weekCol.appendChild(daySquare);
-      }
-      
-      weeksContainer.appendChild(weekCol);
+    // Filter chart data based on timeframe (but not contributions)
+    var filteredChartData = chartData;
+    if (selectedLayout !== "contributions") {
+        filteredChartData = chartData.slice(-dataLimit);
     }
-    
-    grid.appendChild(weeksContainer);
-  };
 
-  // Shared chart configuration
-  var getChartConfig = function(chartData, chartType, chartHeight) {
-    var height = chartHeight || 260;
-    
-    var baseConfig = {
-      adapter: "highcharts",
-      prefix: "",
-      suffix: "h", 
-      thousands: ",",
-      colors: ["black"],
-      library: {
-        chart: {
-          height: height
-        },
-        plotOptions: {
-          series: {
-            animation: false
-          }
-        },
-        yAxis: {
-          labels: {
-            style: {
-              fontSize: "16px",
-              color: "#000000"
-            }
-          },
-          gridLineDashStyle: "shortdot",
-          gridLineWidth: 1,
-          gridLineColor: "#000000",
-          tickAmount: 5,
-          title: {
-            text: "Hours Coded"
-          }
-        },
-        xAxis: {
-          type: "datetime",
-          labels: {
-            style: {
-              fontSize: "16px",
-              color: "#000000"
-            }
-          },
-          lineWidth: 0,
-          gridLineDashStyle: "dot",
-          tickWidth: 1,
-          tickLength: 0,
-          gridLineWidth: 1,
-          gridLineColor: "#000000",
-          tickPixelInterval: 120
+    // Function to group data for line charts
+    function groupDataForLineChart(data, timeframe) {
+        // Only group if grouping is enabled
+        if (!enableGrouping) {
+        return data;
         }
-      }
-    };
-
-    if (chartType === "bars") {
-      baseConfig.library.plotOptions.series.pointPadding = 0.1;
-      baseConfig.library.plotOptions.series.groupPadding = 0.1;
-      baseConfig.library.plotOptions.series.borderWidth = 0;
-    } else {
-      baseConfig.points = false;
-      baseConfig.curve = true;
-      baseConfig.library.plotOptions.series.lineWidth = 4;
+        
+        if (timeframe === 'last_90_days') {
+        // Group by 7-day periods and calculate median
+        var groupedData = [];
+        for (var i = 0; i < data.length; i += 7) {
+            var weekData = data.slice(i, i + 7);
+            if (weekData.length > 0) {
+            var values = weekData.map(function(item) { return item[1]; }).sort(function(a, b) { return a - b; });
+            var median = values.length % 2 === 0 
+                ? (values[Math.floor(values.length / 2) - 1] + values[Math.floor(values.length / 2)]) / 2
+                : values[Math.floor(values.length / 2)];
+            // Use the last date of the week
+            groupedData.push([weekData[weekData.length - 1][0], median]);
+            }
+        }
+        return groupedData;
+        } else if (timeframe === 'last_year') {
+        // Group by month and calculate median
+        var monthlyGroups = {};
+        data.forEach(function(item) {
+            var date = new Date(item[0]);
+            var monthKey = date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0');
+            if (!monthlyGroups[monthKey]) {
+            monthlyGroups[monthKey] = [];
+            }
+            monthlyGroups[monthKey].push(item[1]);
+        });
+        
+        var groupedData = [];
+        Object.keys(monthlyGroups).sort().forEach(function(monthKey) {
+            var values = monthlyGroups[monthKey].sort(function(a, b) { return a - b; });
+            var median = values.length % 2 === 0 
+            ? (values[Math.floor(values.length / 2) - 1] + values[Math.floor(values.length / 2)]) / 2
+            : values[Math.floor(values.length / 2)];
+            // Use first day of month for consistent display
+            groupedData.push([monthKey + '-01', median]);
+        });
+        return groupedData;
+        }
+        return data;
     }
 
-    return baseConfig;
-  };
+    // Function to get X-axis configuration based on timeframe
+    function getXAxisConfig(timeframe, showXAxisLabels) {
+        console.log("getXAxisConfig called with timeframe:", timeframe, "showXAxisLabels:", showXAxisLabels);
+        var config = {
+            type: "datetime",
+            labels: {
+                style: {
+                    fontSize: "14px",
+                    color: "#000000"
+                }
+            },
+            gridLineDashStyle: "dot",
+            tickWidth: 1,
+            tickLength: 0,
+            gridLineWidth: 1,
+            gridLineColor: "#000000"
+        };
 
-  // Create chart based on layout selection
-  var createWakatimeChart = function(chartId, gridId, data, selectedLayout, chartHeight) {
-    if (selectedLayout === "contributions / github style" || selectedLayout === "contributions") {
-      createContributionsGrid(gridId, data.contributionsData);
-    } else if (selectedLayout === "bars") {
-      var config = getChartConfig(data.chartData, "bars", chartHeight);
-      new Chartkick["ColumnChart"](chartId, data.chartData, config);
-    } else {
-      var config = getChartConfig(data.chartData, "lines", chartHeight);
-      new Chartkick["LineChart"](chartId, data.chartData, config);
+        if (showXAxisLabels) {
+            config.labels.enabled = true;
+            
+            if (timeframe === 'last_7_days') {
+                // Show day names for 7 days
+                config.labels.format = '{value:%a}';
+                config.tickPixelInterval = 50;
+            } else if (timeframe === 'last_30_days') {
+                // Show dates for 30 days
+                config.labels.format = '{value:%d.%m}';
+                config.tickPixelInterval = 80;
+            } else if (timeframe === 'last_90_days') {
+                config.labels.format = '{value:%d.%m}';
+                config.tickPixelInterval = 120;
+                // Don't set tickInterval, let Highcharts decide
+            } else if (timeframe === 'last_year') {
+                // Show month names for year
+                config.labels.format = '{value:%b}';
+                config.tickPixelInterval = 120;
+                // Don't set tickInterval, let Highcharts decide
+            }
+        } else {
+            config.labels.enabled = false;
+        }
+        
+        return config;
     }
-  };
 
-  // Initialize chart when ready
-  var initializeWakatimeChart = function(chartId, gridId, selectedLayout, chartHeight) {
-    var data = prepareWakatimeData();
-    
-    var createChart = function() {
-      createWakatimeChart(chartId, gridId, data, selectedLayout, chartHeight);
+    // Function to create chart based on layout selection
+    var createChart = function(showXAxisLabels) {
+        var xAxisConfig = getXAxisConfig(selectedTimeframe, showXAxisLabels);
+        
+        if (selectedLayout === "contributions") {
+        // Contributions are now rendered in Liquid template
+        return;
+        } else if (selectedLayout === "bars") {
+        // Create Bar Chart using Chartkick ColumnChart
+        new Chartkick["ColumnChart"](
+            "wakatime-chart-full",
+            filteredChartData,
+            {
+            adapter: "highcharts",
+            prefix: "",
+            suffix: "h",
+            thousands: ",",
+            colors: ["black"],
+            tooltip: false,
+            library: {
+                chart: {
+                height: chartHeight
+                },
+                plotOptions: {
+                series: {
+                    animation: false,
+                    pointPadding: 0.1,
+                    groupPadding: 0.1,
+                    borderWidth: 0
+                }
+                },
+                yAxis: {
+                labels: {
+                    style: {
+                    fontSize: "16px",
+                    color: "#000000"
+                    }
+                },
+                gridLineDashStyle: "shortdot",
+                gridLineWidth: 1,
+                gridLineColor: "#000000",
+                tickAmount: 5,
+                title: {
+                    text: "Hours Coded"
+                }
+                },
+                xAxis: xAxisConfig
+            }
+            }
+        );
+        } else {
+        // Create Line Chart (default) with data grouping
+        var lineChartData = groupDataForLineChart(filteredChartData, selectedTimeframe);
+        new Chartkick["LineChart"](
+            "wakatime-chart-full",
+            lineChartData,
+            {
+            adapter: "highcharts",
+            prefix: "",
+            suffix: "h",
+            thousands: ",",
+            points: false,
+            colors: ["black"],
+            curve: true,
+            tooltip: false,
+            library: {
+                chart: {
+                height: chartHeight
+                },
+                plotOptions: {
+                series: {
+                    animation: false,
+                    lineWidth: 4
+                }
+                },
+                yAxis: {
+                labels: {
+                    style: {
+                    fontSize: "16px",
+                    color:"#000000"
+                    }
+                },
+                gridLineDashStyle: "shortdot",
+                gridLineWidth: 1,
+                gridLineColor: "#000000",
+                tickAmount: 5,
+                title: {
+                    text: "Hours Coded"
+                }
+                },
+                xAxis: xAxisConfig
+            }
+            }
+        );
+        }
     };
 
-    if (selectedLayout === "contributions / github style" || selectedLayout === "contributions") {
-      createChart();
+    // ensure your chart loads before plugin render is generated
+    if (selectedLayout === "contributions") {
+        // Contributions are now rendered in Liquid template - no JavaScript needed
     } else if ("Chartkick" in window) {
-      createChart();
+        createChart(showXAxisLabels);
     } else {
-      window.addEventListener("chartkick:load", createChart, true);
+        window.addEventListener("chartkick:load", createChart, true);
     }
-  };
-</script>
-
+    </script>
+{% endtemplate %}
 
 {% template wakatime_title_bar %}
   <div class="title_bar">

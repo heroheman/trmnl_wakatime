@@ -26,13 +26,49 @@
     {% assign total_decimal = 0 %}
     {% assign decimal_strings = "" %}
     {% assign data = data | reverse %}
+    {% assign skip_count = skip | default: 0 %}
+    {% assign processed_count = 0 %}
+    {% assign skipped_count = 0 %}
     
-    {% comment %} Iterate through the data for the specified limit {% endcomment %}
-    {% for day in data limit: limit %}
-        {% assign day_decimal = day.grand_total.decimal | plus: 0 %}
-        {% comment %} Add to total decimal time {% endcomment %}
-        {% assign decimal_strings = decimal_strings | append: day_decimal | append: ',' %}
-        {% assign total_decimal = total_decimal | plus: day_decimal %}
+    {% comment %} For calendar-based calculations (this_week, this_month) {% endcomment %}
+    {% if calendar_type %}
+        {% if calendar_type == 'week' %}
+            {% comment %} Calculate days since Monday for current week {% endcomment %}
+            {% assign today_date = 'now' | date: '%u' %} {% comment %} Monday=1, Sunday=7 {% endcomment %}
+            {% assign days_since_monday = today_date | minus: 1 %}
+            {% assign calendar_limit = days_since_monday | plus: 1 %}
+        {% elsif calendar_type == 'month' %}
+            {% comment %} Calculate days since first of month {% endcomment %}
+            {% assign today_date = 'now' | date: '%d' %}
+            {% assign calendar_limit = today_date | plus: 0 %}
+        {% elsif calendar_type == 'last_week' %}
+            {% comment %} Last Monday to Sunday (skip current week, take 7 days) {% endcomment %}
+            {% assign today_date = 'now' | date: '%u' %}
+            {% assign days_since_monday = today_date | minus: 1 %}
+            {% assign skip_count = days_since_monday | plus: 1 %}
+            {% assign calendar_limit = 7 %}
+        {% elsif calendar_type == 'last_month' %}
+            {% comment %} Approximate last month as 30 days, skip current month days {% endcomment %}
+            {% assign today_date = 'now' | date: '%d' %}
+            {% assign skip_count = today_date | plus: 0 %}
+            {% assign calendar_limit = 30 %}
+        {% endif %}
+        {% assign limit = calendar_limit %}
+    {% endif %}
+    
+    {% comment %} Iterate through the data, skipping and then limiting {% endcomment %}
+    {% for day in data %}
+        {% if skipped_count < skip_count %}
+            {% assign skipped_count = skipped_count | plus: 1 %}
+        {% elsif processed_count < limit %}
+            {% assign day_decimal = day.grand_total.decimal | plus: 0 %}
+            {% comment %} Add to total decimal time {% endcomment %}
+            {% assign decimal_strings = decimal_strings | append: day_decimal | append: ',' %}
+            {% assign total_decimal = total_decimal | plus: day_decimal %}
+            {% assign processed_count = processed_count | plus: 1 %}
+        {% else %}
+            {% break %}
+        {% endif %}
     {% endfor %}
     {% comment %} Format time with 15-minute rounding {% endcomment %}
     {% assign total_minutes = total_decimal | times: 60 | round %}
@@ -156,12 +192,27 @@
               {% if metric_trimmed == 'today' %}
                 {% render 'calculate_hours' data: data, limit: 1, valueFit: valueFit, valueSize: valueSize %}
                 <span class="label">Today</span>
+              {% elsif metric_trimmed == 'yesterday' %}
+                {% render 'calculate_hours' data: data, limit: 1, skip: 1, valueFit: valueFit, valueSize: valueSize %}
+                <span class="label">Yesterday</span>
               {% elsif metric_trimmed == 'this_week' %}
-                {% render 'calculate_hours' data: data, limit: 7, valueFit: valueFit, valueSize: valueSize %}
+                {% render 'calculate_hours' data: data, calendar_type: 'week', valueFit: valueFit, valueSize: valueSize %}
                 <span class="label">This Week</span>
+              {% elsif metric_trimmed == 'last_week' %}
+                {% render 'calculate_hours' data: data, calendar_type: 'last_week', valueFit: valueFit, valueSize: valueSize %}
+                <span class="label">Last Week</span>
+              {% elsif metric_trimmed == 'last_7_days' %}
+                {% render 'calculate_hours' data: data, limit: 7, valueFit: valueFit, valueSize: valueSize %}
+                <span class="label">Last 7 Days</span>
               {% elsif metric_trimmed == 'this_month' %}
-                {% render 'calculate_hours' data: data, limit: 30, valueFit: valueFit, valueSize: valueSize %}
+                {% render 'calculate_hours' data: data, calendar_type: 'month', valueFit: valueFit, valueSize: valueSize %}
                 <span class="label">This Month</span>
+              {% elsif metric_trimmed == 'last_month' %}
+                {% render 'calculate_hours' data: data, calendar_type: 'last_month', valueFit: valueFit, valueSize: valueSize %}
+                <span class="label">Last Month</span>
+              {% elsif metric_trimmed == 'last_30_days' %}
+                {% render 'calculate_hours' data: data, limit: 30, valueFit: valueFit, valueSize: valueSize %}
+                <span class="label">Last 30 Days</span>
               {% elsif metric_trimmed == 'last_3_months' %}
                 {% render 'calculate_hours' data: data, limit: 90, valueFit: valueFit, valueSize: valueSize %}
                 <span class="label">Last 3 Months</span>

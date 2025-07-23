@@ -68,8 +68,13 @@ custom_fields:
   description: Select which metrics to display in the dashboard (up to 5)
   options:
   - Today: today
-  - Last 7 Days: this_week
+  - Yesterday: yesterday
+  - This Week: this_week
+  - Last Week: last_week
+  - Last 7 Days: last_7_days
   - This Month: this_month
+  - Last Month: last_month
+  - Last 30 Days: last_30_days
   - Last 3 Months: last_3_months
   - Last Year: last_year
   multiple: true

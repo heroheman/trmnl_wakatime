@@ -40,14 +40,28 @@ custom_fields:
   - 'Yes': 'true'
   - 'No': 'false'
   default: 'true'
-- keyname: show_x_axis_labels
+# - keyname: show_x_axis_labels
+#   field_type: select
+#   name: Show X-Axis Labels
+#   description: Show or hide date labels on the X-axis of charts
+#   options:
+#   - 'Yes': 'true'
+#   - 'No': 'false'
+#   default: 'true'
+- keyname: date_format
   field_type: select
-  name: Show X-Axis Labels
-  description: Show or hide date labels on the X-axis of charts
+  name: Date Format
+  description: Choose how dates are displayed on the X-axis
   options:
-  - 'Yes': 'true'
-  - 'No': 'false'
-  default: 'true'
+  - 'DD.MM (15.07)': '%d.%m'
+  - 'DD/MM (15/07)': '%d/%m'
+  - 'MM-DD (07-15)': '%m-%d'
+  - 'DD MMM (15 Jul)': '%d %b'
+  - 'MMM DD (Jul 15)': '%b %d'
+  - 'Weekday (Mon)': '%a'
+  - 'YYYY-MM-DD (2024-07-15)': '%Y-%m-%d'
+  - 'DD.MM.YYYY (15.07.2024)': '%d.%m.%Y'
+  default: '%d.%m'
 - keyname: dashboard_metrics
   field_type: select
   name: Dashboard Metrics

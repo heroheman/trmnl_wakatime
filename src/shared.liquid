@@ -185,7 +185,7 @@
     var contributionsData = {};
     var chartHeight = {{ chart_height | default: 260 }};
     var showXAxisLabels = "{{ show_x_axis_labels | default: 'true' }}" === 'true';
-    console.log("showXAxisLabels:", showXAxisLabels);
+    var dateFormat = "{{ date_format | default: '%d.%m' }}";
     
     // Get selected timeframe from settings
     var selectedTimeframe = "{{ selected_timeframe |  default: 'last_30_days' }}";
@@ -202,9 +202,9 @@
     {% for day in data limit: 365 reversed %}
         {% if day.range.date and day.grand_total.total_seconds %}
         {% assign day_start_date = day.range.date %}
-        {% comment %} Use date directly for consistency with JavaScript Date object {% endcomment %}
+        {% comment %} Convert date string to JavaScript Date object {% endcomment %}
         var hours = {{ day.grand_total.total_seconds | divided_by: 3600.0 | round: 2 }};
-        chartData.push(["{{ day_start_date }}", hours]);
+        chartData.push([new Date("{{ day_start_date }}").getTime(), hours]);
         contributionsData["{{ day_start_date }}"] = hours;
         {% endif %}
     {% endfor %}
@@ -261,8 +261,8 @@
             var median = values.length % 2 === 0 
             ? (values[Math.floor(values.length / 2) - 1] + values[Math.floor(values.length / 2)]) / 2
             : values[Math.floor(values.length / 2)];
-            // Use first day of month for consistent display
-            groupedData.push([monthKey + '-01', median]);
+            // Use first day of month as timestamp
+            groupedData.push([new Date(monthKey + '-01').getTime(), median]);
         });
         return groupedData;
         }
@@ -270,46 +270,58 @@
     }
 
     // Function to get X-axis configuration based on timeframe
-    function getXAxisConfig(timeframe, showXAxisLabels) {
-        console.log("getXAxisConfig called with timeframe:", timeframe, "showXAxisLabels:", showXAxisLabels);
+    function getXAxisConfig(timeframe, showXAxisLabels, dateFormat) {
+        console.log("getXAxisConfig called with timeframe:", timeframe, "showXAxisLabels:", showXAxisLabels, "dateFormat:", dateFormat);
         var config = {
             type: "datetime",
             labels: {
                 style: {
                     fontSize: "14px",
                     color: "#000000"
-                }
+                },
+                y: 25 // Move labels slightly down
             },
-            gridLineDashStyle: "dot",
+            gridLineDashStyle: "solid",
             tickWidth: 1,
-            tickLength: 0,
+            tickLength: 8,
+            tickColor: "#666666",
             gridLineWidth: 1,
-            gridLineColor: "#000000"
+            gridLineColor: "#cccccc",
+            lineWidth: 1,
+            lineColor: "#000000"
         };
 
         if (showXAxisLabels) {
             config.labels.enabled = true;
+            config.gridLineWidth = 1;
             
             if (timeframe === 'last_7_days') {
-                // Show day names for 7 days
-                config.labels.format = '{value:%a}';
+                // Use custom format or default to weekday for 7 days
+                var format = dateFormat === '%a' || dateFormat === '%A' ? dateFormat : '%a';
+                config.labels.format = '{value:' + format + '}';
                 config.tickPixelInterval = 50;
+                config.gridLineDashStyle = "solid";
             } else if (timeframe === 'last_30_days') {
-                // Show dates for 30 days
-                config.labels.format = '{value:%d.%m}';
+                // Use selected date format
+                config.labels.format = '{value:' + dateFormat + '}';
                 config.tickPixelInterval = 80;
+                config.gridLineDashStyle = "dot";
             } else if (timeframe === 'last_90_days') {
-                config.labels.format = '{value:%d.%m}';
+                // Use selected date format
+                config.labels.format = '{value:' + dateFormat + '}';
                 config.tickPixelInterval = 120;
-                // Don't set tickInterval, let Highcharts decide
+                config.gridLineDashStyle = "dot";
             } else if (timeframe === 'last_year') {
-                // Show month names for year
-                config.labels.format = '{value:%b}';
+                // Use custom format or default to month for year
+                var format = dateFormat.includes('%b') || dateFormat.includes('%B') || dateFormat.includes('%m') ? dateFormat : '%b';
+                config.labels.format = '{value:' + format + '}';
                 config.tickPixelInterval = 120;
-                // Don't set tickInterval, let Highcharts decide
+                config.gridLineDashStyle = "solid";
             }
         } else {
             config.labels.enabled = false;
+            config.gridLineWidth = 0;
+            config.tickLength = 0;
         }
         
         return config;
@@ -317,7 +329,7 @@
 
     // Function to create chart based on layout selection
     var createChart = function(showXAxisLabels) {
-        var xAxisConfig = getXAxisConfig(selectedTimeframe, showXAxisLabels);
+        var xAxisConfig = getXAxisConfig(selectedTimeframe, showXAxisLabels, dateFormat);
         
         if (selectedLayout === "contributions") {
         // Contributions are now rendered in Liquid template

@@ -5,7 +5,8 @@
     {% render 'dashboard_horizontal' 
         selected_metrics: trmnl.plugin_settings.custom_fields_values.dashboard_metrics,
         valueFit: false,
-        data: data
+        data: data,
+        metric_limit: 6
     %}
     <!-- Chart Container -->
     {% assign selected_layout = trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase %}

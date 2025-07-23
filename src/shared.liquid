@@ -211,6 +211,11 @@
     {% assign metrics_count = metrics_array.size %}
     {% assign valueSize = '' %}
 
+    {% comment %} Apply metric_limit if set {% endcomment %}
+    {% if metric_limit and metric_limit > 0 and metric_limit < metrics_count %}
+      {% assign metrics_count = metric_limit %}
+    {% endif %}
+
     {% if metrics_count > 0 %}
       {% if metrics_count == 1 %}
         {% assign grid_class = "grid grid--cols-1" %}
@@ -220,6 +225,11 @@
         {% assign grid_class = "grid grid--cols-3" %}
       {% elsif metrics_count == 4 %}
         {% assign grid_class = "grid grid--cols-4" %}
+      {% elsif metrics_count == 5 %}
+        {% assign grid_class = "grid grid--cols-5" %}
+      {% elsif metrics_count == 6 %}
+        {% assign valueSize = 'value--xsmall' %}
+        {% assign grid_class = "grid grid--cols-6" %}
       {% else %}
         {% assign valueFit = true %}
         {% assign valueSize = 'value--small' %}
@@ -228,7 +238,7 @@
       {% endif %}
       
       <div class="{{ grid_class }}">
-        {% for metric in metrics_array %}
+        {% for metric in metrics_array limit: metrics_count %}
           {% assign metric_trimmed = metric | strip %}
           {% if metric_trimmed != '' %}
             {% render 'render_metric_item' metric_trimmed: metric_trimmed, data: data, valueFit: valueFit %}
@@ -246,6 +256,10 @@
     {% assign valueSize = valueSize | default: '' %}
     {% assign valueFit = valueFit | default: false %}
     
+    {% comment %} Apply metric_limit if set {% endcomment %}
+    {% if metric_limit and metric_limit > 0 and metric_limit < metrics_count %}
+      {% assign metrics_count = metric_limit %}
+    {% endif %}
 
     {% if metrics_count > 0 %}
       {% comment %} For vertical layout, always use 2 columns max, distribute rows {% endcomment %}
@@ -255,10 +269,10 @@
         {% assign start_index = row | minus: 1 | times: 2 %}
         {% assign end_index = start_index | plus: 1 %}
         
-        {% comment %} Count actual items in this row {% endcomment %}
+        {% comment %} Count actual items in this row (respect metric_limit) {% endcomment %}
         {% assign items_in_row = 0 %}
         {% for i in (start_index..end_index) %}
-          {% if metrics_array[i] and metrics_array[i] != '' %}
+          {% if i < metrics_count and metrics_array[i] and metrics_array[i] != '' %}
             {% assign items_in_row = items_in_row | plus: 1 %}
           {% endif %}
         {% endfor %}
@@ -272,9 +286,11 @@
         {% if items_in_row > 0 %}
           <div class="{{ grid_class }}">
             {% for i in (start_index..end_index) %}
-              {% assign metric = metrics_array[i] | strip %}
-              {% if metric != '' %}
-                {% render 'render_metric_item' metric_trimmed: metric, data: data, valueFit: valueFit, valueSize: valueSize %}
+              {% if i < metrics_count %}
+                {% assign metric = metrics_array[i] | strip %}
+                {% if metric != '' %}
+                  {% render 'render_metric_item' metric_trimmed: metric, data: data, valueFit: valueFit, valueSize: valueSize %}
+                {% endif %}
               {% endif %}
             {% endfor %}
           </div>

@@ -9,10 +9,13 @@ polling_headers: ''
 polling_body: 
 id: 123718
 custom_fields:
-# - keyname: time_zone
-#   field_type: time_zone
-#   name: Time Zone
-#   description: Where are you located?
+- keyname: author_bio
+  name: About This Plugin
+  field_type: author_bio
+  description: A WakaTime dashboard plugin for TRMNLP, displaying your coding activity in a customizable chart format.
+  # github_url: https://github.com/heroheman
+  # learn_more_url: https://github.com/heroheman/trmnl_mastodon_user_timeline
+  email_address: moin@flore.nz
 - keyname: layout
   field_type: select
   name: Chart Layout
@@ -78,6 +81,7 @@ custom_fields:
   - Last 3 Months: last_3_months
   - Last Year: last_year
   multiple: true
+  required: true
 - keyname: show_title_bar
   field_type: select
   name: Show Title Bar

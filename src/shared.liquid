@@ -241,7 +241,7 @@
         {% for metric in metrics_array limit: metrics_count %}
           {% assign metric_trimmed = metric | strip %}
           {% if metric_trimmed != '' %}
-            {% render 'render_metric_item' metric_trimmed: metric_trimmed, data: data, valueFit: valueFit %}
+            {% render 'render_metric_item' metric_trimmed: metric_trimmed, data: data, valueFit: valueFit, valueSize: valueSize %}
           {% endif %}
         {% endfor %}
       </div>
@@ -262,6 +262,15 @@
     {% endif %}
 
     {% if metrics_count > 0 %}
+      {% comment %} {% if metrics_count > 8 %}
+        {% assign valueSize = 'value--xsmall' %}
+      {% else %}
+        {% assign valueFit = true %}
+        {% assign valueSize = 'value--small' %}
+
+        {% assign grid_class = "grid grid--cols-5" %}
+      {% endif %} {% endcomment %}
+
       {% comment %} For vertical layout, always use 2 columns max, distribute rows {% endcomment %}
       {% assign rows_needed = metrics_count | divided_by: 2.0 | ceil %}
       

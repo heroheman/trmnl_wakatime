@@ -12,7 +12,7 @@ custom_fields:
 - keyname: author_bio
   name: About This Plugin
   field_type: author_bio
-  description: A WakaTime dashboard plugin for TRMNLP, displaying your coding activity in a customizable chart format.
+  description: v0.0.1 - A WakaTime dashboard plugin for TRMNLP, displaying your coding activity in a customizable chart format.
   # github_url: https://github.com/heroheman
   # learn_more_url: https://github.com/heroheman/trmnl_mastodon_user_timeline
   email_address: moin@flore.nz

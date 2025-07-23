@@ -23,7 +23,7 @@ custom_fields: {
   # exclude_weekends: true,  # "true" or "false"
   # exclude_future_week: false,  # "true" or "false"
   # exclude_future_week: true,  # "true" pr "false"
-  # exclude_weekends: false,  
+  exclude_weekends: false,  
 }
 
 # override variables

@@ -20,23 +20,7 @@
     {% assign selected_layout = trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase %}
     {% if selected_layout == 'contributions' %}
       <!-- GitHub-style Contributions Grid -->
-      <div class="contributions-container">
-        <div class="contributions-grid flex flex--col gap--1" id="contributions-grid-full">
-          <!-- Grid will be populated by JavaScript -->
-        </div>
-        <div class="flex flex--row flex--start-x mt--3">
-          <span class="description">Less</span>
-          <div class="flex flex--row gap--1 mx--3">
-            <div class="w--3 h--3 bg--gray-7"></div>
-            <div class="w--3 h--3 bg--gray-5"></div>
-            <div class="w--3 h--3 bg--gray-3"></div>
-            <div class="w--3 h--3 bg--gray-2"></div>
-            <div class="w--3 h--3 bg--gray-1"></div>
-            <div class="w--3 h--3 bg--black"></div>
-          </div>
-          <span class="description">More</span>
-        </div>
-      </div>
+      {% render 'contributions_grid' %}
     {% else %}
       <div id="wakatime-chart-full" style="width: 100%"></div>
     {% endif %}
@@ -172,7 +156,7 @@
 
   // Function to create contributions grid
   function createContributionsGrid() {
-    var grid = document.getElementById('contributions-grid-full');
+    var grid = document.getElementById('contributions-grid');
     if (!grid) return;
     
     var today = new Date();
@@ -181,12 +165,14 @@
     
     // Create weeks container
     var weeksContainer = document.createElement('div');
-    weeksContainer.className = 'flex flex--row gap--1 flex--center-x';
+    weeksContainer.className = 'flex flex--row flex--center-x year';
+    
     
     // Generate 52 weeks
     for (var week = 0; week < 52; week++) {
       var weekCol = document.createElement('div');
-      weekCol.className = 'flex flex--col gap--1';
+      weekCol.className = 'flex flex--col week week-' + week + ' gap--0';
+    //   weekCol.className = 'week week-' + week';
       
       // Create 7 days for this week
       for (var day = 0; day < 7; day++) {
@@ -201,7 +187,7 @@
         }
         
         var daySquare = document.createElement('div');
-        daySquare.className = 'w--3 h--3';
+        daySquare.className = 'day';
         
         var dateStr = currentDate.toISOString().split('T')[0];
         var hours = contributionsData[dateStr] || 0;

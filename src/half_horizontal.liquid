@@ -11,25 +11,7 @@
     <!-- Chart Container -->
     {% assign selected_layout = trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase %}
     {% if selected_layout == 'contributions' %}
-      <!-- GitHub-style Contributions Grid -->
-      <div class="contributions-container">
-        <div class="contributions-grid flex flex--col gap--1" id="contributions-grid-half">
-          <!-- Grid will be populated by JavaScript -->
-        </div>
-        <div class="flex flex--row flex--center-x mt--2">
-          <span class="description text--small">Less</span>
-          <div class="flex flex--row gap--1 mx--2">
-            <div class="w--2 h--2 bg--gray-7"></div>
-            <div class="w--2 h--2 bg--gray-5"></div>
-            <div class="w--2 h--2 bg--gray-4"></div>
-            <div class="w--2 h--2 bg--gray-3"></div>
-            <div class="w--2 h--2 bg--gray-2"></div>
-            <div class="w--2 h--2 bg--gray-1"></div>
-            <div class="w--2 h--2 bg--black"></div>
-          </div>
-          <span class="description text--small">More</span>
-        </div>
-      </div>
+      {% render 'contributions_grid' %}
     {% else %}
       <div id="wakatime-chart-half" style="width: 100%"></div>
     {% endif %}
@@ -162,7 +144,7 @@
 
   // Function to create contributions grid
   function createContributionsGrid() {
-    var grid = document.getElementById('contributions-grid-half');
+    var grid = document.getElementById('contributions-grid');
     if (!grid) return;
     
     var today = new Date();

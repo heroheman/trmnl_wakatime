@@ -1,3 +1,23 @@
+<style>
+.year {
+    --gap: 4px;
+}
+.week {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem !important; 
+    --gap: 10px;
+}
+
+.day {
+    width: 11px;
+    height: 11px;
+    border-radius: 0.125rem;
+    flex-shrink: 0;
+}
+</style>    
+
+
 <!-- Shared WakaTime JavaScript Functions -->
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartkick@5.0.1/dist/chartkick.min.js"></script>
@@ -40,6 +60,27 @@
     {% comment %} <span class="value value--tnums {{valueSize}}" data-value-fit="{{ valueFit }}">{{ decimal_strings }}</span> {% endcomment %}
     <span class="value value--tnums {{valueSize}}" data-value-fit="{{ valueFit }}">{{ formatted_time }}</span>
 {% endtemplate %}
+
+{% template contributions_grid %}
+      <div class="contributions-container">
+        <div class="contributions-grid flex flex--col gap--1" id="contributions-grid">
+          <!-- Grid will be populated by JavaScript -->
+        </div>
+        <div class="flex flex--row flex--start-x mt--3">
+          <span class="description">Less</span>
+          <div class="flex flex--row gap--1 mx--3">
+            <div class="w--3 h--3 bg--gray-7"></div>
+            <div class="w--3 h--3 bg--gray-5"></div>
+            <div class="w--3 h--3 bg--gray-3"></div>
+            <div class="w--3 h--3 bg--gray-2"></div>
+            <div class="w--3 h--3 bg--gray-1"></div>
+            <div class="w--3 h--3 bg--black"></div>
+          </div>
+          <span class="description">More</span>
+        </div>
+      </div>
+{% endtemplate %}
+
 
 {% template dashboard_horizontal %}
     <!-- Key Metrics Grid -->
@@ -142,12 +183,12 @@
       weekCol.className = 'flex flex--col gap--1';
       
       // Create 7 days for this week
-      for (var day = 0; day < 7; day++) {
+      for (var day = 0; day < 10; day++) {
         var currentDate = new Date(startDate);
         currentDate.setDate(startDate.getDate() + (week * 7) + day);
         
         var daySquare = document.createElement('div');
-        daySquare.className = 'w--3 h--3';
+        daySquare.className = 'w--2 h--2';
         
         var dateStr = currentDate.toISOString().split('T')[0];
         var hours = contributionsData[dateStr] || 0;

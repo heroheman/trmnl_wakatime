@@ -10,7 +10,7 @@
     <!-- Chart Container -->
     {% assign selected_layout = trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase %}
     {% if selected_layout == 'contributions' %}
-      {% render 'contributions_grid' %}
+      {% render 'contributions_grid', data: data %}
     {% else %}
       <div id="wakatime-chart-half" style="width: 100%"></div>
     {% endif %}
@@ -106,56 +106,6 @@
     return data;
   }
 
-  // Function to get contribution level based on hours
-  function getContributionLevel(hours) {
-    if (hours === 0) return 'bg--white';
-    if (hours < 0.5) return 'bg--gray-7';
-    if (hours < 1) return 'bg--gray-5';
-    if (hours < 2) return 'bg--gray-3';
-    if (hours < 3) return 'bg--gray-2';
-    if (hours < 4) return 'bg--gray-1';
-    return 'bg--black';
-  }
-
-  // Function to create contributions grid
-  function createContributionsGrid() {
-    var grid = document.getElementById('contributions-grid');
-    if (!grid) return;
-    
-    var today = new Date();
-    var startDate = new Date(today);
-    startDate.setDate(today.getDate() - 364); // Show last 365 days
-    
-    // Create weeks container
-    var weeksContainer = document.createElement('div');
-    weeksContainer.className = 'flex flex--row gap--1 flex--center-x';
-    
-    // Generate 52 weeks
-    for (var week = 0; week < 52; week++) {
-      var weekCol = document.createElement('div');
-      weekCol.className = 'flex flex--col gap--1';
-      
-      // Create 7 days for this week
-      for (var day = 0; day < 7; day++) {
-        var currentDate = new Date(startDate);
-        currentDate.setDate(startDate.getDate() + (week * 7) + day);
-        
-        var daySquare = document.createElement('div');
-        daySquare.className = 'w--3 h--3';
-        
-        var dateStr = currentDate.toISOString().split('T')[0];
-        var hours = contributionsData[dateStr] || 0;
-        daySquare.className += ' ' + getContributionLevel(hours);
-        
-        weekCol.appendChild(daySquare);
-      }
-      
-      weeksContainer.appendChild(weekCol);
-    }
-    
-    grid.appendChild(weeksContainer);
-  }
-
   // Function to get X-axis configuration based on timeframe
   function getXAxisConfig(timeframe) {
     var config = {
@@ -206,7 +156,8 @@
     var xAxisConfig = getXAxisConfig(selectedTimeframe);
     
     if (selectedLayout === "contributions") {
-      createContributionsGrid();
+      // Contributions are now rendered in Liquid template
+      return;
     } else if (selectedLayout === "bars") {
       // Create Bar Chart using Chartkick ColumnChart
       new Chartkick["ColumnChart"](
@@ -297,7 +248,7 @@
 
   // ensure your chart loads before plugin render is generated
   if (selectedLayout === "contributions") {
-    createChart();
+    // Contributions are now rendered in Liquid template - no JavaScript needed
   } else if ("Chartkick" in window) {
     createChart();
   } else {

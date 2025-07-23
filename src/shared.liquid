@@ -52,23 +52,74 @@
 {% endtemplate %}
 
 {% template contributions_grid %}
-      <div class="contributions-container">
-        <div class="contributions-grid flex flex--col gap--1" id="contributions-grid">
-          <!-- Grid will be populated by JavaScript -->
+  <div class="contributions-container">
+    <!-- Generate contributions grid in Liquid -->
+    <div class="flex flex--row flex--center-x year">
+      
+      {% comment %} Simple approach: just render squares for the data we have {% endcomment %}
+      {% assign days_rendered = 0 %}
+      {% assign current_week_days = 0 %}
+      
+      {% for day in data limit: 364 reversed %}
+        {% if day.range.start and day.grand_total.total_seconds %}
+          {% assign hours = day.grand_total.total_seconds | divided_by: 3600.0 | round: 2 %}
+          
+          {% comment %} Start a new week column when needed {% endcomment %}
+          {% if current_week_days == 0 %}
+            <div class="flex flex--col week gap--0">
+          {% endif %}
+          
+          {% comment %} Determine background class based on hours {% endcomment %}
+          {% assign bg_class = 'bg--white' %}
+          {% if hours > 0 %}
+            {% if hours < 1 %}
+              {% assign bg_class = 'bg--gray-6' %}
+            {% elsif hours < 2 %}
+              {% assign bg_class = 'bg--gray-4' %}
+            {% elsif hours < 3 %}
+              {% assign bg_class = 'bg--gray-3' %}
+            {% elsif hours < 4 %}
+              {% assign bg_class = 'bg--gray-2' %}
+            {% elsif hours < 5 %}
+              {% assign bg_class = 'bg--gray-1' %}
+            {% else %}
+              {% assign bg_class = 'bg--black' %}
+            {% endif %}
+          {% endif %}
+          
+          <div class="day {{ bg_class }}"></div>
+          
+          {% assign current_week_days = current_week_days | plus: 1 %}
+          {% assign days_rendered = days_rendered | plus: 1 %}
+          
+          {% comment %} Close week column after 7 days {% endcomment %}
+          {% if current_week_days == 7 %}
+            </div>
+            {% assign current_week_days = 0 %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      
+      {% comment %} Close any remaining open week div {% endcomment %}
+      {% if current_week_days > 0 %}
         </div>
-        <div class="flex flex--row flex--start-x mt--3">
-          <span class="description">Less</span>
-          <div class="flex flex--row gap--1 mx--3">
-            <div class="w--3 h--3 bg--gray-7"></div>
-            <div class="w--3 h--3 bg--gray-5"></div>
-            <div class="w--3 h--3 bg--gray-3"></div>
-            <div class="w--3 h--3 bg--gray-2"></div>
-            <div class="w--3 h--3 bg--gray-1"></div>
-            <div class="w--3 h--3 bg--black"></div>
-          </div>
-          <span class="description">More</span>
-        </div>
+      {% endif %}
+      
+    </div>
+    
+    <div class="flex flex--row flex--start-x mt--3">
+      <span class="description">Less</span>
+      <div class="flex flex--row gap--1 mx--3">
+        <div class="w--3 h--3 bg--gray-7"></div>
+        <div class="w--3 h--3 bg--gray-5"></div>
+        <div class="w--3 h--3 bg--gray-3"></div>
+        <div class="w--3 h--3 bg--gray-2"></div>
+        <div class="w--3 h--3 bg--gray-1"></div>
+        <div class="w--3 h--3 bg--black"></div>
       </div>
+      <span class="description">More</span>
+    </div>
+  </div>
 {% endtemplate %}
 
 

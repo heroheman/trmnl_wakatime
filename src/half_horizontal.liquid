@@ -4,7 +4,6 @@
     
     {% render 'dashboard_horizontal' 
         selected_metrics: trmnl.plugin_settings.custom_fields_values.dashboard_metrics,
-        exclude_future_week: trmnl.plugin_settings.custom_fields_values.exclude_future_week | default: 'false',
         valueFit: false,
         data: data
     %}
@@ -53,30 +52,6 @@
   var enableGrouping = "{{ trmnl.plugin_settings.custom_fields_values.enable_grouping | default: 'true' }}" === 'true';
   
   // Get exclude weekends setting
-  var excludeWeekends = "{{ trmnl.plugin_settings.custom_fields_values.exclude_weekends | default: 'false' }}" === 'true';
-  
-  // Get exclude future week setting
-  var excludeFutureWeek = "{{ trmnl.plugin_settings.custom_fields_values.exclude_future_week | default: 'false' }}" === 'true';
-  
-  // Filter out future days if enabled
-  if (excludeFutureWeek) {
-    var today = new Date();
-    today.setHours(23, 59, 59, 999); // Set to end of today
-    chartData = chartData.filter(function(item) {
-      var itemDate = new Date(item[0]);
-      return itemDate <= today;
-    });
-  }
-  
-  // Filter out weekends if enabled
-  if (excludeWeekends) {
-    chartData = chartData.filter(function(item) {
-      var date = new Date(item[0]);
-      var dayOfWeek = date.getDay(); // 0 = Sunday, 6 = Saturday
-      return dayOfWeek !== 0 && dayOfWeek !== 6;
-    });
-  }
-  
   // Filter chart data based on timeframe (but not contributions)
   var filteredChartData = chartData;
   if (selectedLayout !== "contributions" && selectedLayout !== "contributions") {
@@ -164,13 +139,6 @@
       for (var day = 0; day < 7; day++) {
         var currentDate = new Date(startDate);
         currentDate.setDate(startDate.getDate() + (week * 7) + day);
-        
-        var dayOfWeek = currentDate.getDay(); // 0 = Sunday, 6 = Saturday
-        
-        // Skip weekends if exclude_weekends is enabled
-        if (excludeWeekends && (dayOfWeek === 0 || dayOfWeek === 6)) {
-          continue;
-        }
         
         var daySquare = document.createElement('div');
         daySquare.className = 'w--3 h--3';

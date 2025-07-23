@@ -25,20 +25,10 @@
 {% template calculate_hours %}
     {% assign total_decimal = 0 %}
     {% assign decimal_strings = "" %}
-    {% assign today_date = 'now' | date: '%Y-%m-%d' %}
     {% assign data = data | reverse %}
     
     {% comment %} Iterate through the data for the specified limit {% endcomment %}
     {% for day in data limit: limit %}
-        {% assign day_date = day.range.date %}
-        
-        {% comment %} Skip future days if exclude_future_week is true {% endcomment %}
-        {% if exclude_future_week == 'true' or exclude_future_week == true %}
-        {% if day_date > today_date %}
-            {% continue %}
-        {% endif %}
-        {% endif %}
-        
         {% assign day_decimal = day.grand_total.decimal | plus: 0 %}
         {% comment %} Add to total decimal time {% endcomment %}
         {% assign decimal_strings = decimal_strings | append: day_decimal | append: ',' %}
@@ -111,19 +101,19 @@
             <div class="meta"></div>
             <div class="content">
               {% if metric_trimmed == 'today' %}
-                {% render 'calculate_hours' data: data, limit: 1, valueFit: valueFit, valueSize: valueSize, exclude_future_week: exclude_future_week %}
+                {% render 'calculate_hours' data: data, limit: 1, valueFit: valueFit, valueSize: valueSize %}
                 <span class="label">Today</span>
               {% elsif metric_trimmed == 'this_week' %}
-                {% render 'calculate_hours' data: data, limit: 7, valueFit: valueFit, valueSize: valueSize, exclude_future_week: exclude_future_week %}
+                {% render 'calculate_hours' data: data, limit: 7, valueFit: valueFit, valueSize: valueSize %}
                 <span class="label">This Week</span>
               {% elsif metric_trimmed == 'this_month' %}
-                {% render 'calculate_hours' data: data, limit: 30, valueFit: valueFit, valueSize: valueSize, exclude_future_week: exclude_future_week %}
+                {% render 'calculate_hours' data: data, limit: 30, valueFit: valueFit, valueSize: valueSize %}
                 <span class="label">This Month</span>
               {% elsif metric_trimmed == 'last_3_months' %}
-                {% render 'calculate_hours' data: data, limit: 90, valueFit: valueFit, valueSize: valueSize, exclude_future_week: exclude_future_week %}
+                {% render 'calculate_hours' data: data, limit: 90, valueFit: valueFit, valueSize: valueSize %}
                 <span class="label">Last 3 Months</span>
               {% elsif metric_trimmed == 'last_year' %}
-                {% render 'calculate_hours' data: data, limit: 365, valueFit: valueFit, valueSize: valueSize, exclude_future_week: exclude_future_week %}
+                {% render 'calculate_hours' data: data, limit: 365, valueFit: valueFit, valueSize: valueSize %}
                 <span class="label">Last Year</span>
               {% endif %}
             </div>

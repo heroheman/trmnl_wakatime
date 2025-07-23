@@ -20,10 +20,6 @@ custom_fields: {
   # timeframe: "all_time"  
   enable_grouping: true,  # "true" or "false"
   # enable_grouping: false,  # "true" or "false"
-  # exclude_weekends: true,  # "true" or "false"
-  # exclude_future_week: false,  # "true" or "false"
-  # exclude_future_week: true,  # "true" pr "false"
-  exclude_weekends: false,  
 }
 
 # override variables

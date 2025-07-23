@@ -101,7 +101,7 @@
       {% for day in data limit: 364 reversed %}
         {% if day.range.date and day.grand_total.total_seconds %}
           {% assign hours = day.grand_total.total_seconds | divided_by: 3600.0 | round: 2 %}
-          
+         
           {% comment %} Start a new week column when needed {% endcomment %}
           {% if current_week_days == 0 %}
             <div class="flex flex--col week gap--0">
@@ -160,6 +160,50 @@
   </div>
 {% endtemplate %}
 
+{% comment %} === SHARED TEMPLATES === {% endcomment %}
+
+{% template render_metric_item %}
+  <div class="item">
+    <div class="meta"></div>
+    <div class="content">
+      {% if metric_trimmed == 'today' %}
+        {% comment %} DEBUG: First entry should be today {% endcomment %}
+        {% render 'calculate_hours' data: data, limit: 1, valueFit: valueFit, valueSize: valueSize %}
+        <span class="label">Today</span>
+      {% elsif metric_trimmed == 'yesterday' %}
+        {% comment %} DEBUG: Skip first (today), take second (yesterday) {% endcomment %}
+        {% render 'calculate_hours' data: data, limit: 1, skip: 1, valueFit: valueFit, valueSize: valueSize %}
+        <span class="label">Yesterday</span>
+      {% elsif metric_trimmed == 'this_week' %}
+        {% render 'calculate_hours' data: data, calendar_type: 'week', valueFit: valueFit, valueSize: valueSize %}
+        <span class="label">This Week</span>
+      {% elsif metric_trimmed == 'last_week' %}
+        {% render 'calculate_hours' data: data, calendar_type: 'last_week', valueFit: valueFit, valueSize: valueSize %}
+        <span class="label">Last Week</span>
+      {% elsif metric_trimmed == 'last_7_days' %}
+        {% render 'calculate_hours' data: data, limit: 7, valueFit: valueFit, valueSize: valueSize %}
+        <span class="label">Last 7 Days</span>
+      {% elsif metric_trimmed == 'this_month' %}
+        {% render 'calculate_hours' data: data, calendar_type: 'month', valueFit: valueFit, valueSize: valueSize %}
+        <span class="label">This Month</span>
+      {% elsif metric_trimmed == 'last_month' %}
+        {% render 'calculate_hours' data: data, calendar_type: 'last_month', valueFit: valueFit, valueSize: valueSize %}
+        <span class="label">Last Month</span>
+      {% elsif metric_trimmed == 'last_30_days' %}
+        {% render 'calculate_hours' data: data, limit: 30, valueFit: valueFit, valueSize: valueSize %}
+        <span class="label">Last 30 Days</span>
+      {% elsif metric_trimmed == 'last_3_months' %}
+        {% render 'calculate_hours' data: data, limit: 90, valueFit: valueFit, valueSize: valueSize %}
+        <span class="label">Last 3 Months</span>
+      {% elsif metric_trimmed == 'last_year' %}
+        {% render 'calculate_hours' data: data, limit: 365, valueFit: valueFit, valueSize: valueSize %}
+        <span class="label">Last Year</span>
+      {% endif %}
+    </div>
+  </div>
+{% endtemplate %}
+
+{% comment %} === DASHBOARD TEMPLATES === {% endcomment %}
 
 {% template dashboard_horizontal %}
     <!-- Key Metrics Grid -->
@@ -186,46 +230,56 @@
       <div class="{{ grid_class }}">
         {% for metric in metrics_array %}
           {% assign metric_trimmed = metric | strip %}
-          <div class="item">
-            <div class="meta"></div>
-            <div class="content">
-              {% if metric_trimmed == 'today' %}
-                {% comment %} DEBUG: First entry should be today {% endcomment %}
-                {% render 'calculate_hours' data: data, limit: 1, valueFit: valueFit, valueSize: valueSize %}
-                <span class="label">Today</span>
-              {% elsif metric_trimmed == 'yesterday' %}
-                {% comment %} DEBUG: Skip first (today), take second (yesterday) {% endcomment %}
-                {% render 'calculate_hours' data: data, limit: 1, skip: 1, valueFit: valueFit, valueSize: valueSize %}
-                <span class="label">Yesterday</span>
-              {% elsif metric_trimmed == 'this_week' %}
-                {% render 'calculate_hours' data: data, calendar_type: 'week', valueFit: valueFit, valueSize: valueSize %}
-                <span class="label">This Week</span>
-              {% elsif metric_trimmed == 'last_week' %}
-                {% render 'calculate_hours' data: data, calendar_type: 'last_week', valueFit: valueFit, valueSize: valueSize %}
-                <span class="label">Last Week</span>
-              {% elsif metric_trimmed == 'last_7_days' %}
-                {% render 'calculate_hours' data: data, limit: 7, valueFit: valueFit, valueSize: valueSize %}
-                <span class="label">Last 7 Days</span>
-              {% elsif metric_trimmed == 'this_month' %}
-                {% render 'calculate_hours' data: data, calendar_type: 'month', valueFit: valueFit, valueSize: valueSize %}
-                <span class="label">This Month</span>
-              {% elsif metric_trimmed == 'last_month' %}
-                {% render 'calculate_hours' data: data, calendar_type: 'last_month', valueFit: valueFit, valueSize: valueSize %}
-                <span class="label">Last Month</span>
-              {% elsif metric_trimmed == 'last_30_days' %}
-                {% render 'calculate_hours' data: data, limit: 30, valueFit: valueFit, valueSize: valueSize %}
-                <span class="label">Last 30 Days</span>
-              {% elsif metric_trimmed == 'last_3_months' %}
-                {% render 'calculate_hours' data: data, limit: 90, valueFit: valueFit, valueSize: valueSize %}
-                <span class="label">Last 3 Months</span>
-              {% elsif metric_trimmed == 'last_year' %}
-                {% render 'calculate_hours' data: data, limit: 365, valueFit: valueFit, valueSize: valueSize %}
-                <span class="label">Last Year</span>
-              {% endif %}
-            </div>
-          </div>
+          {% if metric_trimmed != '' %}
+            {% render 'render_metric_item' metric_trimmed: metric_trimmed, data: data, valueFit: valueFit %}
+          {% endif %}
         {% endfor %}
       </div>
+    {% endif %}
+{% endtemplate %}
+
+{% template dashboard_vertical %}
+    <!-- Key Metrics Grid for Vertical Layout -->
+    {% assign metrics_array = selected_metrics | split: ',' %}
+    {% assign metrics_count = metrics_array.size %}
+    {% comment %} falls valueSize nicht gesetzt, lass leer {% endcomment %}
+    {% assign valueSize = valueSize | default: '' %}
+    {% assign valueFit = valueFit | default: false %}
+    
+
+    {% if metrics_count > 0 %}
+      {% comment %} For vertical layout, always use 2 columns max, distribute rows {% endcomment %}
+      {% assign rows_needed = metrics_count | divided_by: 2.0 | ceil %}
+      
+      {% for row in (1..rows_needed) %}
+        {% assign start_index = row | minus: 1 | times: 2 %}
+        {% assign end_index = start_index | plus: 1 %}
+        
+        {% comment %} Count actual items in this row {% endcomment %}
+        {% assign items_in_row = 0 %}
+        {% for i in (start_index..end_index) %}
+          {% if metrics_array[i] and metrics_array[i] != '' %}
+            {% assign items_in_row = items_in_row | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+        
+        {% if items_in_row == 1 %}
+          {% assign grid_class = "grid grid--cols-1" %}
+        {% elsif items_in_row == 2 %}
+          {% assign grid_class = "grid grid--cols-2" %}
+        {% endif %}
+        
+        {% if items_in_row > 0 %}
+          <div class="{{ grid_class }}">
+            {% for i in (start_index..end_index) %}
+              {% assign metric = metrics_array[i] | strip %}
+              {% if metric != '' %}
+                {% render 'render_metric_item' metric_trimmed: metric, data: data, valueFit: valueFit, valueSize: valueSize %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endfor %}
     {% endif %}
 {% endtemplate %}
 
@@ -490,7 +544,7 @@
 
 {% template wakatime_title_bar %}
   <div class="title_bar">
-    <img class="image" src="https://wakatime.com/static/img/wakatime-logo.svg" />
+    <img class="image" src="https://wakatime.com/static/img/wakatime.svg" />
     <span class="title">WakaTime</span>
     <span class="instance">Coding Activity</span>
   </div>

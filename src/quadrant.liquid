@@ -1,1 +1,12 @@
-quadrant!
+<div class="view view--half-quadrant">
+    
+    <div class="layout layout--col gap--space-between">
+        {% render 'dashboard_vertical'  
+            selected_metrics: trmnl.plugin_settings.custom_fields_values.dashboard_metrics,
+            valueFit: true,
+            data: data
+        %}
+    </div>
+    {% render 'wakatime_title_bar' %}
+</div>
+

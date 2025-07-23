@@ -32,7 +32,8 @@ custom_fields: {
   # date_format: "%b %d",
   # date_format: "%a",
   # date_format: "%Y-%m-%d",
-  date_format: "%d.%m.%Y",  
+  date_format: "%d.%m.%Y",
+  # show_title_bar: false,  # "true" or "false"
 }
 
 # override variables

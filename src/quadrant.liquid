@@ -4,9 +4,12 @@
         {% render 'dashboard_vertical'  
             selected_metrics: trmnl.plugin_settings.custom_fields_values.dashboard_metrics,
             valueFit: true,
-            data: data
+            data: data,
+            metric_limit: 6
         %}
     </div>
-    {% render 'wakatime_title_bar' %}
+    {% if trmnl.plugin_settings.custom_fields_values.show_title_bar == 'true' %}
+        {% render 'wakatime_title_bar' %}
+    {% endif %}
 </div>
 

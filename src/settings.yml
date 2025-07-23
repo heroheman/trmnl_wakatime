@@ -78,5 +78,13 @@ custom_fields:
   - Last 3 Months: last_3_months
   - Last Year: last_year
   multiple: true
+- keyname: show_title_bar
+  field_type: select
+  name: Show Title Bar
+  description: Show or hide the WakaTime title bar
+  options:
+  - 'Yes': 'true'
+  - 'No': 'false'
+  default: 'true'
 name: WakaTime Dashboard
 refresh_interval: 1440

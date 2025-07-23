@@ -33,9 +33,7 @@
     {% endif %}
   </div>
 
-  <div class="title_bar">
-    <img class="image" src="https://wakatime.com/static/img/wakatime.svg" />
-    <span class="title">WakaTime</span>
-    <span class="instance">Coding Activity</span>
-  </div>
+  {% if trmnl.plugin_settings.custom_fields_values.show_title_bar == 'true' %}
+    {% render 'wakatime_title_bar' %}
+  {% endif %}
 </div>

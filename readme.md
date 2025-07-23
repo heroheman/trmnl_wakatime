@@ -4,15 +4,15 @@ A comprehensive WakaTime dashboard plugin for [TRMNL](https://usetrmnl.com/) e-i
 
 ## ✨ Key Features
 
-• **3 Chart Types**: Choose between line charts, bar charts, or GitHub-style contribution grids
-• **Multiple Layout Options**: Full screen, half horizontal, half vertical, and quadrant layouts
-• **Comprehensive Metrics Dashboard**: Display up to 10 different time-based metrics
-• **Smart Data Grouping**: Automatic weekly/monthly median calculations for larger datasets
-• **Customizable Time Periods**: 7 days to full year with both rolling and calendar-based calculations
-• **Flexible Date Formats**: 8 different date display options for X-axis labels
-• **Responsive Design**: Automatically adapts to different screen layouts with metric limits
-• **Title Bar Control**: Show or hide the WakaTime branding
-• **E-ink Optimized**: Designed specifically for 800x480 e-ink displays with proper contrast
+- **3 Chart Types**: Choose between line charts, bar charts, or GitHub-style contribution grids
+- **Multiple Layout Options**: Full screen, half horizontal, half vertical, and quadrant layouts
+- **Comprehensive Metrics Dashboard**: Display up to 10 different time-based metrics
+- **Smart Data Grouping**: Automatic weekly/monthly median calculations for larger datasets
+- **Customizable Time Periods**: 7 days to full year with both rolling and calendar-based calculations
+- **Flexible Date Formats**: 8 different date display options for X-axis labels
+- **Responsive Design**: Automatically adapts to different screen layouts with metric limits
+- **Title Bar Control**: Show or hide the WakaTime branding
+- **E-ink Optimized**: Designed specifically for 800x480 e-ink displays with proper contrast
 
 ## 📊 Available Metrics
 

@@ -190,9 +190,11 @@
             <div class="meta"></div>
             <div class="content">
               {% if metric_trimmed == 'today' %}
+                {% comment %} DEBUG: First entry should be today {% endcomment %}
                 {% render 'calculate_hours' data: data, limit: 1, valueFit: valueFit, valueSize: valueSize %}
                 <span class="label">Today</span>
               {% elsif metric_trimmed == 'yesterday' %}
+                {% comment %} DEBUG: Skip first (today), take second (yesterday) {% endcomment %}
                 {% render 'calculate_hours' data: data, limit: 1, skip: 1, valueFit: valueFit, valueSize: valueSize %}
                 <span class="label">Yesterday</span>
               {% elsif metric_trimmed == 'this_week' %}

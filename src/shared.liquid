@@ -163,6 +163,7 @@
 {% comment %} === SHARED TEMPLATES === {% endcomment %}
 
 {% template render_metric_item %}
+    {% assign metric_trimmed = metric_trimmed | replace: '[', '' | replace: ']', '' | replace: '"', '' %}
   <div class="item">
     <div class="meta"></div>
     <div class="content">
@@ -207,7 +208,14 @@
 
 {% template dashboard_horizontal %}
     <!-- Key Metrics Grid -->
-    {% assign metrics_array = selected_metrics | split: ',' %}
+    {% comment %} Handle both array and string formats for selected_metrics {% endcomment %}
+    {% comment %} Try to access array elements directly - if it fails, it's a string {% endcomment %}
+    {% assign first_metric = selected_metrics[0] %}
+    {% if first_metric %}
+      {% assign metrics_array = selected_metrics %}
+    {% else %}
+      {% assign metrics_array = selected_metrics | split: ',' %}
+    {% endif %}
     {% assign metrics_count = metrics_array.size %}
     {% assign valueSize = '' %}
 
@@ -223,11 +231,14 @@
         {% assign grid_class = "grid grid--cols-2" %}
       {% elsif metrics_count == 3 %}
         {% assign grid_class = "grid grid--cols-3" %}
-      {% elsif metrics_count == 4 %}
+      {% elsif metrics_count == 4 or metrics_count == 8 %}
+        {% assign valueSize = 'value--xsmall' %}
         {% assign grid_class = "grid grid--cols-4" %}
       {% elsif metrics_count == 5 %}
+        {% assign valueSize = 'value--xsmall' %}
         {% assign grid_class = "grid grid--cols-5" %}
       {% elsif metrics_count == 6 %}
+        {% assign valueSize = 'value--xsmall' %}
         {% assign valueSize = 'value--xsmall' %}
         {% assign grid_class = "grid grid--cols-6" %}
       {% else %}
@@ -250,7 +261,14 @@
 
 {% template dashboard_vertical %}
     <!-- Key Metrics Grid for Vertical Layout -->
-    {% assign metrics_array = selected_metrics | split: ',' %}
+    {% comment %} Handle both array and string formats for selected_metrics {% endcomment %}
+    {% comment %} Try to access array elements directly - if it fails, it's a string {% endcomment %}
+    {% assign first_metric = selected_metrics[0] %}
+    {% if first_metric %}
+      {% assign metrics_array = selected_metrics %}
+    {% else %}
+      {% assign metrics_array = selected_metrics | split: ',' %}
+    {% endif %}
     {% assign metrics_count = metrics_array.size %}
     {% comment %} falls valueSize nicht gesetzt, lass leer {% endcomment %}
     {% assign valueSize = valueSize | default: '' %}

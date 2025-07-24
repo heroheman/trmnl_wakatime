@@ -13,7 +13,18 @@ custom_fields: {
   # dashboard_metrics: "today,yesterday,this_week,last_week,this_month, last_month",
   # dashboard_metrics: "last_3_months,last_year",
   # dashboard_metrics: "last_7_days,last_30_days,last_90_days,last_year",
-  dashboard_metrics: "today,yesterday,this_week,last_week,last_7_days,this_month,last_month,last_30_days,last_3_months,last_year",  
+  # dashboard_metrics: "today,yesterday,this_week,last_week,last_7_days,this_month,last_month,last_30_days,last_3_months,last_year",  
+  # dashboard_metrics: [ today, yesterday, this_week, last_week, this_month, last_month, last_3_months, last_year],
+  dashboard_metrics: [
+      "today",
+      "yesterday",
+      "this_week",
+      "last_week",
+      "this_month",
+      "last_month",
+      "last_3_months",
+      "last_year"
+    ],
   # layout: "contributions",  # "line", "bars", "contributions"
   layout: "line",  # "true", "bars", "contributions"
   # layout: "bars",  # "line", "bars", "contributions"

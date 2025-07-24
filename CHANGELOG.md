@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.2] - 2025-07-24
+
+### 🚀 Features
+
+- *(changelog)* Add initial changelog for project
+- *(metrics)* Enhance dashboard metrics configuration
+- *(contributions)* Add option to show contributions legend
+- *(layout)* Add layout_half_horizontal option for charts
+
+### 🐛 Bug Fixes
+
+- *(metrics)* Update dashboard metrics handling
+- *(layout)* Adjust chart height for better visibility
+
+### 📚 Documentation
+
+- *(readme)* Format key features list for clarity
+- *(settings)* Update plugin description for clarity
+
 ## [0.0.1] - 2025-07-23
 
 ### 🚀 Features

@@ -2,12 +2,12 @@
 <div class="view view--half-horizontal">
   <div class="layout layout--col gap--space-between">
     
-    {% render 'dashboard_horizontal' 
+    {% comment %} {% render 'dashboard_horizontal' 
         selected_metrics: trmnl.plugin_settings.custom_fields_values.dashboard_metrics,
         valueFit: false,
         data: data,
         metric_limit: 6
-    %}
+    %} {% endcomment %}
     <!-- Chart Container -->
     {% assign selected_layout = trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase %}
     {% if selected_layout == 'contributions' %}

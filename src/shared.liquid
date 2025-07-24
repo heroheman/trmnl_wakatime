@@ -12,8 +12,39 @@
 .day {
     width: 11px;
     height: 11px;
-    border-radius: 0.125rem;
+    border-radius: 5%;       
     flex-shrink: 0;
+}
+
+.weekday-labels {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    justify-content: space-around;
+    align-items: center;
+    height: 84px; /* 7 days * 12px */
+}
+
+.weekday-label {
+    height: 11px;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    line-height: 1;
+}
+
+.month-label {
+    white-space: nowrap;
+    font-size: 10px;
+    line-height: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contributions-container {
+    font-family: system-ui, -apple-system, sans-serif;
 }
 </style>    
 
@@ -90,59 +121,92 @@
 {% endtemplate %}
 
 {% template contributions_grid %}
-  <div class="contributions-container">
-    <!-- Generate contributions grid in Liquid -->
-    <div class="flex flex--row flex--center-x year">
-      
-      {% comment %} Simple approach: just render squares for the data we have {% endcomment %}
-      {% assign days_rendered = 0 %}
-      {% assign current_week_days = 0 %}
-      
-      {% for day in data limit: 364 reversed %}
-        {% if day.range.date and day.grand_total.total_seconds %}
-          {% assign hours = day.grand_total.total_seconds | divided_by: 3600.0 | round: 2 %}
-         
-          {% comment %} Start a new week column when needed {% endcomment %}
-          {% if current_week_days == 0 %}
-            <div class="flex flex--col week gap--0">
-          {% endif %}
+  <div class="contributions-container m--4">
+    <!-- Y-axis labels (weekdays) -->
+    <div class="flex flex--row">
+      <!-- Generate contributions grid in Liquid -->
+      <div class="flex flex--col">
+        <div class="flex flex--row flex--center-x year">
           
-          {% comment %} Determine background class based on hours {% endcomment %}
-          {% assign bg_class = 'bg--gray-7' %}
-          {% if hours > 0 %}
-            {% if hours < 1 %}
-              {% assign bg_class = 'bg--gray-6' %}
-            {% elsif hours < 2 %}
-              {% assign bg_class = 'bg--gray-4' %}
-            {% elsif hours < 3 %}
-              {% assign bg_class = 'bg--gray-3' %}
-            {% elsif hours < 4 %}
-              {% assign bg_class = 'bg--gray-2' %}
-            {% elsif hours < 5 %}
-              {% assign bg_class = 'bg--gray-1' %}
-            {% else %}
-              {% assign bg_class = 'bg--black' %}
+          {% comment %} Simple approach: just render squares for the data we have {% endcomment %}
+          {% assign days_rendered = 0 %}
+          {% assign current_week_days = 0 %}
+          {% assign week_count = 0 %}
+          {% assign month_labels = "" %}
+          
+          {% for day in data limit: 364 reversed %}
+            {% if day.range.date and day.grand_total.total_seconds %}
+              {% assign hours = day.grand_total.total_seconds | divided_by: 3600.0 | round: 2 %}
+             
+              {% comment %} Track month changes for X-axis labels {% endcomment %}
+              {% if current_week_days == 0 %}
+                {% assign current_month = day.range.date | date: '%b' %}
+                {% assign month_labels = month_labels | append: current_month | append: ',' %}
+                {% assign week_count = week_count | plus: 1 %}
+              {% endif %}
+             
+              {% comment %} Start a new week column when needed {% endcomment %}
+              {% if current_week_days == 0 %}
+                <div class="flex flex--col week week--{{ week_count }} gap--0">
+              {% endif %}
+              
+              {% comment %} Determine background class based on hours {% endcomment %}
+              {% assign bg_class = 'bg--gray-7' %}
+              {% if hours > 0 %}
+                {% if hours < 1 %}
+                  {% assign bg_class = 'bg--gray-6' %}
+                {% elsif hours < 2 %}
+                  {% assign bg_class = 'bg--gray-4' %}
+                {% elsif hours < 3 %}
+                  {% assign bg_class = 'bg--gray-3' %}
+                {% elsif hours < 4 %}
+                  {% assign bg_class = 'bg--gray-2' %}
+                {% elsif hours < 5 %}
+                  {% assign bg_class = 'bg--gray-1' %}
+                {% else %}
+                  {% assign bg_class = 'bg--black' %}
+                {% endif %}
+              {% endif %}
+              
+              <div class="day {{ bg_class }}"></div>
+              
+              {% assign current_week_days = current_week_days | plus: 1 %}
+              {% assign days_rendered = days_rendered | plus: 1 %}
+              
+              {% comment %} Close week column after 7 days {% endcomment %}
+              {% if current_week_days == 7 %}
+                </div>
+                {% assign current_week_days = 0 %}
+              {% endif %}
             {% endif %}
-          {% endif %}
+          {% endfor %}
           
-          <div class="day {{ bg_class }}"></div>
-          
-          {% assign current_week_days = current_week_days | plus: 1 %}
-          {% assign days_rendered = days_rendered | plus: 1 %}
-          
-          {% comment %} Close week column after 7 days {% endcomment %}
-          {% if current_week_days == 7 %}
+          {% comment %} Close any remaining open week div {% endcomment %}
+          {% if current_week_days > 0 %}
             </div>
-            {% assign current_week_days = 0 %}
           {% endif %}
-        {% endif %}
-      {% endfor %}
-      
-      {% comment %} Close any remaining open week div {% endcomment %}
-      {% if current_week_days > 0 %}
+          
         </div>
-      {% endif %}
-      
+        
+        <!-- X-axis labels (months) -->
+        <div class="flex flex--row">
+          {% assign months_array = month_labels | split: ',' %}
+          {% assign current_month = "" %}
+          {% assign month_position = 0 %}
+          
+          {% for month in months_array %}
+            {% if month != current_month and month != "" %}
+              <div class="month-label text--xxsmall
+              "
+                style="width: {{ month_position | times: 13 }}px; {% if month_position == 0 %} opacity: 0; {% endif %}"
+              >{{ month }}</div>
+              {% assign current_month = month %}
+              {% assign month_position = 0 %}
+            {% endif %}
+            {% assign month_position = month_position | plus: 1 %}
+          {% endfor %}
+        </div>
+      </div>
     </div>
     
     <div class="flex flex--row flex--start-x mt--3">

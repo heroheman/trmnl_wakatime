@@ -11,7 +11,7 @@
     <!-- Chart Container -->
     {% assign selected_layout = trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase %}
     {% if selected_layout == 'contributions' %}
-      {% render 'contributions_grid', data: data %}
+      {% render 'contributions_grid', data: data, show_contributions_legend: trmnl.plugin_settings.custom_fields_values.show_contributions_legend %}
     {% else %}
       {% render 'wakatime_charts', 
         data: data,

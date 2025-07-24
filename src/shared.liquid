@@ -121,7 +121,7 @@
 {% endtemplate %}
 
 {% template contributions_grid %}
-  <div class="contributions-container m--4">
+  <div class="contributions-container ">
     <!-- Y-axis labels (weekdays) -->
     <div class="flex flex--row">
       <!-- Generate contributions grid in Liquid -->
@@ -154,7 +154,7 @@
               {% assign bg_class = 'bg--gray-7' %}
               {% if hours > 0 %}
                 {% if hours < 1 %}
-                  {% assign bg_class = 'bg--gray-6' %}
+                  {% assign bg_class = 'bg--gray-5' %}
                 {% elsif hours < 2 %}
                   {% assign bg_class = 'bg--gray-4' %}
                 {% elsif hours < 3 %}
@@ -209,6 +209,8 @@
       </div>
     </div>
     
+    {% comment %} Show legend only if setting is enabled {% endcomment %}
+    {% if show_contributions_legend == 'true' %}
     <div class="flex flex--row flex--start-x mt--3">
       <span class="description">Less</span>
       <div class="flex flex--row gap--1 mx--3">
@@ -221,6 +223,7 @@
       </div>
       <span class="description">More</span>
     </div>
+    {% endif %}
   </div>
 {% endtemplate %}
 

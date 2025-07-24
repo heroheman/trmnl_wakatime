@@ -43,6 +43,7 @@ custom_fields: {
   # date_format: "%Y-%m-%d",
   date_format: "%d.%m.%Y",
   # show_title_bar: false,  # "true" or "false"
+  show_contributions_legend: 'false',  # "true" or "false"
 }
 
 # override variables

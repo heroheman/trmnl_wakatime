@@ -82,6 +82,14 @@ custom_fields:
   - Last Year: last_year
   multiple: true
   required: true
+- keyname: show_contributions_legend
+  field_type: select
+  name: Show Contributions Legend
+  description: Show or hide the legend below the contributions grid
+  options:
+  - 'Yes': 'true'
+  - 'No': 'false'
+  default: 'true'
 - keyname: show_title_bar
   field_type: select
   name: Show Title Bar

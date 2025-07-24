@@ -315,7 +315,7 @@
         {% assign grid_class = "grid grid--cols-5" %}
       {% endif %}
       
-      <div class="{{ grid_class }}">
+      <div class="{{ grid_class }} stretch-y">
         {% for metric in metrics_array limit: metrics_count %}
           {% assign metric_trimmed = metric | strip %}
           {% if metric_trimmed != '' %}

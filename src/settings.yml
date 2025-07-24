@@ -19,7 +19,16 @@ custom_fields:
 - keyname: layout
   field_type: select
   name: Chart Layout
-  description: Choose how to display your coding activity
+  description: Choose how to display your coding activity on the full layout
+  options:
+  - Bars: bars
+  - Lines: lines
+  - Contributions / Github Style: contributions
+  default: lines
+- keyname: layout_half_horizontal
+  field_type: select
+  name: Chart Layout
+  description: Choose how to display your coding activity, affects the half horizontal layout
   options:
   - Bars: bars
   - Lines: lines

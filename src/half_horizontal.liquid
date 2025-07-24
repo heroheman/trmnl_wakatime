@@ -8,18 +8,20 @@
         data: data,
         metric_limit: 6
     %} {% endcomment %}
-    <!-- Chart Container -->
-    {% assign selected_layout = trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase %}
+
+
+    {% assign selected_layout = trmnl.plugin_settings.custom_fields_values.layout_half_horizontal | default: 'lines' | downcase %}
     {% if selected_layout == 'contributions' %}
       {% render 'contributions_grid', data: data, show_contributions_legend: trmnl.plugin_settings.custom_fields_values.show_contributions_legend %}
     {% else %}
       {% render 'wakatime_charts', 
+        chart_height: 200,
         data: data,
         selected_timeframe: trmnl.plugin_settings.custom_fields_values.timeframe,
-        selected_layout: trmnl.plugin_settings.custom_fields_values.layout,
+        selected_layout: selected_layout,
         enable_grouping: trmnl.plugin_settings.custom_fields_values.enable_grouping,
-        chart_height: 200,
         show_x_axis_labels: 'false',
+        date_format: trmnl.plugin_settings.custom_fields_values.date_format | default: '%d.%m'
        %}
     {% endif %}
         {% comment %} show_x_axis_labels: trmnl.plugin_settings.custom_fields_values.show_x_axis_labels {% endcomment %}

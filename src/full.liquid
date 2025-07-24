@@ -9,12 +9,14 @@
 
   {% comment %} {{ trmnl.plugin_settings.custom_fields_values.dashboard_metrics }} {% endcomment %}
 
+  <div class="mb--4 stretch-y">
     {% render 'dashboard_horizontal' 
         selected_metrics: trmnl.plugin_settings.custom_fields_values.dashboard_metrics | default: ["today", "this_week", "this_month", "last_year"],
         valueFit: false,
         data: data,
         metric_limit: 10
     %}
+  </div>
 
 
     <!-- Chart Container -->
@@ -35,6 +37,7 @@
         {% comment %} show_x_axis_labels: trmnl.plugin_settings.custom_fields_values.show_x_axis_labels {% endcomment %}
     {% endif %}
   </div>
+
 
   {% if trmnl.plugin_settings.custom_fields_values.show_title_bar == 'true' %}
     {% render 'wakatime_title_bar' %}

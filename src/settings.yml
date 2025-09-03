@@ -13,15 +13,17 @@ custom_fields:
   name: About This Plugin
   field_type: author_bio
   description: v0.0.1 - A WakaTime dashboard plugin for TRMNLP, displaying your coding activity in a customizable chart format.
+  github_url: https://github.com/heroheman/trmnl_wakatime
   email_address: moin@flore.nz
 - keyname: wakatime_url
   field_type: string
   name: Wakatime URL (check description)
   description: Go to https://wakatime.com/share/embed, Format "JSON", Charttype "Coding Activity", Daterange "Last Year" and click "Get Embeddable Code. Copy the given url and paste it here"
   placeholder: https://wakatime.com/share/[@USERNAME]/XXXxxxxxx..xxxxxxxxx.json
+  default: https://wakatime.com/share/@flrnz/1f359997-0c54-41a2-8603-a8399b497a51.json
 - keyname: layout
   field_type: select
-  name: Chart Layout
+  name: Chart Layout (FULL)
   description: Choose how to display your coding activity on the full layout
   options:
   - Bars: bars
@@ -30,7 +32,7 @@ custom_fields:
   default: lines
 - keyname: layout_half_horizontal
   field_type: select
-  name: Chart Layout
+  name: Chart Layout (HALF Horizontal)
   description: Choose how to display your coding activity, affects the half horizontal layout
   options:
   - Bars: bars

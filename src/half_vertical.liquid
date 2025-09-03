@@ -1,5 +1,4 @@
-<div class="view view--half-vertical">
-    
+
     <div class="layout layout--col gap--space-between">
         {% render 'dashboard_vertical'  
             selected_metrics: trmnl.plugin_settings.custom_fields_values.dashboard_metrics,
@@ -10,4 +9,3 @@
     {% if trmnl.plugin_settings.custom_fields_values.show_title_bar == 'true' %}
         {% render 'wakatime_title_bar' %}
     {% endif %}
-</div>

@@ -4,7 +4,7 @@ no_screen_padding: 'no'
 dark_mode: 'no'
 static_data: ''
 polling_verb: get
-polling_url: '{{ wakatime_url }}'
+polling_url: "{{ wakatime_url }}"
 polling_headers: ''
 polling_body: 
 id: 123718
@@ -19,7 +19,6 @@ custom_fields:
   name: Wakatime URL (check description)
   description: Go to https://wakatime.com/share/embed, Format "JSON", Charttype "Coding Activity", Daterange "Last Year" and click "Get Embeddable Code. Copy the given url and paste it here"
   placeholder: https://wakatime.com/share/[@USERNAME]/XXXxxxxxx..xxxxxxxxx.json
-  default: https://wakatime.com/share/embed
 - keyname: layout
   field_type: select
   name: Chart Layout

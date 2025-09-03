@@ -4,7 +4,7 @@ no_screen_padding: 'no'
 dark_mode: 'no'
 static_data: ''
 polling_verb: get
-polling_url: ''
+polling_url: '{{ wakatime_url }}'
 polling_headers: ''
 polling_body: 
 id: 123718
@@ -13,9 +13,13 @@ custom_fields:
   name: About This Plugin
   field_type: author_bio
   description: v0.0.1 - A WakaTime dashboard plugin for TRMNLP, displaying your coding activity in a customizable chart format.
-  # github_url: https://github.com/heroheman
-  # learn_more_url: https://github.com/heroheman/trmnl_mastodon_user_timeline
   email_address: moin@flore.nz
+- keyname: wakatime_url
+  field_type: string
+  name: Wakatime URL (check description)
+  description: Go to https://wakatime.com/share/embed, Format "JSON", Charttype "Coding Activity", Daterange "Last Year" and click "Get Embeddable Code. Copy the given url and paste it here"
+  placeholder: https://wakatime.com/share/[@USERNAME]/XXXxxxxxx..xxxxxxxxx.json
+  default: https://wakatime.com/share/embed
 - keyname: layout
   field_type: select
   name: Chart Layout
@@ -52,32 +56,24 @@ custom_fields:
   - 'Yes': 'true'
   - 'No': 'false'
   default: 'true'
-# - keyname: show_x_axis_labels
-#   field_type: select
-#   name: Show X-Axis Labels
-#   description: Show or hide date labels on the X-axis of charts
-#   options:
-#   - 'Yes': 'true'
-#   - 'No': 'false'
-#   default: 'true'
 - keyname: date_format
   field_type: select
   name: Date Format
   description: Choose how dates are displayed on the X-axis
   options:
-  - 'DD.MM (15.07)': '%d.%m'
-  - 'DD/MM (15/07)': '%d/%m'
-  - 'MM-DD (07-15)': '%m-%d'
-  - 'DD MMM (15 Jul)': '%d %b'
-  - 'MMM DD (Jul 15)': '%b %d'
-  - 'Weekday (Mon)': '%a'
-  - 'YYYY-MM-DD (2024-07-15)': '%Y-%m-%d'
-  - 'DD.MM.YYYY (15.07.2024)': '%d.%m.%Y'
-  default: '%d.%m'
+  - DD.MM (15.07): "%d.%m"
+  - DD/MM (15/07): "%d/%m"
+  - MM-DD (07-15): "%m-%d"
+  - DD MMM (15 Jul): "%d %b"
+  - MMM DD (Jul 15): "%b %d"
+  - Weekday (Mon): "%a"
+  - YYYY-MM-DD (2024-07-15): "%Y-%m-%d"
+  - DD.MM.YYYY (15.07.2024): "%d.%m.%Y"
+  default: "%d.%m"
 - keyname: dashboard_metrics
   field_type: select
   name: Dashboard Metrics
-  description: Select which metrics to display in the dashboard (up to 5)
+  description: Select which metrics to display in the dashboard (up to 5). Use shift+click to select multiple.
   options:
   - Today: today
   - Yesterday: yesterday

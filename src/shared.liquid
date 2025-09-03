@@ -505,7 +505,10 @@
             gridLineWidth: 1,
             gridLineColor: "#cccccc",
             lineWidth: 1,
-            lineColor: "#000000"
+            lineColor: "#000000",
+            tooltip: {
+              enabled: false
+            }
         };
 
         if (showXAxisLabels) {
@@ -608,7 +611,9 @@
             points: false,
             colors: ["black"],
             curve: true,
-            tooltip: false,
+            tooltip: {
+              enabled: false
+            },
             library: {
                 chart: {
                 height: chartHeight

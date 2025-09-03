@@ -23,8 +23,8 @@ custom_fields: {
     ],
   # layout: "contributions",  # "line", "bars", "contributions"
   # layout: "line",  # "true", "bars", "contributions"
-  layout: "bars",  # "line", "bars", "contributions"
-  layout_half_horizontal: "bars",  # "line", "bars", "contributions"
+  layout: "line",  # "line", "bars", "contributions"
+  layout_half_horizontal: "line",  # "line", "bars", "contributions"
   # layout_half_horizontal: "contributions",  # "line", "bars", "contributions"
   # "last_7_days", "last_30_days", "last_90_days", "last_year", "all_time"
   # timeframe: "last_7_days",  
@@ -43,7 +43,7 @@ custom_fields: {
   # date_format: "%a",
   # date_format: "%Y-%m-%d",
   date_format: "%d.%m.%Y",
-  # show_title_bar: false,  # "true" or "false"
+  show_title_bar: true,  # "true" or "false"
   show_contributions_legend: 'false',  # "true" or "false"
 }
 

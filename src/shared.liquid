@@ -302,12 +302,14 @@
         {% assign valueSize = 'value--xsmall' %}
         {% assign grid_class = "grid grid--cols-4" %}
       {% elsif metrics_count == 5 %}
-        {% assign valueSize = 'value--xsmall' %}
         {% assign grid_class = "grid grid--cols-5" %}
       {% elsif metrics_count == 6 %}
         {% assign valueSize = 'value--xsmall' %}
-        {% assign valueSize = 'value--xsmall' %}
         {% assign grid_class = "grid grid--cols-6" %}
+      {% elsif metrics_count == 7 %}
+        {% assign grid_class = "grid grid--cols-4" %}
+      {% elsif metrics_count == 8 %}
+        {% assign grid_class = "grid grid--cols-4" %}
       {% else %}
         {% assign valueFit = true %}
         {% assign valueSize = 'value--small' %}
@@ -402,6 +404,7 @@
     var contributionsData = {};
     var chartHeight = {{ chart_height | default: 260 }};
     var showXAxisLabels = "{{ show_x_axis_labels | default: 'true' }}" === 'true';
+    var showYAxisLabels = "{{ show_y_axis_labels | default: 'true' }}" === 'true';
     var dateFormat = "{{ date_format | default: '%d.%m' }}";
     
     // Get selected timeframe from settings
@@ -580,6 +583,7 @@
                 },
                 yAxis: {
                 labels: {
+                    enabled: showYAxisLabels,
                     style: {
                     fontSize: "16px",
                     color: "#000000"
@@ -626,6 +630,7 @@
                 },
                 yAxis: {
                 labels: {
+                    enabled: showYAxisLabels,
                     style: {
                     fontSize: "16px",
                     color:"#000000"

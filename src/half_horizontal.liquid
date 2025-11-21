@@ -19,7 +19,8 @@
         selected_timeframe: trmnl.plugin_settings.custom_fields_values.timeframe,
         selected_layout: selected_layout,
         enable_grouping: trmnl.plugin_settings.custom_fields_values.enable_grouping,
-        show_x_axis_labels: 'false',
+        show_x_axis_labels: trmnl.plugin_settings.custom_fields_values.show_x_axis_labels,
+        show_y_axis_labels: trmnl.plugin_settings.custom_fields_values.show_y_axis_labels,
         date_format: trmnl.plugin_settings.custom_fields_values.date_format | default: '%d.%m'
        %}
     {% endif %}

@@ -49,6 +49,22 @@ custom_fields:
   - Last 90 Days: last_90_days
   - Last Year: last_year
   default: last_30_days
+- keyname: show_x_axis_labels
+  field_type: select
+  name: Show X-Axis Labels
+  description: Show or hide labels on the X-axis of charts (dates)
+  options:
+  - 'Yes': 'true'
+  - 'No': 'false'
+  default: 'true'
+- keyname: show_y_axis_labels
+  field_type: select
+  name: Show Y-Axis Labels
+  description: Show or hide labels on the Y-axis of charts (hours)
+  options:
+  - 'Yes': 'true'
+  - 'No': 'false'
+  default: 'true'
 - keyname: enable_grouping
   field_type: select
   name: Data Grouping

@@ -10,7 +10,8 @@
 }
 
 .day {
-    width: 11px;
+    /* width: 11px; */
+    width: var(--day-width, 11px);
     height: var(--day-height, 11px);
     border-radius: 5%;       
     flex-shrink: 0;
@@ -19,10 +20,12 @@
 /* Size variants */
 .contributions-container--square .day {
     --day-height: 11px;
+    --day-width: 11px;
 }
 
 .contributions-container--half .day {
-    --day-height: 15px;
+    --day-height: 13px;
+    --day-width: 10.5px;
 }
 
 .contributions-container--full .day {
@@ -65,6 +68,17 @@
 
 .contributions-container {
     font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* fontsize */
+.label.value--xxsmall {
+    font-size: 10px;
+}
+.label.value--xsmall {
+    font-size: 12px;
+}
+.label.value--small {
+    font-size: 14px;
 }
 </style>    
 
@@ -146,8 +160,8 @@
     <!-- Y-axis labels (weekdays) -->
     <div class="flex flex--row">
       <!-- Generate contributions grid in Liquid -->
-      <div class="flex flex--col">
-        <div class="flex flex--row flex--center-x year">
+      <div class="flex flex--col flex--left">
+        <div class="flex flex--row flex--left year">
           
           {% comment %} Simple approach: just render squares for the data we have {% endcomment %}
           {% assign days_rendered = 0 %}
@@ -258,38 +272,46 @@
       {% if metric_trimmed == 'today' %}
         {% comment %} DEBUG: First entry should be today {% endcomment %}
         {% render 'calculate_hours' data: data, limit: 1, valueFit: valueFit, valueSize: valueSize %}
-        <span class="label">Today</span>
+        {% render 'render_metric_item_label' label: 'Today', valueSize: valueSize %}
       {% elsif metric_trimmed == 'yesterday' %}
         {% comment %} DEBUG: Skip first (today), take second (yesterday) {% endcomment %}
         {% render 'calculate_hours' data: data, limit: 1, skip: 1, valueFit: valueFit, valueSize: valueSize %}
-        <span class="label">Yesterday</span>
+        {% render 'render_metric_item_label' label: 'Yesterday', valueSize: valueSize %}
       {% elsif metric_trimmed == 'this_week' %}
         {% render 'calculate_hours' data: data, calendar_type: 'week', valueFit: valueFit, valueSize: valueSize %}
-        <span class="label">This Week</span>
+        {% render 'render_metric_item_label' label: 'This Week', valueSize: valueSize %}
       {% elsif metric_trimmed == 'last_week' %}
         {% render 'calculate_hours' data: data, calendar_type: 'last_week', valueFit: valueFit, valueSize: valueSize %}
-        <span class="label">Last Week</span>
+        {% render 'render_metric_item_label' label: 'Last Week', valueSize: valueSize %}
       {% elsif metric_trimmed == 'last_7_days' %}
         {% render 'calculate_hours' data: data, limit: 7, valueFit: valueFit, valueSize: valueSize %}
-        <span class="label">Last 7 Days</span>
+        {% render 'render_metric_item_label' label: 'Last 7 Days', valueSize: valueSize %}
       {% elsif metric_trimmed == 'this_month' %}
         {% render 'calculate_hours' data: data, calendar_type: 'month', valueFit: valueFit, valueSize: valueSize %}
-        <span class="label">This Month</span>
+        {% render 'render_metric_item_label' label: 'This Month', valueSize: valueSize %}
       {% elsif metric_trimmed == 'last_month' %}
         {% render 'calculate_hours' data: data, calendar_type: 'last_month', valueFit: valueFit, valueSize: valueSize %}
-        <span class="label">Last Month</span>
+        {% render 'render_metric_item_label' label: 'Last Month', valueSize: valueSize %}
       {% elsif metric_trimmed == 'last_30_days' %}
         {% render 'calculate_hours' data: data, limit: 30, valueFit: valueFit, valueSize: valueSize %}
-        <span class="label">Last 30 Days</span>
+        {% render 'render_metric_item_label' label: 'Last 30 Days', valueSize: valueSize %}
       {% elsif metric_trimmed == 'last_3_months' %}
         {% render 'calculate_hours' data: data, limit: 90, valueFit: valueFit, valueSize: valueSize %}
-        <span class="label">Last 3 Months</span>
+        {% render 'render_metric_item_label' label: 'Last 3 Months', valueSize: valueSize %}
       {% elsif metric_trimmed == 'last_year' %}
         {% render 'calculate_hours' data: data, limit: 365, valueFit: valueFit, valueSize: valueSize %}
-        <span class="label">Last Year</span>
+        {% render 'render_metric_item_label' label: 'Last Year', valueSize: valueSize %}
       {% endif %}
     </div>
   </div>
+{% endtemplate %}
+
+{% comment %} rendermetrics item label {% endcomment %}
+{% template render_metric_item_label %}
+  {% assign clamp = clamp | default: 1 %}
+  {% assign valueSize = valueSize | default: '' %}
+  {% comment %} fontsize {% endcomment %}
+  <span class="label text--gray-30 {{ valueSize }}"">{{ label}}</span>
 {% endtemplate %}
 
 {% comment %} === DASHBOARD TEMPLATES === {% endcomment %}
@@ -313,36 +335,75 @@
     {% endif %}
 
     {% if metrics_count > 0 %}
-      {% if metrics_count == 1 %}
-        {% assign grid_class = "grid grid--cols-1" %}
-      {% elsif metrics_count == 2 %}
-        {% assign grid_class = "grid grid--cols-2" %}
-      {% elsif metrics_count == 3 %}
-        {% assign grid_class = "grid grid--cols-3" %}
-      {% elsif metrics_count == 4 or metrics_count == 8 %}
-        {% assign grid_class = "grid grid--cols-4" %}
-      {% elsif metrics_count == 5 %}
-        {% assign grid_class = "grid grid--cols-5" %}
-      {% elsif metrics_count == 6 %}
-        {% assign grid_class = "grid grid--cols-4" %}
-      {% elsif metrics_count == 7 %}
-        {% assign grid_class = "grid grid--cols-4" %}
-      {% elsif metrics_count == 8 %}
-        {% assign grid_class = "grid grid--cols-4" %}
+      {% if one_line == true %}
+        {% comment %} one_line mode: use metrics_count as column count, max 4 columns {% endcomment %}
+        {% comment %} {% assign valueFit = false %} {% endcomment %}
+        {% if metrics_count == 1 %}
+          {% assign grid_class = "grid--cols-1" %}
+        {% elsif metrics_count == 2 %}
+          {% assign grid_class = "grid--cols-2" %}
+        {% elsif metrics_count == 3 %}
+          {% assign grid_class = "grid--cols-3" %}
+        {% elsif metrics_count == 4 %}
+          {% assign grid_class = "grid--cols-4" %}
+        {% assign valueSize = 'value--xsmall' %}
+        {% elsif metrics_count == 5 %}
+          {% assign grid_class = "grid--cols-5" %}
+          {% assign valueSize = 'value--xxsmall' %}
+        {% elsif metrics_count == 6 %}
+          {% assign grid_class = "grid--cols-6" %}
+          {% assign valueSize = 'value--xxsmall' %}
+        {% elsif metrics_count == 7 %}
+          {% assign grid_class = "grid--cols-7" %}
+          {% assign valueSize = 'value--xxsmall' %}
+        {% else %}
+          {% assign grid_class = "grid grid--cols-8" %}
+        {% assign valueSize = 'value--xxsmall' %}
+        {% endif %}
       {% else %}
-        {% assign valueFit = true %}
-        {% assign valueSize = 'value--small' %}
+        {% comment %} Default mode: wrap after 4-5 columns {% endcomment %}
+        {% if metrics_count == 1 %}
+          {% assign grid_class = "grid--cols-1" %}
+        {% elsif metrics_count == 2 %}
+          {% assign grid_class = "grid--cols-2" %}
+        {% elsif metrics_count == 3 %}
+          {% assign grid_class = "grid--cols-3" %}
+        {% elsif metrics_count == 4 or metrics_count == 8 %}
+          {% assign grid_class = "grid--cols-4" %}
+        {% elsif metrics_count == 5 %}
+          {% assign grid_class = "grid--cols-5" %}
+        {% elsif metrics_count == 6 %}
+          {% assign grid_class = "grid--cols-4" %}
+        {% elsif metrics_count == 7 %}
+          {% assign grid_class = "grid--cols-4" %}
+        {% elsif metrics_count == 8 %}
+          {% assign grid_class = "grid--cols-4" %}
+        {% else %}
+          {% assign valueFit = true %}
+          {% assign valueSize = 'value--small' %}
 
-        {% assign grid_class = "grid grid--cols-5" %}
+          {% assign grid_class = "grid grid--cols-5" %}
+        {% endif %}
       {% endif %}
       
-      <div class="grid {{ grid_class }} stretch-y" style="width: 100%;">
-        {% for metric in metrics_array limit: metrics_count %}
-          {% assign metric_trimmed = metric | strip %}
-          {% if metric_trimmed != '' %}
-            {% render 'render_metric_item' metric_trimmed: metric_trimmed, data: data, valueFit: valueFit, valueSize: valueSize %}
-          {% endif %}
-        {% endfor %}
+      <div class="grid {{ grid_class }} w--full {% if one_line == true %} py--4 {% else %} {% endif %}">
+        {% if one_line == true %}
+          {% comment %} In one_line mode, only show first 5 metrics {% endcomment %}
+          {% for metric in metrics_array limit: 8 %}
+            {% assign metric_trimmed = metric | strip %}
+            {% if metric_trimmed != '' %}
+              {% render 'render_metric_item' metric_trimmed: metric_trimmed, data: data, valueFit: valueFit, valueSize: valueSize %}
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          {% comment %} Default mode, show all metrics up to metric_limit {% endcomment %}
+          {% for metric in metrics_array limit: metrics_count %}
+            {% assign metric_trimmed = metric | strip %}
+            {% if metric_trimmed != '' %}
+              {% render 'render_metric_item' metric_trimmed: metric_trimmed, data: data, valueFit: valueFit, valueSize: valueSize %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
       </div>
     {% endif %}
 {% endtemplate %}

@@ -1,14 +1,15 @@
 <!-- WakaTime Half Horizontal Layout -->
-  <div class="layout layout--col gap--space-between">
+  <div class="layout layout--col layout--start gap--space-between">
     
-    {% comment %} 
-  {% render 'dashboard_horizontal' 
-        selected_metrics: trmnl.plugin_settings.custom_fields_values.dashboard_metrics,
-        valueFit: false,
-        data: data,
-        metric_limit: 6
-    %} 
-        {% endcomment %}
+    <div class="mb--2">
+      {% render 'dashboard_horizontal' 
+          selected_metrics: trmnl.plugin_settings.custom_fields_values.dashboard_metrics | default: ["today", "this_week", "this_month", "last_year"],
+          valueFit: true,
+          data: data,
+          metric_limit: 10,
+          one_line: true
+      %} 
+    </div>
 
 
     {% assign selected_layout = trmnl.plugin_settings.custom_fields_values.layout_half_horizontal | default: 'lines' | downcase %}

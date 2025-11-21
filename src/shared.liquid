@@ -299,13 +299,11 @@
       {% elsif metrics_count == 3 %}
         {% assign grid_class = "grid grid--cols-3" %}
       {% elsif metrics_count == 4 or metrics_count == 8 %}
-        {% assign valueSize = 'value--xsmall' %}
         {% assign grid_class = "grid grid--cols-4" %}
       {% elsif metrics_count == 5 %}
         {% assign grid_class = "grid grid--cols-5" %}
       {% elsif metrics_count == 6 %}
-        {% assign valueSize = 'value--xsmall' %}
-        {% assign grid_class = "grid grid--cols-6" %}
+        {% assign grid_class = "grid grid--cols-4" %}
       {% elsif metrics_count == 7 %}
         {% assign grid_class = "grid grid--cols-4" %}
       {% elsif metrics_count == 8 %}
@@ -317,7 +315,7 @@
         {% assign grid_class = "grid grid--cols-5" %}
       {% endif %}
       
-      <div class="{{ grid_class }} stretch-y">
+      <div class="grid {{ grid_class }} stretch-y" style="width: 100%;">
         {% for metric in metrics_array limit: metrics_count %}
           {% assign metric_trimmed = metric | strip %}
           {% if metric_trimmed != '' %}

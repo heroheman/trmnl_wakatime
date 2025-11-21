@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.4] - 2025-11-21
+
+### 🚀 Features
+
+- *(settings)* Update custom fields for WakaTime plugin
+- *(settings)* Add options for show/hide axis labels
+- *(settings)* Update layout options for contributions
+- *(layout)* Enhance dashboard layout and metrics display
+
+### 🐛 Bug Fixes
+
+- *(settings)* Correct polling_url formatting
+
+### 🚜 Refactor
+
+- *(layout)* Remove unnecessary view wrappers
+- *(settings)* Update dashboard metrics configuration
+
+### 📚 Documentation
+
+- *(settings)* Update plugin description to v0.0.4
+
+### ⚙️ Miscellaneous Tasks
+
+- Changelog update
+
 ## [0.0.3] - 2025-09-03
 
 ### 🚀 Features

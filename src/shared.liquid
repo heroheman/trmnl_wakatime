@@ -11,9 +11,22 @@
 
 .day {
     width: 11px;
-    height: 11px;
+    height: var(--day-height, 11px);
     border-radius: 5%;       
     flex-shrink: 0;
+}
+
+/* Size variants */
+.contributions-container--square .day {
+    --day-height: 11px;
+}
+
+.contributions-container--half .day {
+    --day-height: 15px;
+}
+
+.contributions-container--full .day {
+    --day-height: 30px;
 }
 
 .weekday-labels {
@@ -22,11 +35,18 @@
     gap: 0.25rem;
     justify-content: space-around;
     align-items: center;
-    height: 84px; /* 7 days * 12px */
+    height: 84px; /* default for square */
+}
+
+.contributions-container--half .weekday-labels {
+    height: 126px; /* 7 days * ~18px */
+}
+
+.contributions-container--full .weekday-labels {
+    height: 234px; /* 7 days * ~33px */
 }
 
 .weekday-label {
-    height: 11px;
     display: flex;
     align-items: center;
     font-size: 10px;
@@ -121,7 +141,8 @@
 {% endtemplate %}
 
 {% template contributions_grid %}
-  <div class="contributions-container ">
+  {% assign grid_size = size | default: 'square' %}
+  <div class="contributions-container contributions-container--{{ grid_size }}">
     <!-- Y-axis labels (weekdays) -->
     <div class="flex flex--row">
       <!-- Generate contributions grid in Liquid -->

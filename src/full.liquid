@@ -22,7 +22,7 @@
     {% assign selected_layout = trmnl.plugin_settings.custom_fields_values.layout | default: 'lines' | downcase %}
     {% if selected_layout == 'contributions' %}
       <!-- GitHub-style Contributions Grid -->
-      {% render 'contributions_grid', data: data, show_contributions_legend: trmnl.plugin_settings.custom_fields_values.show_contributions_legend %}
+      {% render 'contributions_grid', data: data, show_contributions_legend: trmnl.plugin_settings.custom_fields_values.show_contributions_legend, size: 'full' %}
     {% else %}
       {% render 'wakatime_charts', 
         chart_height: 260,

@@ -1,17 +1,19 @@
 <!-- WakaTime Half Horizontal Layout -->
   <div class="layout layout--col gap--space-between">
     
-    {% comment %} {% render 'dashboard_horizontal' 
+    {% comment %} 
+  {% render 'dashboard_horizontal' 
         selected_metrics: trmnl.plugin_settings.custom_fields_values.dashboard_metrics,
         valueFit: false,
         data: data,
         metric_limit: 6
-    %} {% endcomment %}
+    %} 
+        {% endcomment %}
 
 
     {% assign selected_layout = trmnl.plugin_settings.custom_fields_values.layout_half_horizontal | default: 'lines' | downcase %}
     {% if selected_layout == 'contributions' %}
-      {% render 'contributions_grid', data: data, show_contributions_legend: trmnl.plugin_settings.custom_fields_values.show_contributions_legend %}
+      {% render 'contributions_grid', data: data, show_contributions_legend: trmnl.plugin_settings.custom_fields_values.show_contributions_legend, size: 'half' %}
     {% else %}
       {% render 'wakatime_charts', 
         chart_height: 200,

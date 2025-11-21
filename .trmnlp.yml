@@ -48,17 +48,19 @@ custom_fields: {
   layout: "contributions",  # "line", "bars", "contributions"
   # layout: "line",  # "true", "bars", "contributions"
   # layout: "bars",  # "line", "bars", "contributions"
-  layout_half_horizontal: "line",  # "line", "bars", "contributions"
-  # layout_half_horizontal: "contributions",  # "line", "bars", "contributions"
-  # "last_7_days", "last_30_days", "last_90_days", "last_year", "all_time"
+  # layout_half_horizontal: "line",  # "line", "bars", "contributions"
+  layout_half_horizontal: "contributions",  # "line", "bars", "contributions"
+  # # "last_7_days", "last_30_days", "last_90_days", "last_year", "all_time"
   # timeframe: "last_7_days",  
-  # timeframe: "last_30_days",
-  timeframe: "last_90_days",  
+  timeframe: "last_30_days",
+  # timeframe: "last_90_days",  
   # timeframe: "last_year",
   # enable_grouping: true,  # "true" or "false"
   enable_grouping: false,  # "true" or "false"
-  show_x_axis_labels: 'false',
-  show_y_axis_labels: 'false',
+  # show_x_axis_labels: 'false',
+  # show_y_axis_labels: 'false',
+  show_x_axis_labels: 'true',
+  show_y_axis_labels: 'true',
   contributions_period: "current_year", 
   # date format for x-axis labels, options: "%d.%m", "%d/%m", "%m-%d", "%d %b", "%b %d", "%a", "%Y-%m-%d"
   # date_format: "%d.%m",  

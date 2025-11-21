@@ -93,8 +93,8 @@ Select which metrics to display (multiple selection):
 
 ## 🚀 Installation
 
-### Step 1: Fork the Plugin
-1. **[Fork this plugin](https://usetrmnl.com/plugin_settings/123718)** to your TRMNL account
+### Step 1: Install the Plugin
+1. **[Install plugin](https://usetrmnl.com/plugin_settings/123718)** via your TRMNL Dashboard
 
 ### Step 2: Get Your WakaTime Share URL
 1. **Login** to [wakatime.com](https://wakatime.com)
@@ -128,15 +128,6 @@ You need: `https://wakatime.com/share/@YOUR_USERNAME/xxxx-xxxx-xxxx-xxxx.json`
    - Adjust date format and other visual options
 3. **Set** refresh interval (recommended: 1440 minutes / 24 hours)
 4. **Add** to your TRMNL playlist
-
-## 🔄 How to Update
-
-**Important**: As this plugin has custom fields, it can only be forked. This means it does not automatically update when new versions are available.
-
-To update:
-1. **Fork** the plugin again from the link above
-2. **Reconfigure** your WakaTime URL and settings
-3. **Replace** the old version in your playlist
 
 ## 🛠️ Technical Details
 

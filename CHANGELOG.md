@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.0] - 2026-01-12
+
+### 🚀 Features
+
+- *(settings)* Initialize transform function for data processing
+
+### 📚 Documentation
+
+- *(readme)* Update installation instructions and remove update section
+
+### ⚙️ Miscellaneous Tasks
+
+- Changelog update
+
 ## [0.0.4] - 2025-11-21
 
 ### 🚀 Features

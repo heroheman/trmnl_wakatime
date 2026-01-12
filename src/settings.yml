@@ -6,7 +6,7 @@ static_data: ''
 polling_verb: get
 polling_url: "{{ wakatime_url }}"
 polling_headers: ''
-polling_body: 
+polling_body: ''
 id: 123718
 custom_fields:
 - keyname: author_bio
